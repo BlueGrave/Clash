@@ -1,6 +1,3 @@
-# > Fast
-DOMAIN-SUFFIX,fast.com
-
 # > Speedtest
 USER-AGENT,SpeedTest*
 DOMAIN-KEYWORD,speedtest
