@@ -45,7 +45,7 @@ external-controller: '127.0.0.1:9090'
 # 实验性功能
 experimental:
   ignore-resolve-fail: true # 忽略 DNS 解析失败，默认值为 true
-  # interface-name: en0 # outbound interface name
+  interface-name: en0 # outbound interface name
 
 # 本地 SOCKS5 / HTTP(S) 服务认证
 # authentication:
@@ -58,6 +58,14 @@ experimental:
 #hosts:
 #   '*.clash.dev': 127.0.0.1
 #   'alpha.clash.dev': '::1'
+
+# tun:
+# 	enable: true
+# 	stack: Gvisor # system or netstack
+# 	macos-auto-route: true
+# 	macos-auto-detect-interface: true
+# 	dns-hijack:
+# 		 - tcp://8.8.8.8:53
 
 dns:
   enable: true # 是否启用dns false
