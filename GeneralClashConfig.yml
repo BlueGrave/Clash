@@ -64,7 +64,7 @@ dns:
   ipv6: false
   listen: 0.0.0.0:53
   enhanced-mode: redir-host # 模式：redir-host或fake-ip
-  #fake-ip-range: 198.18.0.1/16 #
+  fake-ip-range: 198.18.0.1/16
   fake-ip-filter: # fake ip 白名单列表，如果你不知道这个参数的作用，请勿修改
      - '*.lan'
      - localhost.ptlogin2.qq.com
@@ -81,8 +81,9 @@ dns:
      #- 117.50.11.11 # ONE DNS拦截版 恶意网站拦截、广告过滤
      #- 117.50.10.10 # ONE DNS纯净版 直接返回其真实的响应结果
   fallback:
-     - 8.8.8.8 # 谷歌DNS
-     - 1.1.1.1 # Cloudflare DNS     
+     - tls://1.0.0.1:853 # Cloudflare DoT
+     - tls://1.1.1.1:853 # Cloudflare DoT
+     - tls://dns.google:853 # Google DoT
      - https://cloudflare-dns.com/dns-query # Cloudflare DoH
      - https://dns.google/dns-query # Google DoH
      - https://doh.rixcloud.dev/dns-query # rixCloud DoH
@@ -91,8 +92,6 @@ dns:
      - https://139.224.112.177/dns-query # rixCloud DoH
      - https://47.108.56.233/dns-query # rixCloud DoH
      - https://59.110.53.209/dns-query # rixCloud DoH
-     - tls://1.0.0.1:853 # Cloudflare DoT
-     - tls://dns.google:853 # Google DoT
   #fallback-filter:
      #geoip: true # 默认
      #ipcidr: # 在这个网段内的 IP 地址会被考虑为被污染的 IP
