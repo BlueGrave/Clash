@@ -66,6 +66,8 @@ dns:
   enhanced-mode: redir-host # 模式：redir-host或fake-ip
   #fake-ip-range: 198.18.0.1/16 #
   fake-ip-filter: # fake ip 白名单列表，如果你不知道这个参数的作用，请勿修改
+     - '*.lan'
+     - localhost.ptlogin2.qq.com
      - '*.*.*.*.srv.nintendo.net'
      - '*.*.*.stun.playstation.net'
      - 'xbox.*.microsoft.com'
