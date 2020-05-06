@@ -1,1 +1,4 @@
 # 自用的
+# 排除 AdBlock 的误伤
+
+DOMAIN-SUFFIX,tce.alicdn.com
