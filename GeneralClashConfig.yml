@@ -81,9 +81,9 @@ dns:
      - 'xbox.*.microsoft.com'
      - '*.*.*.xboxlive.com'
      - '*.ipv6.microsoft.com'
-     - 'dns.msftncsi.com'
-     - 'www.msftncsi.com'
-     - 'www.msftconnecttest.com'
+     - dns.msftncsi.com
+     - www.msftncsi.com
+     - www.msftconnecttest.com
   nameserver:
      - 223.5.5.5 # 阿里DNS
      - 1.2.4.8 # CNNIC DNS
