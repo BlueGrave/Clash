@@ -70,8 +70,77 @@ experimental:
 # 	macos-auto-detect-interface: true
 # 	dns-hijack:
 #			- tcp://8.8.8.8:53
+dns:
+  enable: true # 是否启用dns false
+  ipv6: false
+  listen: 0.0.0.0:53
+ #default-nameserver:
+   #- 114.114.114.114
+   #- 8.8.8.8
+  enhanced-mode: redir-host # 模式：redir-host或fake-ip
+  fake-ip-range: 198.18.0.1/16 #
+  fake-ip-filter: # fake ip 白名单列表，如果你不知道这个参数的作用，请勿修改
+     - '*.lan'
+     - localhost.ptlogin2.qq.com
+     - '*.*.*.*.srv.nintendo.net'
+     - '*.*.*.stun.playstation.net'
+     - 'xbox.*.microsoft.com'
+     - '*.*.*.xboxlive.com'
+     - '*.ipv6.microsoft.com'
+     - dns.msftncsi.com
+     - www.msftncsi.com
+     - www.msftconnecttest.com
+  nameserver:
+     - 223.5.5.5 # 阿里DNS
+     - 1.2.4.8 # CNNIC DNS
+     - 114.114.114.114 # 114 DNS
+     - 119.29.29.29 # 腾讯DNS
+     #- 180.76.76.76 # 百度DNS
+     #- 117.50.11.11 # ONE DNS拦截版 恶意网站拦截、广告过滤
+     #- 117.50.10.10 # ONE DNS纯净版 直接返回其真实的响应结果
+  fallback:
+     - tls://1.1.1.1:853 # Cloudflare DoT
+     - tls://1.0.0.1:853 # Cloudflare DoT
+     - tls://dns.google:853 # Google DoT
+     - tls://dns.adguard.com:853 # Adguard DoT
+     - https://cloudflare-dns.com/dns-query # Cloudflare DoH
+     - https://1.1.1.1/dns-query # Cloudflare DoH
+     - https://1.0.0.1/dns-query # Cloudflare DoH
+     - https://dns.google/dns-query # Google DoH
+     - https://dns.nextdns.io/6a9581 # NextDNS DoH
+     - https://doh.rixcloud.dev/dns-query # rixCloud DoH
+     - https://118.31.13.131/dns-query # rixCloud DoH
+     - https://120.25.25.166/dns-query # rixCloud DoH
+     - https://139.224.112.177/dns-query # rixCloud DoH
+     - https://47.108.56.233/dns-query # rixCloud DoH
+     - https://59.110.53.209/dns-query # rixCloud DoH
+     - https://doh.opendns.com/dns-query # OpenDNS DoH
+  fallback-filter:
+     geoip: true # 默认
+     ipcidr: # 在这个网段内的 IP 地址会被考虑为被污染的 IP
+       - 240.0.0.0/4
 
+# 1. clash DNS 请求逻辑：
+#   (1) 当访问一个域名时， nameserver 与 fallback 列表内的所有服务器并发请求，得到域名对应的 IP 地址。
+#   (2) clash 将选取 nameserver 列表内，解析最快的结果。
+#   (3) 若解析结果中，IP 地址属于 国外，那么 clash 将选择 fallback 列表内，解析最快的结果。
+#
+#   因此，我在 nameserver 和 fallback 内都放置了无污染、解析速度较快的国内 DNS 服务器，以达到最快的解析速度。
+#   但是 fallback 列表内服务器会用在解析境外网站，为了结果绝对无污染，我仅保留了支持 DoT/DoH 的两个服务器。
+#
+# 2. clash DNS 配置注意事项：
+#   (1) 如果您为了确保 DNS 解析结果无污染，请仅保留列表内以 tls:// 或 https:// 开头的 DNS 服务器，但是通常对于国内域名没有必要。
+#   (2) 如果您不在乎可能解析到污染的结果，更加追求速度。请将 nameserver 列表的服务器插入至 fallback 列表内，并移除重复项。
+#
+# 3. 关于 DNS over HTTPS (DoH) 和 DNS over TLS (DoT) 的选择：
+#   对于两项技术双方各执一词，而且会无休止的争论，各有利弊。各位请根据具体需求自行选择，但是配置文件内默认启用 DoT，因为目前国内没有封锁或管制。
+#   DoH: 以 https:// 开头的 DNS 服务器。拥有更好的伪装性，且几乎不可能被运营商或网络管理封锁，但查询效率和安全性可能略低。
+#   DoT: 以 tls:// 开头的 DNS 服务器。拥有更高的安全性和查询效率，但端口有可能被管制或封锁。
+#   若要了解更多关于 DoH/DoT 相关技术，请自行查阅规范文档。
 
+# 代理组
+# 下面这3个不要引到订阅里去 要不会出错
+# Will be ignored after profile selection
 Proxy:
   - name: Shadowsocks
     type: socks5
