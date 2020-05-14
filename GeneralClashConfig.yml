@@ -44,7 +44,7 @@ external-controller: '127.0.0.1:9090'
 
 # 实验性功能
 experimental:
-	ignore-resolve-fail: true # 忽略 DNS 解析失败，默认值为 true
+  ignore-resolve-fail: true # 忽略 DNS 解析失败，默认值为 true
 #	interface-name: en0 # outbound interface name
 
 # 本地 SOCKS5 / HTTP(S) 服务认证
@@ -72,40 +72,40 @@ experimental:
 #			- tcp://8.8.8.8:53
 
 dns:
-	enable: true # 是否启用dns false
-	ipv6: false
-	listen: 0.0.0.0:53
+  enable: true # 是否启用dns false
+  ipv6: false
+  listen: 0.0.0.0:53
 #	default-nameserver:
 #		- 114.114.114.114
 #		- 8.8.8.8
-	enhanced-mode: redir-host # 模式：redir-host或fake-ip
-	fake-ip-range: 198.18.0.1/16
-	fake-ip-filter: # fake ip 白名单列表，如果你不知道这个参数的作用，请勿修改
-		- '*.lan'
-		- localhost.ptlogin2.qq.com
-		- '*.*.*.*.srv.nintendo.net'
-		- '*.*.*.stun.playstation.net'
-		- 'xbox.*.microsoft.com'
-		- '*.*.*.xboxlive.com'
-		- '*.ipv6.microsoft.com'
-		- dns.msftncsi.com
-		- www.msftncsi.com
-		- www.msftconnecttest.com
-	nameserver:
+  enhanced-mode: redir-host # 模式：redir-host或fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter: # fake ip 白名单列表，如果你不知道这个参数的作用，请勿修改
+    - '*.lan'
+    - localhost.ptlogin2.qq.com
+    - '*.*.*.*.srv.nintendo.net'
+    - '*.*.*.stun.playstation.net'
+    - 'xbox.*.microsoft.com'
+    - '*.*.*.xboxlive.com'
+    - '*.ipv6.microsoft.com'
+    - dns.msftncsi.com
+    - www.msftncsi.com
+    - www.msftconnecttest.com
+  nameserver:
     - 223.5.5.5 # 阿里DNS
     - 1.2.4.8 # CNNIC DNS
     - 119.29.29.29 # 腾讯DNS
     - 114.114.114.114 # 114 DNS
-#		- 117.50.11.11 # ONE DNS拦截版 恶意网站拦截、广告过滤
-#		- 117.50.10.10 # ONE DNS纯净版 直接返回其真实的响应结果
+#   - 117.50.11.11 # ONE DNS拦截版 恶意网站拦截、广告过滤
+#   - 117.50.10.10 # ONE DNS纯净版 直接返回其真实的响应结果
 	fallback:
- 		- tls://1.1.1.1:853 # Cloudflare DoT
- 		- tls://1.0.0.1:853 # Cloudflare DoT
- 		- tls://dns.google:853 # Google DoT
+    - tls://1.1.1.1:853 # Cloudflare DoT
+    - tls://1.0.0.1:853 # Cloudflare DoT
+    - tls://dns.google:853 # Google DoT
 #		- tls://9.9.9.9:853
 #		- tls://96.113.151.145:853
 #		- tls://185.228.168.9:853
- 		- tls://dns.adguard.com:853 # Adguard DoT
+    - tls://dns.adguard.com:853 # Adguard DoT
 #		- tls://89.233.43.71:853
 #		- tls://145.100.185.18:853
 #		- tls://dns.cmrg.net:853
@@ -116,19 +116,19 @@ dns:
 #		- tls://dot1.appliedprivacy.net:853
 #		- https://1.1.1.1/dns-query # Cloudflare DoH
 #		- https://1.0.0.1/dns-query # Cloudflare DoH
- 		- https://cloudflare-dns.com/dns-query # Cloudflare DoH
- 		- https://dns.google/dns-query # Google DoH
+    - https://cloudflare-dns.com/dns-query # Cloudflare DoH
+    - https://dns.google/dns-query # Google DoH
 #		- https://dns11.quad9.net/dns-query
 #		- https://doh.xfinity.com/dns-query
 #		- https://doh.opendns.com/dns-query # OpenDNS DoH
- 		- https://dns.nextdns.io/6a9581 # NextDNS DoH
+    - https://dns.nextdns.io/6a9581 # NextDNS DoH
 #		- https://commons.host
- 		- https://doh.rixcloud.dev/dns-query # rixCloud DoH
- 		- https://118.31.13.131/dns-query # rixCloud DoH
- 		- https://120.25.25.166/dns-query # rixCloud DoH
- 		- https://139.224.112.177/dns-query # rixCloud DoH
- 		- https://47.108.56.233/dns-query # rixCloud DoH
- 		- https://59.110.53.209/dns-query # rixCloud DoH
+    - https://doh.rixcloud.dev/dns-query # rixCloud DoH
+    - https://118.31.13.131/dns-query # rixCloud DoH
+    - https://120.25.25.166/dns-query # rixCloud DoH
+    - https://139.224.112.177/dns-query # rixCloud DoH
+    - https://47.108.56.233/dns-query # rixCloud DoH
+    - https://59.110.53.209/dns-query # rixCloud DoH
 #		- https://dohdot.coxlab.net/dns-query
 #		- https://jp.tiarap.org/dns-query
 #		- https://dns.twnic.tw/dns-query
