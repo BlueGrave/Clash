@@ -174,15 +174,15 @@ dns:
 # 代理组
 # 下面这3个不要引到订阅里去 要不会出错
 # Will be ignored after profile selection
-Proxy:
-  - name: Shadowsocks
-    type: socks5
-    server: 127.0.0.1
-    port: 1080
-Proxy Group:
-  - name: Proxy
-    type: select
-    proxies:
-      - Shadowsocks
-Rule:
-  - 'MATCH,DIRECT'
+#Proxy:
+#  - name: Shadowsocks
+#    type: socks5
+#    server: 127.0.0.1
+#    port: 1080
+#Proxy Group:
+#  - name: Proxy
+#    type: select
+#    proxies:
+#      - Shadowsocks
+#Rule:
+#  - 'MATCH,DIRECT'
