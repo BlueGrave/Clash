@@ -273,6 +273,11 @@ export default {
             label: "BlueGrave_Clash",
             options: [
               {
+                label: "UnlockNE",
+                value:
+                  "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/UnlockNE_ACL4SSR.ini"
+              },
+              {
                 label: "YToo",
                 value:
                   "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/YToo_ACL4SSR.ini"
@@ -291,11 +296,6 @@ export default {
                 label: "NyanCAT",
                 value:
                   "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/NyanCAT_ACL4SSR.ini"
-              },
-              {
-                label: "UnlockNE",
-                value:
-                  "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/UnlockNE_ACL4SSR.ini"
               }
             ]
           },
