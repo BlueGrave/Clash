@@ -126,8 +126,8 @@ dns:
   nameserver:
      - 223.5.5.5 # 阿里DNS
      - 1.2.4.8 # CNNIC DNS
-     - 114.114.114.114 # 114 DNS
      - 119.29.29.29 # 腾讯DNS
+     - 114.114.114.114 # 114 DNS
      #- 180.76.76.76 # 百度DNS
      #- 117.50.11.11 # ONE DNS拦截版 恶意网站拦截、广告过滤
      #- 117.50.10.10 # ONE DNS纯净版 直接返回其真实的响应结果
@@ -141,12 +141,6 @@ dns:
      - https://1.0.0.1/dns-query # Cloudflare DoH
      - https://dns.google/dns-query # Google DoH
      - https://dns.nextdns.io/6a9581 # NextDNS DoH
-     - https://doh.rixcloud.dev/dns-query # rixCloud DoH
-     - https://118.31.13.131/dns-query # rixCloud DoH
-     - https://120.25.25.166/dns-query # rixCloud DoH
-     - https://139.224.112.177/dns-query # rixCloud DoH
-     - https://47.108.56.233/dns-query # rixCloud DoH
-     - https://59.110.53.209/dns-query # rixCloud DoH
      - https://doh.opendns.com/dns-query # OpenDNS DoH
   fallback-filter:
      geoip: true # 默认
