@@ -59,24 +59,15 @@ experimental:
 #   '*.clash.dev': 127.0.0.1
 #   'alpha.clash.dev': '::1'
 
-# tun:
-#   enable: true
-#   device-url: dev://utun # macOS
-#   device-url: dev://clash0 # Linux
-#   device-url: fd://5 # Linux
-#   dns-listen: 0.0.0.0:53  # additional dns server listen on TUN
-#   stack: gvisor # system
-#   macos-auto-route: true
-#   macos-auto-detect-interface: true
-#   dns-hijack:
-#     - tcp://8.8.8.8:53
 dns:
   enable: true # 是否启用dns false
   ipv6: false
   listen: 0.0.0.0:53
- #default-nameserver:
-   #- 114.114.114.114
-   #- 8.8.8.8
+  default-nameserver:
+    - 223.5.5.5
+    - 1.0.0.1
+    - 119.29.29.29
+    - 1.2.4.8
   enhanced-mode: redir-host # 模式：redir-host或fake-ip
   fake-ip-range: 198.18.0.1/16 #
   fake-ip-filter: # fake ip 白名单列表，如果你不知道这个参数的作用，请勿修改
@@ -151,6 +142,20 @@ dns:
      geoip: true # 默认
      ipcidr: # 在这个网段内的 IP 地址会被考虑为被污染的 IP
        - 240.0.0.0/4
+       - 0.0.0.0/32
+       - 127.0.0.1/32
+# tun:
+#   enable: true
+#   device-url: dev://utun # macOS
+#   device-url: dev://clash0 # Linux
+#   device-url: fd://5 # Linux
+#   dns-listen: 0.0.0.0:53  # additional dns server listen on TUN
+#   stack: gvisor # system
+#   macos-auto-route: true
+#   macos-auto-detect-interface: true
+#   dns-hijack:
+#     - tcp://8.8.8.8:53
+#     - 198.18.0.2:53
 
 # 1. clash DNS 请求逻辑：
 #   (1) 当访问一个域名时， nameserver 与 fallback 列表内的所有服务器并发请求，得到域名对应的 IP 地址。
