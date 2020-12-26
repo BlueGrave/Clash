@@ -142,6 +142,9 @@ dns:
      - https://dns.google/dns-query # Google DoH
      - https://dns.nextdns.io/6a9581 # NextDNS DoH
      - https://doh.opendns.com/dns-query # OpenDNS DoH
+     - https://doh.xeton.dev/dns-query
+     - https://dns.alidns.com/dns-query
+     - https://13800000000.rubyfish.cn
   fallback-filter:
      geoip: true # 默认
      ipcidr: # 在这个网段内的 IP 地址会被考虑为被污染的 IP
