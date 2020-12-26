@@ -2,4 +2,4 @@
 DOMAIN,emby.ytoo.li
 DOMAIN,emby.nexitally.com
 DOMAIN,emby.w8ves.co
-IP-CIDR, 45.137.217.217/24
+IP-CIDR, 45.137.217.217/32
