@@ -147,15 +147,16 @@ dns:
        - 240.0.0.0/4
        - 0.0.0.0/32
        - 127.0.0.1/32
-      domain:
-        - +.google.com
-        - +.facebook.com
-        - +.twitter.com
-        - +.youtube.com
-        - +.xn--ngstr-lra8j.com
-        - +.google.cn
-        - +.googleapis.cn
-        - +.gvt1.com
+#      domain:
+#        - +.google.com
+#        - +.facebook.com
+#        - +.twitter.com
+#        - +.youtube.com
+#        - +.xn--ngstr-lra8j.com
+#        - +.google.cn
+#        - +.googleapis.cn
+#        - +.gvt1.com
+
 # tun:
 #   enable: true
 #   device-url: dev://utun # macOS
