@@ -148,7 +148,6 @@ dns:
     - https://1.0.0.1/dns-query # Cloudflare DoH
 #   - https://1.1.1.1/dns-query # Cloudflare DoH
     - https://dns.nextdns.io/6a9581 # NextDNS DoH
-    - https://cdn-doh.ssnm.xyz/dns-query
     - https://dns.twnic.tw/dns-query
 #   - https://cloudflare-dns.com/dns-query # Cloudflare DoH
 #   - https://dns.alidns.com/dns-query # Ali DoH
