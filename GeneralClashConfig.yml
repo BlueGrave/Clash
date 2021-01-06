@@ -65,13 +65,13 @@ dns:
   listen: 0.0.0.0:53
   default-nameserver:
     - 223.5.5.5 # 阿里 DNS
-    - 1.0.0.1 # Cloudflare DNS
-    - 119.29.29.29 # 腾讯 DNS
     - 1.2.4.8 # CNNIC DNS
+    - 119.29.29.29 # 腾讯 DNS
 #   - 114.114.114.114 # 114 DNS
 #   - 180.76.76.76 # 百度 DNS
 #   - 117.50.11.11 # ONE DNS 拦截版 恶意网站拦截、广告过滤
 #   - 117.50.10.10 # ONE DNS 纯净版 直接返回其真实的响应结果
+# interface-name: en0 # 出口网卡名称，或者使用下方的自动检测
   enhanced-mode: redir-host # or fake-ip
 #    fake-ip-range: 198.18.0.1/16
 #    fake-ip-filter: # fake ip 白名单列表，如果你不知道这个参数的作用，请勿修改
@@ -144,16 +144,15 @@ dns:
 #      - "*.*.xboxlive.com"
   nameserver:
     - https://223.5.5.5/dns-query # Ali DoH
+    - https://1.1.1.1/dns-query # Cloudflare DoH
   fallback:
     - https://1.0.0.1/dns-query # Cloudflare DoH
-#   - https://1.1.1.1/dns-query # Cloudflare DoH
     - https://dns.nextdns.io/6a9581 # NextDNS DoH
     - https://dns.twnic.tw/dns-query
 #   - https://cloudflare-dns.com/dns-query # Cloudflare DoH
 #   - https://dns.alidns.com/dns-query # Ali DoH
 #   - https://223.5.5.5/resolve
 #   - https://dns.google/dns-query # Google DoH
-
 #   - https://dns.rubyfish.cn/dns-query # Rubyfish DoH
 #   - https://doh.opendns.com/dns-query # OpenDNS DoH
 #   - https://doh.xeton.dev/dns-query
@@ -194,9 +193,8 @@ dns:
 #   dns-listen: 0.0.0.0:53  # additional dns server listen on TUN
 #   stack: gvisor # system
 #   macos-auto-route: true
-#   macos-auto-detect-interface: true
+#   macos-auto-detect-interface: true # 自动检测出口网卡
 #   dns-hijack:
-#     - tcp://8.8.8.8:53
 #     - 198.18.0.2:53
 
 # 1. clash DNS 请求逻辑：
