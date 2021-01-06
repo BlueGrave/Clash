@@ -144,6 +144,7 @@ dns:
 #      - "*.*.xboxlive.com"
   nameserver:
     - https://223.5.5.5/dns-query # Ali DoH
+    - https://cdn-doh.ssnm.xyz/dns-query
     - https://1.1.1.1/dns-query # Cloudflare DoH
   fallback:
     - https://1.0.0.1/dns-query # Cloudflare DoH
