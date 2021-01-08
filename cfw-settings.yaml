@@ -2,7 +2,7 @@ latencyUrl: http://cp.cloudflare.com/generate_204
 latencyTimeout: 3000
 proxyOrder: 0
 connProfile: true
-theme: 2
+theme: 1
 systemTheme: false
 bypassText: |
   bypass:
@@ -602,3 +602,57 @@ bypassText: |
     - <local>
 showNotifications: true
 selectAfterUpdated: false
+mixinText: |-
+  mixin: # object
+    dns:
+      enable: true
+      ipv6: false
+      default-nameserver:
+        - 223.5.5.5
+        - 1.2.4.8
+        - 119.29.29.29
+      enhanced-mode: redir-host # or fake-ip
+      nameserver:
+        - https://223.5.5.5/dns-query
+        - https://cdn-doh.ssnm.xyz/dns-query
+        - https://1.1.1.1/dns-query
+      fallback:
+        - https://1.0.0.1/dns-query
+        - https://dns.nextdns.io/6a9581
+        - https://dns.twnic.tw/dns-query
+      fallback-filter:
+        geoip: true
+        ipcidr:
+          - 240.0.0.0/4
+          - 0.0.0.0/32
+          - 127.0.0.1/32
+        domain:
+          - +.google.com
+          - +.facebook.com
+          - +.twitter.com
+          - +.youtube.com
+          - +.xn--ngstr-lra8j.com
+          - +.google.cn
+          - +.googleapis.cn
+          - +.gvt1.com
+          - +.ipv6.microsoft.com
+          - +.srv.nintendo.net
+          - +.stun.playstation.net
+          - xbox.*.microsoft.com
+          - +.xboxlive.com
+    tun:
+      enable: true
+      stack: gvisor # or system
+      dns-hijack:
+        - 192.18.0.2:53
+      macOS-auto-route: true
+      macOS-auto-detect-interface: true # 自动检测出口网卡
+connMode: true
+showNewVersionIcon: true
+hideAfterStartup: true
+randomControllerPort: true
+proxyItemWidth: ""
+showProxyFilter: false
+shortcutRuleMode: ""
+shortcutGlobalMode: ""
+shortcutSystemProxy: ""
