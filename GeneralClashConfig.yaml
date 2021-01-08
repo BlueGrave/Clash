@@ -192,11 +192,12 @@ dns:
 #   device-url: dev://clash0 # Linux
 #   device-url: fd://5 # Linux
 #   dns-listen: 0.0.0.0:53  # additional dns server listen on TUN
-#   stack: gvisor # system
+#   stack: gvisor # system(macOS)
 #   macos-auto-route: true
 #   macos-auto-detect-interface: true # 自动检测出口网卡
 #   dns-hijack:
-#     - 198.18.0.2:53
+#     - 198.18.0.2:53 # Windows
+#     - 223.5.5.5 # macOS 可任意设置，但为了保证CFW关闭后能不影响联网，建议设置真实能访问的DNS服务器
 
 # 1. clash DNS 请求逻辑：
 #   (1) 当访问一个域名时， nameserver 与 fallback 列表内的所有服务器并发请求，得到域名对应的 IP 地址。
