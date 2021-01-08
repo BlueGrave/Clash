@@ -615,10 +615,12 @@ mixinText: |-
       enhanced-mode: redir-host # or fake-ip
       nameserver:
         - https://223.5.5.5/dns-query
+        - https://dns.rubyfish.cn/dns-query
+        - https://dns.pub/dns-query
         - https://cdn-doh.ssnm.xyz/dns-query
-        - https://1.1.1.1/dns-query
       fallback:
         - https://1.0.0.1/dns-query
+        - https://1.1.1.1/dns-query
         - https://dns.nextdns.io/6a9581
         - https://dns.twnic.tw/dns-query
       fallback-filter:
@@ -636,16 +638,11 @@ mixinText: |-
           - +.google.cn
           - +.googleapis.cn
           - +.gvt1.com
-          - +.ipv6.microsoft.com
-          - +.srv.nintendo.net
-          - +.stun.playstation.net
-          - xbox.*.microsoft.com
-          - +.xboxlive.com
-    tun:
+    tun: # 需要开启 Service Mode
       enable: true
       stack: gvisor # or system
       dns-hijack:
-        - 192.18.0.2:53
+        - 198.18.0.2:53
       macOS-auto-route: true
       macOS-auto-detect-interface: true # 自动检测出口网卡
 connMode: true
@@ -657,3 +654,4 @@ showProxyFilter: false
 shortcutRuleMode: ""
 shortcutGlobalMode: ""
 shortcutSystemProxy: ""
+editor: 0
