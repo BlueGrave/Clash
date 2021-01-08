@@ -62,7 +62,7 @@ experimental:
 dns:
   enable: true # 是否启用 dns false
   ipv6: false
-# listen: 0.0.0.0:53
+  listen: 0.0.0.0:53
   default-nameserver:
     - 223.5.5.5 # 阿里 DNS
     - 1.2.4.8 # CNNIC DNS
