@@ -2,9 +2,11 @@
 # 配置文件需要放置在 $HOME/.config/clash/config.yml
 # 或者运行目录下的config.yml
 #---------------------------------------------------#
+# 混合端口 HTTP和SOCKS5用一个端口
+mixed-port: 7890
 
 # HTTP 代理端口
-port: 7890
+# port: 7890
 
 # SOCKS5 代理端口
 socks-port: 7891
@@ -20,6 +22,7 @@ allow-lan: true
 # #192.168.122.11: 绑定单个IPv4地址
 # #"[aaaa::a8aa:ff:fe09:57d8]": 绑定单个IPv6地址
 # bind-address: "*"
+# ipv6: true
 
 # 规则模式：Rule（规则） / Global（全局代理）/ Direct（全局直连）
 mode: Rule
