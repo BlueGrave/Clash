@@ -185,15 +185,13 @@ dns:
 
 # tun:
 #   enable: true
-#   device-url: dev://utun # macOS
-#   device-url: dev://clash0 # Linux
-#   device-url: fd://5 # Linux
-#   dns-listen: 0.0.0.0:53  # additional dns server listen on TUN
-#   stack: gvisor # system(macOS)
-#   macos-auto-route: true
-#   macos-auto-detect-interface: true # 自动检测出口网卡
+#   stack: gvisor # only gvisor (Windows)
+#   stack: system # or gvisor (macOS)
+#   macos-auto-route: true # auto set global route
+# It is recommended to use `interface-name` (Windows)
+#   macos-auto-detect-interface: true # 自动检测出口网卡，conflict with interface-name
 #   dns-hijack:
-#     - 198.18.0.2:53 # Windows
+#     - 198.18.0.2:53 # when `fake-ip-range` is 198.18.0.1/16, should hijack 198.18.0.2:53 (Windows)
 #     - 223.5.5.5 # macOS 可任意设置，但为了保证CFW关闭后能不影响联网，建议设置真实能访问的DNS服务器
 
 # 1. clash DNS 请求逻辑：
