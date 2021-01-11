@@ -70,6 +70,3 @@ DOMAIN-SUFFIX,xn--ngstr-lra8j.com
 DOMAIN-SUFFIX,youtube-nocookie.com
 IP-CIDR,74.125.0.0/16,no-resolve
 IP-CIDR,173.194.0.0/16,no-resolve
-# YouTube
-DOMAIN-SUFFIX,googleapis.com
-DOMAIN-SUFFIX,youtube.com
