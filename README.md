@@ -11,4 +11,6 @@ Clash X Pro (macOS)
 配置文件方面，主要应用环境是：
 subconverter v0.6.4 (部署在 vercel.com/now.sh 上面，参见 tindy2013/subconverter 和 tindy2013/now-subconverter)
 sub-web v1.0 (部署在 vercel.com/now.sh 上面，参见 CareyWang/sub-web)
-GeneralClashConfig.yaml
+Config 目录下的文件，GeneralClashConfig.yaml 和 pref_064.ini 提供给 subconverter 使用
+Subconverter.vue 提供给 sub-web 使用
+cfw-settings.yaml 提供给 Clash for Windows 使用
