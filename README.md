@@ -8,9 +8,9 @@
 
 - [ClashX Pro](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public) (macOS)
 
-主用 [ACL4SSR](https://github.com/ACL4SSR/ACL4SSR) 的规则，自己补充的放到 Ruleset/Patch 目录下
+主用 [ACL4SSR](https://github.com/ACL4SSR/ACL4SSR) 的规则，自己补充的放到 [Ruleset/Patch](https://github.com/BlueGrave/Clash/tree/master/Ruleset/Patch) 目录下
 
-其他 [ACL4SSR](https://github.com/ACL4SSR/ACL4SSR) 没有提供的规则，则是根据 [DivineEngine](https://github.com/DivineEngine/Profiles) 的规则整理的，放到 Ruleset/DivineEngine 目录下
+其他 [ACL4SSR](https://github.com/ACL4SSR/ACL4SSR) 没有提供的规则，则是根据 [DivineEngine](https://github.com/DivineEngine/Profiles) 的规则整理的，放到 [Ruleset/DivineEngine](https://github.com/BlueGrave/Clash/tree/master/Ruleset/DivineEngine) 目录下
 
 ### 配置文件方面，主要应用环境是：
 - [subconverter](https://github.com/tindy2013/subconverter) v0.6.4 (部署在 [vercel.com](https://vercel.com) 上面，参见 [tindy2013/subconverter](https://github.com/tindy2013/subconverter) 和 [tindy2013/now-subconverter](https://github.com/tindy2013/now-subconverter))
