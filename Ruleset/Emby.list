@@ -1,0 +1,9 @@
+# > Emby
+DOMAIN,emby.ytoo.li
+DOMAIN,emby.nexitally.com
+DOMAIN,emby.w8ves.co
+DOMAIN,emby.xeton.dev
+DOMAIN,jellyfin.xeton.dev
+DOMAIN,movie.xeton.dev
+DOMAIN,servers.xeton.dev
+IP-CIDR,45.137.217.217/32
