@@ -17,8 +17,8 @@
 
 - [sub-web](https://github.com/CareyWang/sub-web) v1.0 (部署在 [vercel.com](https://vercel.com) 上面，参见 [CareyWang/sub-web](https://github.com/CareyWang/sub-web))
 
-Config 目录下的文件，GeneralClashConfig.yaml 和 pref_064.ini 提供给 [subconverter](https://github.com/tindy2013/subconverter) 使用
+[Config](https://github.com/BlueGrave/Clash/tree/master/Config) 目录下的文件，[GeneralClashConfig.yaml](https://github.com/BlueGrave/Clash/blob/master/GeneralClashConfig.yaml) 和 [pref_064.ini](https://github.com/BlueGrave/Clash/blob/master/pref_064.ini) 提供给 [subconverter](https://github.com/tindy2013/subconverter) 使用
 
-Subconverter.vue 提供给 [sub-web](https://github.com/CareyWang/sub-web) 使用
+[Subconverter.vue](https://github.com/BlueGrave/Clash/blob/master/Subconverter.vue) 提供给 [sub-web](https://github.com/CareyWang/sub-web) 使用
 
-cfw-settings.yaml 提供给 [Clash for Windows](https://github.com/Fndroid/clash_for_windows_pkg) 使用
+[cfw-settings.yaml](https://github.com/BlueGrave/Clash/blob/master/cfw-settings.yaml) 提供给 [Clash for Windows](https://github.com/Fndroid/clash_for_windows_pkg) 使用
