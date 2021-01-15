@@ -26,4 +26,4 @@
 ### 脚本文件，应用环境：
 - Windows 10 PowerShell
 
-用于更新 [Clash for Windows](https://github.com/Fndroid/clash_for_windows_pkg) (Windows 10) 的 GeoIP2 数据库
+仅适用于更新 [Clash for Windows v0.14.1](https://github.com/Fndroid/clash_for_windows_pkg/releases) 及以上版本 (Windows 10) 的 GeoIP2 数据库
