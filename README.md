@@ -24,5 +24,6 @@
 [cfw-settings.yaml](https://github.com/BlueGrave/Clash/blob/master/cfw-settings.yaml) 提供给 [Clash for Windows](https://github.com/Fndroid/clash_for_windows_pkg) 使用
 
 ### 脚本文件，应用环境：
-- Windows 10 PowerShell 
+- Windows 10 PowerShell
+
 用于更新 [Clash for Windows](https://github.com/Fndroid/clash_for_windows_pkg) (Windows 10) 的 GeoIP2 数据库
