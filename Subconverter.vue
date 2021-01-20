@@ -273,14 +273,9 @@ export default {
             label: "BlueGrave_Clash",
             options: [
               {
-                label: "UnlockNE",
+                label: "Nexitally & YToo",
                 value:
-                  "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/UnlockNE_ACL4SSR.ini"
-              },
-              {
-                label: "YToo",
-                value:
-                  "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/YToo_ACL4SSR.ini"
+                  "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/Nexitally_YToo_ACL4SSR.ini"
               },
               {
                 label: "Nexitally",
@@ -288,14 +283,19 @@ export default {
                   "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/Nexitall_ACL4SSR.ini"
               },
               {
+                label: "YToo",
+                value:
+                  "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/YToo_ACL4SSR.ini"
+              },
+              {
                 label: "w8ves",
                 value:
                   "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/w8ves_ACL4SSR.ini"
               },
               {
-                label: "Nexitally & YToo",
+                label: "UnlockNE",
                 value:
-                  "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/Nexitally_YToo_ACL4SSR.ini"
+                  "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/UnlockNE_ACL4SSR.ini"
               }
             ]
           },
