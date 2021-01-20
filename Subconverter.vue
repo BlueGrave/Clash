@@ -288,14 +288,14 @@ export default {
                   "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/Nexitall_ACL4SSR.ini"
               },
               {
-                label: "Maying",
+                label: "w8ves",
                 value:
-                  "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/Maying_ACL4SSR.ini"
+                  "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/w8ves_ACL4SSR.ini"
               },
               {
-                label: "NyanCAT",
+                label: "Nexitally & YToo",
                 value:
-                  "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/NyanCAT_ACL4SSR.ini"
+                  "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/Nexitally_YToo_ACL4SSR.ini"
               }
             ]
           },
