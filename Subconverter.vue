@@ -278,6 +278,11 @@ export default {
                   "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/Nexitally_YToo_ACL4SSR.ini"
               },
               {
+                label: "w8ves & YToo",
+                value:
+                  "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/w8ves_YToo_ACL4SSR.ini"
+              },
+              {
                 label: "Nexitally",
                 value:
                   "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/Nexitall_ACL4SSR.ini"
