@@ -63,13 +63,18 @@ experimental:
 #   'alpha.clash.dev': '::1'
 
 dns:
+  hosts:
+    'mtalk.google.com': 108.177.125.188
+    'services.googleapis.cn': 74.125.203.94
+    'raw.githubusercontent.com': 151.101.76.133
   enable: true # 是否启用 dns false
   ipv6: false
   listen: 0.0.0.0:53
   default-nameserver:
     - 223.5.5.5 # 阿里 DNS
-    - 1.2.4.8 # CNNIC DNS
-    - 119.29.29.29 # 腾讯 DNS
+    - 1.0.0.1 # Cloudflare DNS
+#   - 1.2.4.8 # CNNIC DNS
+#   - 119.29.29.29 # 腾讯 DNS
 #   - 114.114.114.114 # 114 DNS
 #   - 180.76.76.76 # 百度 DNS
 #   - 117.50.11.11 # ONE DNS 拦截版 恶意网站拦截、广告过滤
@@ -152,9 +157,10 @@ dns:
     - https://cdn-doh.ssnm.xyz/dns-query
   fallback:
     - https://cloudflare-dns.com/dns-query # Cloudflare DoH
-    - https://dns.google/dns-query # Google DoH
+    - https://public.dns.iij.jp/dns-query
     - https://dns.twnic.tw/dns-query
 #   - https://dns.alidns.com/resolve
+#   - https://dns.google/dns-query # Google DoH
 #   - https://dns.google/resolve
 #   - https://dns.nextdns.io/6a9581 # NextDNS DoH
 #   - https://doh.opendns.com/dns-query # OpenDNS DoH
