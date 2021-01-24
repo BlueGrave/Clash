@@ -604,14 +604,19 @@ showNotifications: true
 selectAfterUpdated: false
 mixinText: |-
   mixin: # object
+    hosts:
+     'mtalk.google.com': 108.177.125.188
+     'services.googleapis.cn': 74.125.203.94
+     'raw.githubusercontent.com': 151.101.76.133
     dns:
       enable: true
       ipv6: false
       default-nameserver:
         - 223.5.5.5
-        - 1.2.4.8
-        - 119.29.29.29
-  #   interface-name: en0 # 出口网卡名称，或者使用下方的自动检测
+        - 1.0.0.1
+#       - 1.2.4.8
+#       - 119.29.29.29
+#     interface-name: en0 # 出口网卡名称，或者使用下方的自动检测
       enhanced-mode: redir-host # or fake-ip
       nameserver:
         - https://dns.alidns.com/dns-query
@@ -620,7 +625,7 @@ mixinText: |-
         - https://cdn-doh.ssnm.xyz/dns-query
       fallback:
         - https://cloudflare-dns.com/dns-query
-        - https://dns.nextdns.io/6a9581
+        - https://public.dns.iij.jp/dns-query
         - https://dns.twnic.tw/dns-query
       fallback-filter:
         geoip: true # Default
