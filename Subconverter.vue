@@ -255,21 +255,6 @@ export default {
         backendOptions: [{ value: "http://127.0.0.1:25500/sub?" }],
         remoteConfig: [
           {
-            label: "universal",
-            options: [
-              {
-                label: "No-Urltest",
-                value:
-                  "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/universal/no-urltest.ini"
-              },
-              {
-                label: "Urltest",
-                value:
-                  "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/universal/urltest.ini"
-              }
-            ]
-          },
-          {
             label: "BlueGrave_Clash",
             options: [
               {
@@ -301,6 +286,21 @@ export default {
                 label: "UnlockNE",
                 value:
                   "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/UnlockNE_ACL4SSR.ini"
+              }
+            ]
+          },
+          {
+            label: "universal",
+            options: [
+              {
+                label: "No-Urltest",
+                value:
+                  "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/universal/no-urltest.ini"
+              },
+              {
+                label: "Urltest",
+                value:
+                  "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/universal/urltest.ini"
               }
             ]
           },
