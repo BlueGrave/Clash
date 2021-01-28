@@ -1,4 +1,4 @@
-latencyUrl: http://www.gstatic.com/generate_204
+latencyUrl: http://cp.cloudflare.com/generate_204
 latencyTimeout: 3000
 proxyOrder: 0
 connProfile: true
