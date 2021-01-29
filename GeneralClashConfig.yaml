@@ -9,7 +9,7 @@ mixed-port: 7890
 # port: 7890
 
 # SOCKS5 代理端口
-socks-port: 7891
+# socks-port: 7891
 
 # Linux 和 macOS 的 redir 代理端口 (如需使用此功能，请取消注释)
 # redir-port: 7892
