@@ -604,11 +604,11 @@ showNotifications: true
 selectAfterUpdated: false
 mixinText: |-
   mixin: # object
-    hosts:
-     'mtalk.google.com': 108.177.125.188
-     'services.googleapis.cn': 74.125.203.94
-     'raw.githubusercontent.com': 151.101.76.133
     dns:
+      hosts:
+        'mtalk.google.com': 108.177.125.188
+        'services.googleapis.cn': 74.125.203.94
+        'raw.githubusercontent.com': 151.101.76.133
       enable: true
       ipv6: false
       default-nameserver:
