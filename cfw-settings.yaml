@@ -3,7 +3,7 @@ latencyTimeout: 3000
 proxyOrder: 0
 connProfile: true
 theme: 1
-systemTheme: false
+systemTheme: true
 bypassText: |
   bypass:
     - qq.com
@@ -614,9 +614,8 @@ mixinText: |-
       default-nameserver:
         - 223.5.5.5
         - 1.0.0.1
-#       - 1.2.4.8
-#       - 119.29.29.29
-#     interface-name: en0 # 出口网卡名称，或者使用下方的自动检测
+  #     - 1.2.4.8
+  #     - 119.29.29.29
       enhanced-mode: redir-host # or fake-ip
       nameserver:
         - https://dns.alidns.com/dns-query
