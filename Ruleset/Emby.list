@@ -11,3 +11,6 @@ DOMAIN,jellyfin.xeton.dev
 DOMAIN,movie.xeton.dev
 DOMAIN,servers.xeton.dev
 IP-CIDR,45.137.217.217/32,no-resolve
+DOMIAN-SUFFIX,emby.wtf
+DOMAIN-SUFFIX,plusmedia.site
+DOMAIN-SUFFIX,mickeycloud.com
