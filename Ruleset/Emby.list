@@ -1,8 +1,8 @@
 # 自己整理的
 # > Emby
-USER-AGENT, Infuse*
-USER-AGENT, Emby*
-DOMAIN-KEYWORD, emby
+USER-AGENT,Infuse*
+USER-AGENT,Emby*
+DOMAIN-KEYWORD,emby
 DOMAIN,emby.ytoo.li
 DOMAIN,emby.nexitally.com
 DOMAIN,emby.w8ves.co
