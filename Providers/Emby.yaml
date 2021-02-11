@@ -1,6 +1,7 @@
 payload:
   # 自己整理的
   # > Emby
+  - DOMAIN-KEYWORD,emby
   - DOMAIN,emby.ytoo.li
   - DOMAIN,emby.nexitally.com
   - DOMAIN,emby.w8ves.co
@@ -11,7 +12,7 @@ payload:
   - DOMAIN,jellyfin.xeton.dev
   - DOMAIN,movie.xeton.dev
   - DOMAIN,servers.xeton.dev
-  - IP-CIDR,45.137.217.217/32,no-resolve
   - DOMIAN-SUFFIX,emby.wtf
   - DOMAIN-SUFFIX,plusmedia.site
   - DOMAIN-SUFFIX,mickeycloud.com
+  - IP-CIDR,45.137.217.217/32,no-resolve
