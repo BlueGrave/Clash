@@ -1,7 +1,6 @@
 payload:
   # 自己整理的
   # > Emby
-  - DOMAIN-KEYWORD,emby
   - DOMAIN,emby.ytoo.li
   - DOMAIN,emby.nexitally.com
   - DOMAIN,emby.w8ves.co
