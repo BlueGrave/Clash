@@ -1,6 +1,0 @@
-payload:
-  # 自己根据 DivineEngine/Profiles/Quantumult/Filter/Extra/Apple/Apple.list 补充的
-  - DOMAIN-KEYWORD,icloud.com.akadns.net
-  - DOMAIN-KEYWORD,apple.com.akadns.net
-  - DOMAIN-SUFFIX,apple.com.cn
-  - DOMAIN-SUFFIX,icloud.com.cn

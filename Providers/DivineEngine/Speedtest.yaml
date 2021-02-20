@@ -1,7 +1,0 @@
-payload:
-  # > Speedtest
-  - DOMAIN-KEYWORD,speedtest
-  - DOMAIN-SUFFIX,ooklaserver.net
-  - DOMAIN-SUFFIX,speed.cloudflare.com
-  # > Netflix Fast.com
-  - DOMAIN-SUFFIX,fast.com
