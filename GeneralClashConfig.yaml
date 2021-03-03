@@ -152,8 +152,9 @@ dns:
 #      - "*.*.xboxlive.com"
   nameserver:
     - https://dns.alidns.com/dns-query # Ali DoH
+    - https://dns.pub/dns-query # Tencent DoH
+    - https://doh.opendns.com/dns-query # OpenDNS DoH
     - https://dns.rubyfish.cn/dns-query # Rubyfish DoH
-    - https://dns.pub/dns-query
     - https://cdn-doh.ssnm.xyz/dns-query
   fallback:
     - https://cloudflare-dns.com/dns-query # Cloudflare DoH
@@ -163,7 +164,6 @@ dns:
 #   - https://dns.google/dns-query # Google DoH
 #   - https://dns.google/resolve
 #   - https://dns.nextdns.io/6a9581 # NextDNS DoH
-#   - https://doh.opendns.com/dns-query # OpenDNS DoH
 #   - https://doh.xeton.dev/dns-query
 #   - https://public.dns.iij.jp/dns-query
 #   - tls://1.0.0.1:853 # Cloudflare DoT
