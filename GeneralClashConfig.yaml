@@ -63,10 +63,10 @@ experimental:
 #   'alpha.clash.dev': '::1'
 
 dns:
-  hosts:
-    'mtalk.google.com': 108.177.125.188
-    'services.googleapis.cn': 74.125.203.94
-    'raw.githubusercontent.com': 151.101.228.133
+# hosts:
+#   'mtalk.google.com': 108.177.125.188
+#   'services.googleapis.cn': 74.125.203.94
+#   'raw.githubusercontent.com': 151.101.228.133
   enable: true # 是否启用 dns false
   ipv6: false
 # listen: 0.0.0.0:53
