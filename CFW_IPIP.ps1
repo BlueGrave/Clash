@@ -7,12 +7,12 @@ cd C:\Users\BlueGrave\.config\clash\service
 Stop-Process -Name 'Clash for*'
 Stop-Process -Name clash-win64 -Force
 Start-Sleep -Seconds 1
-Start-Process -WindowStyle Hidden service.exe stop
-Start-Process -WindowStyle Hidden service.exe uninstall
-# Hackl0us ÖĞ¹ú´óÂ½ IP ¶Î + GeoIP2 Êı¾İ¿â
+Start-Process -WindowStyle Hidden C:\Users\BlueGrave\.config\clash\service\service.exe stop
+Start-Process -WindowStyle Hidden C:\Users\BlueGrave\.config\clash\service\service.exe uninstall
+# Hackl0us ä¸­å›½å¤§é™† IP æ®µ + GeoIP2 æ•°æ®åº“
 # Invoke-WebRequest -Uri "https://github.com/Hackl0us/GeoIP2-CN/raw/release/Country.mmdb" -OutFile "Country.mmdb"
-# alechw china_ip_list + ´¿Õæ CN Êı¾İ¿â + MaxMind
-# ´Ó ACL4SSR »ñÈ¡µ½µÄ£¬Í¬ alechw °æ£¬Í¬ Hackl0us CDN ¼ÓËÙ°æ
+# alechw china_ip_list + çº¯çœŸ CN æ•°æ®åº“ + MaxMind
+# ä» ACL4SSR è·å–åˆ°çš„ï¼ŒåŒ alechw ç‰ˆï¼ŒåŒ Hackl0us CDN åŠ é€Ÿç‰ˆ
 # Invoke-WebRequest -Uri "https://raw.githubusercontent.com/alecthw/mmdb_china_ip_list/release/Country.mmdb" -OutFile "Country.mmdb"
 cd C:\Users\BlueGrave\.config\clash
 Invoke-WebRequest -Uri "https://cdn.jsdelivr.net/gh/alecthw/mmdb_china_ip_list@release/Country.mmdb" -OutFile "Country.mmdb"
