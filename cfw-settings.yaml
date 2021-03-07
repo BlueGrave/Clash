@@ -605,17 +605,17 @@ selectAfterUpdated: false
 mixinText: |-
   mixin: # object
     dns:
-#     hosts:
-#       'mtalk.google.com': 108.177.125.188
-#       'services.googleapis.cn': 74.125.203.94
-#       'raw.githubusercontent.com': 151.101.228.133
+  #   hosts:
+  #     'mtalk.google.com': 108.177.125.188
+  #     'services.googleapis.cn': 74.125.203.94
+  #     'raw.githubusercontent.com': 151.101.228.133
       enable: true
       ipv6: false
       default-nameserver:
         - 223.5.5.5
         - 119.29.29.29
         - 1.0.0.1
-  #     - 1.2.4.8
+        - 1.2.4.8
       enhanced-mode: redir-host # or fake-ip
       nameserver:
         - https://doh.opendns.com/dns-query
@@ -623,8 +623,14 @@ mixinText: |-
         - https://cdn-doh.ssnm.xyz/dns-query
       fallback:
         - https://cloudflare-dns.com/dns-query
+        - https://dns.google/dns-query
+        - https://doh.xeton.dev/dns-query
         - https://public.dns.iij.jp/dns-query
         - https://dns.twnic.tw/dns-query
+        - tls://1.0.0.1:853
+        - tls://1.1.1.1:853
+        - tls://dns.google:853
+        - tls://dns.adguard.com:853
       fallback-filter:
         geoip: true # Default
         ipcidr: # 在这个网段内的 IP 地址会被考虑为污染的 IP
