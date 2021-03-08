@@ -261,6 +261,11 @@ export default {
             label: "BlueGrave_Clash",
             options: [
               {
+                label: "OpenWrt OpenClash",
+                value:
+                  "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/OC_BG.ini"
+              },
+              {
                 label: "Nexitally & YToo",
                 value:
                   "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/Nexitally_YToo_ACL4SSR.ini"
