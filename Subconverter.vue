@@ -80,7 +80,7 @@
                     </el-col>
                     <el-popover placement="bottom" v-model="form.extraset">
                       <el-row>
-                        <el-checkbox v-model="form.new_name" label="Clash New Field"></el-checkbox>
+                        <el-checkbox v-model="form.new_name" label="Clash 新字段名"></el-checkbox>
                       </el-row>
                       <el-row>
                         <el-checkbox v-model="form.udp" label="启用 UDP"></el-checkbox>
@@ -89,10 +89,13 @@
                         <el-checkbox v-model="form.tfo" label="启用 TFO"></el-checkbox>
                       </el-row>
                       <el-row>
-                        <el-checkbox v-model="form.appendType" label="节点类型"></el-checkbox>
+                        <el-checkbox v-model="form.appendType" label="插入节点类型"></el-checkbox>
                       </el-row>
                       <el-row>
                         <el-checkbox v-model="form.sort" label="排序节点"></el-checkbox>
+                      </el-row>
+                      <el-row>
+                        <el-checkbox v-model="form.scv" label="跳过证书验证"></el-checkbox>
                       </el-row>
                       <el-row>
                         <el-checkbox v-model="form.fdn" label="过滤非法节点"></el-checkbox>
@@ -269,31 +272,6 @@ export default {
                 label: "Nexitally & YToo",
                 value:
                   "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/Nexitally_YToo_ACL4SSR.ini"
-              },
-              {
-                label: "w8ves & YToo",
-                value:
-                  "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/w8ves_YToo_ACL4SSR.ini"
-              },
-              {
-                label: "Nexitally",
-                value:
-                  "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/Nexitall_ACL4SSR.ini"
-              },
-              {
-                label: "YToo",
-                value:
-                  "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/YToo_ACL4SSR.ini"
-              },
-              {
-                label: "w8ves",
-                value:
-                  "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/w8ves_ACL4SSR.ini"
-              },
-              {
-                label: "UnlockNE",
-                value:
-                  "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/UnlockNE_ACL4SSR.ini"
               }
             ]
           },
