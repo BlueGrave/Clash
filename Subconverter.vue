@@ -264,7 +264,7 @@ export default {
             label: "BlueGrave_Clash",
             options: [
               {
-                label: "OpenWrt OpenClash",
+                label: "OpenClash Config",
                 value:
                   "https://raw.githubusercontent.com/BlueGrave/Clash/master/Config/OC_BG.ini"
               },
