@@ -73,9 +73,9 @@ dns:
   default-nameserver:
     - 223.5.5.5 # 阿里 DNS
     - 119.29.29.29 # 腾讯 DNS
-    - 1.2.4.8 # CNNIC DNS
     - 1.0.0.1 # Cloudflare DNS
     - 1.1.1.1 # Cloudflare DNS
+#   - 1.2.4.8 # CNNIC DNS
 #   - 114.114.114.114 # 114 DNS
 #   - 180.76.76.76 # 百度 DNS
 #   - 117.50.11.11 # ONE DNS 拦截版 恶意网站拦截、广告过滤
