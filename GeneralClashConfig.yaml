@@ -172,6 +172,7 @@ dns:
 #   - https://dns.nextdns.io/6a9581 # NextDNS DoH
     - tls://1.0.0.1:853 # Cloudflare DoT
     - tls://1.1.1.1:853 # Cloudflare DoT
+#   - tls://cloudflare-dns.com:853  # Cloudflare DoT
     - tls://dns.rubyfish.cn:853 # Rubyfish DoT
     - tls://dns.google:853 # Google DoT
     - tls://dns.adguard.com:853 # Adguard DoT
