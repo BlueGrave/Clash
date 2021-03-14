@@ -626,6 +626,7 @@ mixinText: |-
         - https://dns.twnic.tw/dns-query
         - tls://1.0.0.1:853
         - tls://1.1.1.1:853
+        - tls://dns.rubyfish.cn:853
         - tls://dns.google:853
         - tls://dns.adguard.com:853
       fallback-filter:
