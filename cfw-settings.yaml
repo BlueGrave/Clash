@@ -610,25 +610,40 @@ mixinText: |-
       default-nameserver:
         - 223.5.5.5
         - 119.29.29.29
-        - 1.2.4.8
         - 1.0.0.1
         - 1.1.1.1
+  #     - 1.2.4.8 # CNNIC DNS
+  #     - 114.114.114.114 # 114 DNS
+  #     - 180.76.76.76 # 百度 DNS
+  #     - 117.50.11.11 # ONE DNS 拦截版 恶意网站拦截、广告过滤
+  #     - 117.50.10.10 # ONE DNS 纯净版 直接返回其真实的响应结果
       enhanced-mode: redir-host # or fake-ip
       nameserver:
-        - https://doh.opendns.com/dns-query
-        - https://dns.rubyfish.cn/dns-query
+        - https://223.5.5.5/dns-query # Ali DoH
+        - https://223.6.6.6/dns-query # Ali DoH
+  #     - https://dns.alidns.com/dns-query # Ali DoH
+        - https://dns.pub/dns-query # Tencent DoH
+        - https://doh.opendns.com/dns-query # OpenDNS DoH
+        - https://dns.rubyfish.cn/dns-query # Rubyfish DoH
         - https://cdn-doh.ssnm.xyz/dns-query
       fallback:
-        - https://cloudflare-dns.com/dns-query
-        - https://dns.google/dns-query
+        - https://1.0.0.1/dns-query # Cloudflare DoH
+        - https://1.1.1.1/dns-query # Cloudflare DoH
+  #     - https://cloudflare-dns.com/dns-query # Cloudflare DoH
+        - https://dns.google/dns-query # Google DoH
         - https://doh.xeton.dev/dns-query
         - https://public.dns.iij.jp/dns-query
         - https://dns.twnic.tw/dns-query
-        - tls://1.0.0.1:853
-        - tls://1.1.1.1:853
-        - tls://dns.rubyfish.cn:853
-        - tls://dns.google:853
-        - tls://dns.adguard.com:853
+  #     - https://dns.alidns.com/resolve
+  #     - https://dns.google/resolve
+  #     - https://dns.nextdns.io/6a9581 # NextDNS DoH
+        - tls://1.0.0.1:853 # Cloudflare DoT
+        - tls://1.1.1.1:853 # Cloudflare DoT
+  #     - tls://cloudflare-dns.com:853  # Cloudflare DoT
+        - tls://dns.rubyfish.cn:853 # Rubyfish DoT
+        - tls://dns.google:853 # Google DoT
+        - tls://dns.adguard.com:853 # Adguard DoT
+  #     - tls://6a9581.dns.nextdns.io # NextDNS DoT
       fallback-filter:
         geoip: true # Default
         ipcidr: # 在这个网段内的 IP 地址会被考虑为污染的 IP
