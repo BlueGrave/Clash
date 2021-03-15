@@ -1,6 +1,6 @@
+# 内容：GoogleCNProxyIP 谷歌中国服务 services.googleapis.cn
+# 数量：18条
 payload:
-  # 内容：GoogleCNProxyIP 谷歌中国服务 services.googleapis.cn
-  # 数量：18条
   - '120.232.181.162/32'
   - '120.241.147.226/32'
   - '120.253.253.226/32'
