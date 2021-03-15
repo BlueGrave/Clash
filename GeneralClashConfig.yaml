@@ -71,15 +71,28 @@ dns:
   ipv6: false
 # listen: 0.0.0.0:53
   default-nameserver:
-    - 223.5.5.5 # 阿里 DNS
-    - 119.29.29.29 # 腾讯 DNS
+    - 223.5.5.5 # 阿里 AliDNS
+#   - 223.6.6.6 # 阿里 AliDNS
+    - 119.29.29.29 # DNSPod DNS+
+#   - 182.254.116.116 # DNSPod DNS+
     - 1.0.0.1 # Cloudflare DNS
     - 1.1.1.1 # Cloudflare DNS
-#   - 1.2.4.8 # CNNIC DNS
+#   - 1.2.4.8 # CNNIC SDNS
+#   - 210.2.4.8 # CNNIC SDNS
 #   - 114.114.114.114 # 114 DNS
-#   - 180.76.76.76 # 百度 DNS
-#   - 117.50.11.11 # ONE DNS 拦截版 恶意网站拦截、广告过滤
-#   - 117.50.10.10 # ONE DNS 纯净版 直接返回其真实的响应结果
+#   - 114.114.115.115 # 114 DNS
+#   - 180.76.76.76 # 百度 BaiduDNS
+#   - 117.50.11.11 # oneDNS
+#   - 52.80.66.66 # oneDNS
+#   - 8.8.8.8 # Google DNS
+#   - 8.8.4.4 # Google DNS
+#   - 9.9.9.9 # IBM Quad9
+#   - 208.67.222.222 # OpenDNS
+#   - 208.67.220.220 # OpenDNS
+#   - 199.91.73.222 # V2EX DNS
+#   - 178.79.131.110 # V2EX DNS
+#   - 185.222.222.222 # DNS.SB
+#   - 185.184.222.222 # DNS.SB
 # interface-name: en0 # 出口网卡名称，或者使用下方的自动检测
   enhanced-mode: redir-host # or fake-ip
 #    fake-ip-range: 198.18.0.1/16
@@ -155,6 +168,7 @@ dns:
     - https://223.5.5.5/dns-query # Ali DoH
     - https://223.6.6.6/dns-query # Ali DoH
 #   - https://dns.alidns.com/dns-query # Ali DoH
+#   - https://dns.alidns.com/resolve
     - https://dns.pub/dns-query # Tencent DoH
     - https://doh.opendns.com/dns-query # OpenDNS DoH
     - https://dns.rubyfish.cn/dns-query # Rubyfish DoH
@@ -164,18 +178,19 @@ dns:
     - https://1.1.1.1/dns-query # Cloudflare DoH
 #   - https://cloudflare-dns.com/dns-query # Cloudflare DoH
     - https://dns.google/dns-query # Google DoH
+#   - https://dns.google/resolve
+    - https://dns.quad9.net/dns-query # Quad9 DNS
     - https://doh.xeton.dev/dns-query
     - https://public.dns.iij.jp/dns-query
     - https://dns.twnic.tw/dns-query
-#   - https://dns.alidns.com/resolve
-#   - https://dns.google/resolve
+#   - https://dns.adguard.com/dns-query # Adguard DoH
 #   - https://dns.nextdns.io/6a9581 # NextDNS DoH
     - tls://1.0.0.1:853 # Cloudflare DoT
     - tls://1.1.1.1:853 # Cloudflare DoT
 #   - tls://cloudflare-dns.com:853  # Cloudflare DoT
     - tls://dns.rubyfish.cn:853 # Rubyfish DoT
     - tls://dns.google:853 # Google DoT
-    - tls://dns.adguard.com:853 # Adguard DoT
+#   - tls://dns.adguard.com:853 # Adguard DoT
 #   - tls://6a9581.dns.nextdns.io # NextDNS DoT
   fallback-filter:
      geoip: true # 默认
