@@ -168,7 +168,7 @@ dns:
     - https://dns.alidns.com/dns-query # Ali DoH
 #   - https://dns.alidns.com/resolve
     - https://dns.pub/dns-query # Tencent DoH
-    - https://doh.opendns.com/dns-query # OpenDNS DoH
+    - https://doh.opendns.com/dns-query # Cisco OpenDNS DoH
     - https://dns.rubyfish.cn/dns-query # Rubyfish DoH
   fallback:
     - https://1.0.0.1/dns-query # Cloudflare DoH
@@ -176,8 +176,7 @@ dns:
 #   - https://cloudflare-dns.com/dns-query # Cloudflare DoH
     - https://dns.google/dns-query # Google DoH
 #   - https://dns.google/resolve
-    - https://dns.quad9.net/dns-query # Quad9 DNS
-    - https://doh.xeton.dev/dns-query
+    - https://dns.quad9.net/dns-query # IBM Quad9 DNS
     - https://public.dns.iij.jp/dns-query
     - https://dns.twnic.tw/dns-query
 #   - https://dns.adguard.com/dns-query # Adguard DoH
