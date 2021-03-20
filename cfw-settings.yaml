@@ -623,8 +623,7 @@ mixinText: |-
         - https://1.1.1.1/dns-query # Cloudflare DoH
   #     - https://cloudflare-dns.com/dns-query # Cloudflare DoH
         - https://dns.google/dns-query # Google DoH
-        - https://dns.quad9.net/dns-query # Quad9 DNS
-        - https://doh.xeton.dev/dns-query
+        - https://dns.quad9.net/dns-query # IBM Quad9 DNS
         - https://public.dns.iij.jp/dns-query
         - https://dns.twnic.tw/dns-query
   #     - https://dns.alidns.com/resolve
