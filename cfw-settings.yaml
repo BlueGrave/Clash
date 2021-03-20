@@ -616,13 +616,14 @@ mixinText: |-
       nameserver:
         - https://dns.alidns.com/dns-query # Ali DoH
         - https://dns.pub/dns-query # Tencent DoH
-        - https://doh.opendns.com/dns-query # OpenDNS DoH
+        - https://doh.opendns.com/dns-query # Cisco OpenDNS DoH
         - https://dns.rubyfish.cn/dns-query # Rubyfish DoH
       fallback:
         - https://1.0.0.1/dns-query # Cloudflare DoH
         - https://1.1.1.1/dns-query # Cloudflare DoH
   #     - https://cloudflare-dns.com/dns-query # Cloudflare DoH
         - https://dns.google/dns-query # Google DoH
+        - https://dns.quad9.net/dns-query # Quad9 DNS
         - https://doh.xeton.dev/dns-query
         - https://public.dns.iij.jp/dns-query
         - https://dns.twnic.tw/dns-query
@@ -634,7 +635,7 @@ mixinText: |-
   #     - tls://cloudflare-dns.com:853  # Cloudflare DoT
         - tls://dns.rubyfish.cn:853 # Rubyfish DoT
         - tls://dns.google:853 # Google DoT
-        - tls://dns.adguard.com:853 # Adguard DoT
+  #     - tls://dns.adguard.com:853 # Adguard DoT
   #     - tls://6a9581.dns.nextdns.io # NextDNS DoT
       fallback-filter:
         geoip: true # Default
