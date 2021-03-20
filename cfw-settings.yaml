@@ -622,10 +622,10 @@ mixinText: |-
         - https://1.0.0.1/dns-query # Cloudflare DoH
         - https://1.1.1.1/dns-query # Cloudflare DoH
   #     - https://cloudflare-dns.com/dns-query # Cloudflare DoH
-        - https://dns.google/dns-query # Google DoH
-        - https://dns.quad9.net/dns-query # IBM Quad9 DNS
         - https://public.dns.iij.jp/dns-query
         - https://dns.twnic.tw/dns-query
+        - https://dns.google/dns-query # Google DoH
+        - https://dns.quad9.net/dns-query # IBM Quad9 DNS
   #     - https://dns.alidns.com/resolve
   #     - https://dns.google/resolve
   #     - https://dns.nextdns.io/6a9581 # NextDNS DoH
