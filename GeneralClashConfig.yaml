@@ -76,7 +76,7 @@ dns:
     - 119.29.29.29 # DNSPod DNS+
 #   - 182.254.116.116 # DNSPod DNS+
     - 1.0.0.1 # Cloudflare DNS
-    - 1.1.1.1 # Cloudflare DNS
+#   - 1.1.1.1 # Cloudflare DNS
 #   - 1.2.4.8 # CNNIC SDNS
 #   - 210.2.4.8 # CNNIC SDNS
 #   - 114.114.114.114 # 114 DNS
@@ -84,7 +84,7 @@ dns:
 #   - 180.76.76.76 # 百度 BaiduDNS
 #   - 117.50.11.11 # oneDNS
 #   - 52.80.66.66 # oneDNS
-#   - 8.8.8.8 # Google DNS
+    - 8.8.8.8 # Google DNS
 #   - 8.8.4.4 # Google DNS
 #   - 9.9.9.9 # IBM Quad9
 #   - 208.67.222.222 # OpenDNS
@@ -171,19 +171,19 @@ dns:
     - https://doh.opendns.com/dns-query # Cisco OpenDNS DoH
     - https://dns.rubyfish.cn/dns-query # Rubyfish DoH
   fallback:
-    - https://1.0.0.1/dns-query # Cloudflare DoH
-    - https://1.1.1.1/dns-query # Cloudflare DoH
-#   - https://cloudflare-dns.com/dns-query # Cloudflare DoH
+#   - https://1.0.0.1/dns-query # Cloudflare DoH
+#   - https://1.1.1.1/dns-query # Cloudflare DoH
+    - https://cloudflare-dns.com/dns-query # Cloudflare DoH
+    - https://public.dns.iij.jp/dns-query
+    - https://dns.twnic.tw/dns-query
     - https://dns.google/dns-query # Google DoH
 #   - https://dns.google/resolve
     - https://dns.quad9.net/dns-query # IBM Quad9 DNS
-    - https://public.dns.iij.jp/dns-query
-    - https://dns.twnic.tw/dns-query
 #   - https://dns.adguard.com/dns-query # Adguard DoH
 #   - https://dns.nextdns.io/6a9581 # NextDNS DoH
-    - tls://1.0.0.1:853 # Cloudflare DoT
-    - tls://1.1.1.1:853 # Cloudflare DoT
-#   - tls://cloudflare-dns.com:853  # Cloudflare DoT
+#   - tls://1.0.0.1:853 # Cloudflare DoT
+#   - tls://1.1.1.1:853 # Cloudflare DoT
+    - tls://cloudflare-dns.com:853  # Cloudflare DoT
     - tls://dns.rubyfish.cn:853 # Rubyfish DoT
     - tls://dns.google:853 # Google DoT
 #   - tls://dns.adguard.com:853 # Adguard DoT
