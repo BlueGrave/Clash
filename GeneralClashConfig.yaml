@@ -75,8 +75,8 @@ dns:
 #   - 223.6.6.6 # 阿里 AliDNS
     - 119.29.29.29 # DNSPod DNS+
 #   - 182.254.116.116 # DNSPod DNS+
-    - 1.0.0.1 # Cloudflare DNS
-#   - 1.1.1.1 # Cloudflare DNS
+#   - 1.0.0.1 # Cloudflare DNS
+    - 1.1.1.1 # Cloudflare DNS
 #   - 1.2.4.8 # CNNIC SDNS
 #   - 210.2.4.8 # CNNIC SDNS
 #   - 114.114.114.114 # 114 DNS
@@ -178,7 +178,7 @@ dns:
     - https://dns.twnic.tw/dns-query
     - https://dns.google/dns-query # Google DoH
 #   - https://dns.google/resolve
-    - https://dns.quad9.net/dns-query # IBM Quad9 DNS
+    - https://dns.quad9.net:5053/dns-query # IBM Quad9 DNS
 #   - https://dns.adguard.com/dns-query # Adguard DoH
 #   - https://dns.nextdns.io/6a9581 # NextDNS DoH
 #   - tls://1.0.0.1:853 # Cloudflare DoT
