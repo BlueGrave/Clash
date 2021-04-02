@@ -610,7 +610,7 @@ mixinText: |-
       default-nameserver:
         - 223.5.5.5
         - 119.29.29.29
-        - 8.8.4.4
+        - 1.1.1.1
         - 8.8.8.8
       enhanced-mode: redir-host # or fake-ip
       nameserver:
@@ -626,7 +626,7 @@ mixinText: |-
         - https://public.dns.iij.jp/dns-query
         - https://dns.twnic.tw/dns-query
         - https://dns.google/dns-query # Google DoH
-        - https://dns.quad9.net/dns-query # IBM Quad9 DNS
+        - https://dns.quad9.net:5053/dns-query # IBM Quad9 DNS
   #     - https://dns.google/resolve
   #     - https://dns.nextdns.io/6a9581 # NextDNS DoH
   #     - tls://1.0.0.1:853 # Cloudflare DoT
