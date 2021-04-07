@@ -592,6 +592,7 @@ bypassText: |-
     - 169.254.0.0/16
     - 224.0.0.0/4
     - 240.0.0.0/4
+    - <local>
 mixinText: |-
   mixin: # object
     dns:
