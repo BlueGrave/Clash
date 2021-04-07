@@ -653,3 +653,4 @@ mixinText: |-
 showNotifications: true
 latencyUrl: http://cp.cloudflare.com/generate_204
 latencyTimeout: 3000
+fontFamily: Avenir Light
