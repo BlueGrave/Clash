@@ -75,7 +75,6 @@
                 <el-form-item label-width="0px">
                   <el-row type="flex">
                     <el-col>
-                      <el-checkbox v-model="form.emoji" label="Emoji" border></el-checkbox>
                       <el-checkbox v-model="form.nodeList" label="输出为 Node List" border></el-checkbox>
                     </el-col>
                     <el-popover placement="bottom" v-model="form.extraset">
@@ -87,6 +86,9 @@
                       </el-row>
                       <el-row>
                         <el-checkbox v-model="form.tfo" label="启用 TFO"></el-checkbox>
+                      </el-row>
+                      <el-row>
+                        <el-checkbox v-model="form.emoji" label="Emoji"></el-checkbox>
                       </el-row>
                       <el-row>
                         <el-checkbox v-model="form.appendType" label="插入节点类型"></el-checkbox>
@@ -228,7 +230,7 @@ const project = "https://github.com/CareyWang/sub-web";
 const remoteConfigSample =
   "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/example_external_config.ini";
 const gayhubRelease = "https://github.com/tindy2013/subconverter/releases";
-const defaultBackend = "https://api-bg.now.sh/sub?";
+const defaultBackend = "https://api-bg.vercel.app/sub?";
 const shortUrlBackend = "https://api.suo.yt/short";
 const configUploadBackend = "https://api.wcc.best/config/upload";
 const tgBotLink = "https://t.me/CareyWong_bot";
@@ -375,12 +377,12 @@ export default {
         excludeRemarks: "",
         includeRemarks: "",
         filename: "",
-        emoji: true,
-        nodeList: false,
+        emoji: false,
+        nodeList: true,
         extraset: false,
         sort: false,
-        udp: false,
-        tfo: false,
+        udp: true,
+        tfo: true,
         scv: false,
         fdn: false,
         appendType: false,
