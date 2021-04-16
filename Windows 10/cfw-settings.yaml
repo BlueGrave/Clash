@@ -661,3 +661,5 @@ shortcutSystemProxy: ""
 editor: 0
 fontFamily: Avenir Light
 connProxy: 1
+iconSpeed: true
+trayColorTransparent: true
