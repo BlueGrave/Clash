@@ -94,6 +94,7 @@ dns:
 #   - 185.222.222.222 # DNS.SB
 #   - 185.184.222.222 # DNS.SB
 # interface-name: en0 # 出口网卡名称，或者使用下方的自动检测
+# use-hosts: true
   enhanced-mode: redir-host # or fake-ip
 #    fake-ip-range: 198.18.0.1/16
 #    fake-ip-filter: # fake ip 白名单列表，如果你不知道这个参数的作用，请勿修改
@@ -191,9 +192,9 @@ dns:
   fallback-filter:
      geoip: true # 默认
      ipcidr: # 在这个网段内的 IP 地址会被考虑为被污染的 IP
-       - 240.0.0.0/4
        - 0.0.0.0/32
        - 127.0.0.1/32
+       - 240.0.0.0/4
      domain:
        - +.google.com
        - +.facebook.com
