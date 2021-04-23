@@ -2,7 +2,7 @@ latencyUrl: http://cp.cloudflare.com/generate_204
 latencyTimeout: 3000
 proxyOrder: 0
 connProfile: true
-theme: 1
+theme: 2
 systemTheme: true
 bypassText: |
   bypass:
@@ -630,9 +630,9 @@ mixinText: |-
       fallback-filter:
         geoip: true # Default
         ipcidr: # 在这个网段内的 IP 地址会被考虑为污染的 IP
-          - 240.0.0.0/4
           - 0.0.0.0/32
           - 127.0.0.1/32
+          - 240.0.0.0/4
         domain:
           - +.google.com
           - +.facebook.com
@@ -663,3 +663,4 @@ fontFamily: Avenir Light
 connProxy: 1
 iconSpeed: true
 trayColorTransparent: false
+trayText: 上善若水，厚德载物。
