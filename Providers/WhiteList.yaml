@@ -1,5 +1,5 @@
 payload:
-  # 自己补充的
+  # 自己整理的
   # 排除 AdBlock 的误伤
   - DOMAIN-SUFFIX,tce.alicdn.com
   - DOMAIN-SUFFIX,accounts.logi.com
