@@ -1,0 +1,7 @@
+# 自己整理的黑名单
+
+# 屏蔽 iOS 企业证书
+# DOMAIN,ocsp.apple.com
+
+# 屏蔽勾正数据
+DOMAIN-SUFFIX,gz-data.com
