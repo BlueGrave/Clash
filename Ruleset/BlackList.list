@@ -1,7 +1,9 @@
 # 自己整理的黑名单
 
 # 屏蔽 iOS 企业证书
+# DOMAIN,ocsp-lb.apple.com.akadns.net
 # DOMAIN,ocsp.apple.com
+# DOMAIN,ocsp.g.aaplimg.com
 
 # 屏蔽勾正数据
 DOMAIN-SUFFIX,gz-data.com
