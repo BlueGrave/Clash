@@ -665,4 +665,5 @@ iconSpeed: true
 trayColorTransparent: false
 trayText: 上善若水，厚德载物。
 shortcutRunTrayScript: ""
-hideUnselectableGroup: true
+hideUnselectableGroup: false
+connChainType: 2
