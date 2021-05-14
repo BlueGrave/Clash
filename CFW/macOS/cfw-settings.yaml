@@ -648,9 +648,13 @@ mixinText: |-
       dns-hijack:
         - 8.8.8.8
         - 1.1.1.1
-      macOS-auto-route: true
-      macOS-auto-detect-interface: true # 自动检测出口网卡
+      auto-route: true
+      auto-detect-interface: true # 自动检测出口网卡
 showNotifications: true
 latencyUrl: http://cp.cloudflare.com/generate_204
 latencyTimeout: 3000
 fontFamily: Avenir Light
+trayText: ""
+editor: 0
+runTimeFormat: "hh : mm : ss"
+hideUnselectableGroup: true
