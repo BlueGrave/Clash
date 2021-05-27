@@ -63,6 +63,7 @@ experimental:
 #   'alpha.clash.dev': '::1'
 
 dns:
+# use-hosts: true
 # hosts:
 #   'mtalk.google.com': 108.177.125.188
 #   'services.googleapis.cn': 74.125.203.94
@@ -94,7 +95,6 @@ dns:
 #   - 185.222.222.222 # DNS.SB
 #   - 185.184.222.222 # DNS.SB
 # interface-name: en0 # 出口网卡名称，或者使用下方的自动检测
-# use-hosts: true
   enhanced-mode: redir-host # or fake-ip
 #    fake-ip-range: 198.18.0.1/16
 #    fake-ip-filter: # fake ip 白名单列表，如果你不知道这个参数的作用，请勿修改
