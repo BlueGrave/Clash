@@ -34,6 +34,8 @@ showNotifications: true
 selectAfterUpdated: false
 mixinText: |-
   mixin: # object
+    hosts:
+      'api-bg.vercel.app': '76.223.126.88'
     dns:
       enable: true
       ipv6: false
@@ -50,7 +52,6 @@ mixinText: |-
   #     - https://doh.opendns.com/dns-query # Cisco OpenDNS DoH
   #     - https://dns.rubyfish.cn/dns-query # Rubyfish DoH
       fallback:
-        - 8.8.8.8
         - https://dns.google/dns-query # Google DoH
         - https://cloudflare-dns.com/dns-query # Cloudflare DoH
         - https://dns.adguard.com/dns-query
