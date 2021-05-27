@@ -176,12 +176,12 @@ dns:
     - https://dns.twnic.tw/dns-query
     - https://dns.google/dns-query # Google DoH
 #   - https://dns.google/resolve
-#   - https://cloudflare-dns.com/dns-query # Cloudflare DoH
+    - https://cloudflare-dns.com/dns-query # Cloudflare DoH
 #   - https://dns.quad9.net:5053/dns-query # IBM Quad9 DNS
 #   - https://dns.adguard.com/dns-query # Adguard DoH
 #   - https://dns.nextdns.io/6a9581 # NextDNS DoH
 #   - tls://cloudflare-dns.com:853  # Cloudflare DoT
-#   - tls://dns.rubyfish.cn:853 # Rubyfish DoT
+    - tls://dns.rubyfish.cn:853 # Rubyfish DoT
     - tls://dns.google:853 # Google DoT
 #   - tls://dns.adguard.com:853 # Adguard DoT
 #   - tls://6a9581.dns.nextdns.io # NextDNS DoT
