@@ -34,36 +34,35 @@ bypassText: |-
     - <local>
 mixinText: |-
   mixin: # object
+    hosts:
+      'api-bg.vercel.app': '76.223.126.88'
     dns:
       enable: true
       ipv6: false
       default-nameserver:
         - 223.5.5.5
         - 119.29.29.29
-        - 1.1.1.1
         - 8.8.8.8
+  #   interface-name: 以太网
       enhanced-mode: redir-host # or fake-ip
       nameserver:
         - https://dns.alidns.com/dns-query # Ali DoH
   #     - https://dns.alidns.com/resolve
         - https://dns.pub/dns-query # Tencent DoH
-        - https://doh.opendns.com/dns-query # Cisco OpenDNS DoH
-        - https://dns.rubyfish.cn/dns-query # Rubyfish DoH
+  #     - https://doh.opendns.com/dns-query # Cisco OpenDNS DoH
+  #     - https://dns.rubyfish.cn/dns-query # Rubyfish DoH
       fallback:
-  #     - https://1.0.0.1/dns-query # Cloudflare DoH
-  #     - https://1.1.1.1/dns-query # Cloudflare DoH
+        - https://dns.google/dns-query # Google DoH
         - https://cloudflare-dns.com/dns-query # Cloudflare DoH
+        - https://dns.adguard.com/dns-query
         - https://public.dns.iij.jp/dns-query
         - https://dns.twnic.tw/dns-query
-        - https://dns.google/dns-query # Google DoH
-        - https://dns.quad9.net:5053/dns-query # IBM Quad9 DNS
+  #     - https://dns.quad9.net:5053/dns-query # IBM Quad9 DNS
   #     - https://dns.google/resolve
   #     - https://dns.nextdns.io/6a9581 # NextDNS DoH
-  #     - tls://1.0.0.1:853 # Cloudflare DoT
-  #     - tls://1.1.1.1:853 # Cloudflare DoT
-        - tls://cloudflare-dns.com:853  # Cloudflare DoT
-        - tls://dns.rubyfish.cn:853 # Rubyfish DoT
-        - tls://dns.google:853 # Google DoT
+  #     - tls://cloudflare-dns.com:853  # Cloudflare DoT
+  #     - tls://dns.rubyfish.cn:853 # Rubyfish DoT
+  #     - tls://dns.google:853 # Google DoT
   #     - tls://dns.adguard.com:853 # Adguard DoT
   #     - tls://6a9581.dns.nextdns.io # NextDNS DoT
       fallback-filter:
