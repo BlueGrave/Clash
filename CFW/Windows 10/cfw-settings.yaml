@@ -46,25 +46,23 @@ mixinText: |-
   #   interface-name: 以太网
       enhanced-mode: redir-host # or fake-ip
       nameserver:
-        - https://dns.alidns.com/dns-query # Ali DoH
-  #     - https://dns.alidns.com/resolve
-        - https://dns.pub/dns-query # Tencent DoH
-  #     - https://doh.opendns.com/dns-query # Cisco OpenDNS DoH
-  #     - https://dns.rubyfish.cn/dns-query # Rubyfish DoH
+        - https://dns.alidns.com/dns-query
+        - https://dns.pub/dns-query
+        - https://doh.opendns.com/dns-query
+        - https://dns.rubyfish.cn/dns-query
       fallback:
-        - https://dns.google/dns-query # Google DoH
-        - https://cloudflare-dns.com/dns-query # Cloudflare DoH
-        - https://dns.adguard.com/dns-query
         - https://public.dns.iij.jp/dns-query
+        - https://jp.tiarap.org/dns-query
+        - https://dns.google/dns-query
+        - https://dns.adguard.com/dns-query
+        - https://cloudflare-dns.com/dns-query
         - https://dns.twnic.tw/dns-query
-  #     - https://dns.quad9.net:5053/dns-query # IBM Quad9 DNS
-  #     - https://dns.google/resolve
-  #     - https://dns.nextdns.io/6a9581 # NextDNS DoH
-  #     - tls://cloudflare-dns.com:853  # Cloudflare DoT
-  #     - tls://dns.rubyfish.cn:853 # Rubyfish DoT
-  #     - tls://dns.google:853 # Google DoT
-  #     - tls://dns.adguard.com:853 # Adguard DoT
-  #     - tls://6a9581.dns.nextdns.io # NextDNS DoT
+        - tls://public.dns.iij.jp
+        - tls://jp.tiar.app
+        - tls://dns.google
+        - tls://dns.adguard.com
+        - tls://1.1.1.1
+        - tls://101.101.101.101
       fallback-filter:
         geoip: true # Default
         ipcidr: # 在这个网段内的 IP 地址会被考虑为污染的 IP
@@ -103,6 +101,6 @@ iconSpeed: true
 trayColorTransparent: false
 trayText: 上善若水，厚德载物。
 shortcutRunTrayScript: ""
-hideUnselectableGroup: false
+hideUnselectableGroup: true
 connChainType: 2
 runTimeFormat: "hh : mm : ss"
