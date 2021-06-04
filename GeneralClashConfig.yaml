@@ -184,6 +184,7 @@ dns:
 #   - tls://cloudflare-dns.com:853  # Cloudflare DoT
     - tls://dns.rubyfish.cn:853 # Rubyfish DoT
     - tls://dns.google:853 # Google DoT
+    - tls://public.dns.iij.jp # IIJ.JP DoT
 #   - tls://dns.adguard.com:853 # Adguard DoT
 #   - tls://6a9581.dns.nextdns.io # NextDNS DoT
   fallback-filter:
