@@ -168,25 +168,19 @@ dns:
 #      - "*.*.xboxlive.com"
   nameserver:
     - https://dns.alidns.com/dns-query # Ali DoH
-#   - https://dns.alidns.com/resolve
     - https://dns.pub/dns-query # Tencent DoH
-#   - https://doh.opendns.com/dns-query # Cisco OpenDNS DoH
-#   - https://dns.rubyfish.cn/dns-query # Rubyfish DoH
+    - https://dns.rubyfish.cn/dns-query # Rubyfish DoH
   fallback:
-    - https://public.dns.iij.jp/dns-query
+    - https://public.dns.iij.jp/dns-query # IIJ.JP DoH
+    - https://doh.tiarap.org/dns-query
     - https://dns.twnic.tw/dns-query
     - https://dns.google/dns-query # Google DoH
-#   - https://dns.google/resolve
     - https://cloudflare-dns.com/dns-query # Cloudflare DoH
-#   - https://dns.quad9.net:5053/dns-query # IBM Quad9 DNS
-#   - https://dns.adguard.com/dns-query # Adguard DoH
-#   - https://dns.nextdns.io/6a9581 # NextDNS DoH
-#   - tls://cloudflare-dns.com:853  # Cloudflare DoT
-    - tls://dns.rubyfish.cn:853 # Rubyfish DoT
-    - tls://dns.google:853 # Google DoT
+    - https://dns.adguard.com/dns-query # Adguard DoH
     - tls://public.dns.iij.jp # IIJ.JP DoT
-#   - tls://dns.adguard.com:853 # Adguard DoT
-#   - tls://6a9581.dns.nextdns.io # NextDNS DoT
+    - tls://cloudflare-dns.com:853  # Cloudflare DoT
+    - tls://dns.google:853 # Google DoT
+    - tls://dns.adguard.com:853 # Adguard DoT
   fallback-filter:
      geoip: true # 默认
      ipcidr: # 在这个网段内的 IP 地址会被考虑为被污染的 IP
