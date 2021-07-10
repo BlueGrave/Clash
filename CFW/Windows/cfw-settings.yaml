@@ -94,7 +94,7 @@ fontFamily: Avenir Light
 connProxy: 1
 iconSpeed: true
 trayColorTransparent: false
-trayText: 上善若水，厚德载物。
+trayText: "Hovic "
 shortcutRunTrayScript: ""
 hideUnselectableGroup: true
 connChainType: 2
