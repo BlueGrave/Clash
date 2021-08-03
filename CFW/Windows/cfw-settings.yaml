@@ -47,7 +47,7 @@ mixinText: |-
       enhanced-mode: redir-host # or fake-ip
       nameserver:
         - https://dns.alidns.com/dns-query
-        - https://dns.pub/dns-query
+        - https://doh.pub/dns-query
         - https://dns.rubyfish.cn/dns-query
       fallback:
         - https://public.dns.iij.jp/dns-query
