@@ -168,7 +168,7 @@ dns:
 #      - "*.*.xboxlive.com"
   nameserver:
     - https://dns.alidns.com/dns-query # Ali DoH
-    - https://dns.pub/dns-query # Tencent DoH
+    - https://doh.pub/dns-query # Tencent DoH
     - https://dns.rubyfish.cn/dns-query # Rubyfish DoH
   fallback:
     - https://public.dns.iij.jp/dns-query # IIJ.JP DoH
