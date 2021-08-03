@@ -48,7 +48,7 @@ mixinText: |-
       nameserver:
         - https://dns.alidns.com/dns-query # Ali DoH
   #     - https://dns.alidns.com/resolve
-        - https://dns.pub/dns-query # Tencent DoH
+        - https://doh.pub/dns-query # Tencent DoH
   #     - https://doh.opendns.com/dns-query # Cisco OpenDNS DoH
   #     - https://dns.rubyfish.cn/dns-query # Rubyfish DoH
       fallback:
