@@ -4,7 +4,7 @@
       <el-col>
         <el-card>
           <div slot="header">
-            Subscription Converter
+            Subscription Converter        由 BlueGrave 定制且自用
             <svg-icon icon-class="github" style="margin-left: 20px" @click="goToProject" />
 
             <div style="display: inline-block; position:absolute; right: 20px">{{ backendVersion }}</div>
@@ -76,7 +76,11 @@
                   <el-row type="flex">
                     <el-col>
                       <el-checkbox v-model="form.nodeList" label="Node List" border></el-checkbox>
+                    </el-col>
+                    <el-col>
                       <el-checkbox v-model="form.udp" label="UDP" border></el-checkbox>
+                    </el-col>
+                    <el-col>
                       <el-checkbox v-model="form.tfo" label="TFO" border></el-checkbox>
                     </el-col>
                     <el-popover placement="bottom" v-model="form.extraset">
