@@ -35,10 +35,13 @@ selectAfterUpdated: false
 mixinText: |-
   mixin: # object
     hosts:
-      'api-bg.vercel.app': '76.223.126.88'
+      'api-bg.vercel.app': 76.223.126.88
+      'sub-bg.vercel.app': 76.223.126.88
+      'vercel.com': 76.223.126.88
+      'www.vercel.com': 76.223.126.88
     dns:
       enable: true
-      ipv6: false
+      ipv6: true
       default-nameserver:
         - 223.5.5.5
         - 119.29.29.29
@@ -93,7 +96,7 @@ editor: 0
 fontFamily: Avenir Light
 connProxy: 1
 iconSpeed: true
-trayColorTransparent: false
+trayColorTransparent: true
 trayText: "Hovic "
 shortcutRunTrayScript: ""
 hideUnselectableGroup: true
