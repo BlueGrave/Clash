@@ -75,20 +75,14 @@
                 <el-form-item label-width="0px">
                   <el-row type="flex">
                     <el-col>
-                      <el-checkbox v-model="form.nodeList" label="输出为 Node List" border></el-checkbox>
+                      <el-checkbox v-model="form.nodeList" label="Node List" border></el-checkbox>
+                      <el-checkbox v-model="form.udp" label="UDP" border></el-checkbox>
+                      <el-checkbox v-model="form.tfo" label="TFO" border></el-checkbox>
+                      <el-checkbox v-model="form.emoji" label="Emoji" border></el-checkbox>
                     </el-col>
                     <el-popover placement="bottom" v-model="form.extraset">
                       <el-row>
                         <el-checkbox v-model="form.new_name" label="Clash 新字段名"></el-checkbox>
-                      </el-row>
-                      <el-row>
-                        <el-checkbox v-model="form.udp" label="启用 UDP"></el-checkbox>
-                      </el-row>
-                      <el-row>
-                        <el-checkbox v-model="form.tfo" label="启用 TFO"></el-checkbox>
-                      </el-row>
-                      <el-row>
-                        <el-checkbox v-model="form.emoji" label="Emoji"></el-checkbox>
                       </el-row>
                       <el-row>
                         <el-checkbox v-model="form.appendType" label="插入节点类型"></el-checkbox>
@@ -247,14 +241,14 @@ export default {
       options: {
         clientTypes: {
           Clash: "clash",
-          ClashR: "clashr",
-          Surge2: "surge&ver=2",
-          Surge3: "surge&ver=3",
           Surge4: "surge&ver=4",
-          Quantumult: "quan",
           QuantumultX: "quanx",
-          Surfboard: "surfboard",
           Loon: "loon",
+          Surge3: "surge&ver=3",
+          Surge2: "surge&ver=2",
+          Quantumult: "quan",
+          Surfboard: "surfboard",
+          ClashR: "clashr",
           ss: "ss",
           ssr: "ssr",
           ssd: "ssd",
