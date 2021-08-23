@@ -78,11 +78,13 @@
                       <el-checkbox v-model="form.nodeList" label="Node List" border></el-checkbox>
                       <el-checkbox v-model="form.udp" label="UDP" border></el-checkbox>
                       <el-checkbox v-model="form.tfo" label="TFO" border></el-checkbox>
-                      <el-checkbox v-model="form.emoji" label="Emoji" border></el-checkbox>
                     </el-col>
                     <el-popover placement="bottom" v-model="form.extraset">
                       <el-row>
-                        <el-checkbox v-model="form.new_name" label="Clash 新字段名"></el-checkbox>
+                        <el-checkbox v-model="form.new_name" label="Clash New Field"></el-checkbox>
+                      </el-row>
+                      <el-row>
+                        <el-checkbox v-model="form.emoji" label="Emoji"></el-checkbox>
                       </el-row>
                       <el-row>
                         <el-checkbox v-model="form.appendType" label="插入节点类型"></el-checkbox>
