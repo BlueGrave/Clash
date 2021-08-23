@@ -76,11 +76,7 @@
                   <el-row type="flex">
                     <el-col>
                       <el-checkbox v-model="form.nodeList" label="Node List" border></el-checkbox>
-                    </el-col>
-                    <el-col>
                       <el-checkbox v-model="form.udp" label="UDP" border></el-checkbox>
-                    </el-col>
-                    <el-col>
                       <el-checkbox v-model="form.tfo" label="TFO" border></el-checkbox>
                     </el-col>
                     <el-popover placement="bottom" v-model="form.extraset">
