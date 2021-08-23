@@ -4,7 +4,7 @@
       <el-col>
         <el-card>
           <div slot="header">
-            Subscription Converter        由 BlueGrave 定制且自用
+            Subscription Converter ---- 由 BlueGrave 定制且自用
             <svg-icon icon-class="github" style="margin-left: 20px" @click="goToProject" />
 
             <div style="display: inline-block; position:absolute; right: 20px">{{ backendVersion }}</div>
@@ -75,16 +75,14 @@
                 <el-form-item label-width="0px">
                   <el-row type="flex">
                     <el-col>
-                      <el-checkbox v-model="form.nodeList" label="Node List" border></el-checkbox>
-                      <el-checkbox v-model="form.udp" label="UDP" border></el-checkbox>
-                      <el-checkbox v-model="form.tfo" label="TFO" border></el-checkbox>
+                      <el-checkbox-button v-model="form.nodeList" label="Node List"></el-checkbox-button>
+                      <el-checkbox-button v-model="form.udp" label="UDP"></el-checkbox-button>
+                      <el-checkbox-button v-model="form.tfo" label="TFO"></el-checkbox-button>
+                      <el-checkbox-button v-model="form.emoji" label="Emoji"></el-checkbox-button>
                     </el-col>
                     <el-popover placement="bottom" v-model="form.extraset">
                       <el-row>
                         <el-checkbox v-model="form.new_name" label="Clash New Field"></el-checkbox>
-                      </el-row>
-                      <el-row>
-                        <el-checkbox v-model="form.emoji" label="Emoji"></el-checkbox>
                       </el-row>
                       <el-row>
                         <el-checkbox v-model="form.appendType" label="插入节点类型"></el-checkbox>
@@ -98,9 +96,6 @@
                       <el-row>
                         <el-checkbox v-model="form.fdn" label="过滤非法节点"></el-checkbox>
                       </el-row>
-                      <el-button slot="reference">更多选项</el-button>
-                    </el-popover>
-                    <el-popover placement="bottom" style="margin-left: 20px">
                       <el-row>
                         <el-checkbox v-model="form.tpl.surge.doh" label="Surge.DoH"></el-checkbox>
                       </el-row>
@@ -110,7 +105,7 @@
                       <el-row>
                         <el-checkbox v-model="form.insert" label="网易云"></el-checkbox>
                       </el-row>
-                      <el-button slot="reference">定制功能</el-button>
+                      <el-button slot="reference">更多选项</el-button>
                     </el-popover>
                   </el-row>
                 </el-form-item>
@@ -152,17 +147,17 @@
                   @click="makeUrl"
                   :disabled="form.sourceSubUrl.length === 0"
                 >生成订阅链接</el-button>
-                <el-button
+                <!-- <el-button
                   style="width: 120px"
                   type="danger"
                   @click="makeShortUrl"
                   :loading="loading"
                   :disabled="customSubUrl.length === 0"
-                >生成短链接</el-button>
+                >生成短链接</el-button> -->
                 <!-- <el-button style="width: 120px" type="primary" @click="surgeInstall" icon="el-icon-connection">一键导入Surge</el-button> -->
               </el-form-item>
 
-              <el-form-item label-width="0px" style="text-align: center">
+              <!-- <el-form-item label-width="0px" style="text-align: center">
                 <el-button
                   style="width: 120px"
                   type="primary"
@@ -177,7 +172,7 @@
                   icon="el-icon-connection"
                   :disabled="customSubUrl.length === 0"
                 >一键导入Clash</el-button>
-              </el-form-item>
+              </el-form-item> -->
             </el-form>
           </el-container>
         </el-card>
@@ -407,7 +402,7 @@ export default {
     this.isPC = this.$getOS().isPc;
   },
   mounted() {
-    this.form.clientType = "clash";
+    this.form.clientType = "Surge4";
     this.notify();
     this.getBackendVersion();
   },
