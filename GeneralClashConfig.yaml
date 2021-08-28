@@ -18,9 +18,9 @@ mixed-port: 7890
 allow-lan: true
 
 # 仅在将allow-lan设置为true时适用
-# #"*": 绑定所有IP地址
-# #192.168.122.11: 绑定单个IPv4地址
-# #"[aaaa::a8aa:ff:fe09:57d8]": 绑定单个IPv6地址
+# "*": 绑定所有IP地址
+# 192.168.122.11: 绑定单个IPv4地址
+# "[aaaa::a8aa:ff:fe09:57d8]": 绑定单个IPv6地址
 # bind-address: "*"
 # ipv6: true
 
@@ -62,8 +62,6 @@ experimental:
 #   '*.clash.dev': 127.0.0.1
 #   'alpha.clash.dev': '::1'
 
-
-# hosts:
 #   'mtalk.google.com': 108.177.125.188
 #   'services.googleapis.cn': 74.125.203.94
 #   'raw.githubusercontent.com': 151.101.228.133
