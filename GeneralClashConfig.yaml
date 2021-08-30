@@ -62,7 +62,12 @@ experimental:
 #   '*.clash.dev': 127.0.0.1
 #   'alpha.clash.dev': '::1'
 
+#   Google FCM (Firebase Cloud Messaging)
 #   'mtalk.google.com': 108.177.125.188
+#   Google Download (Android Studio / Google Chrome)
+#   'dl.google.com': 180.163.151.161
+#   'dl.l.google.com': 180.163.151.161
+
 #   'services.googleapis.cn': 74.125.203.94
 #   'raw.githubusercontent.com': 151.101.228.133
 
