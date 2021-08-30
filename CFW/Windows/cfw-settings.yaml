@@ -42,6 +42,7 @@ mixinText: |-
     dns:
       enable: true
       ipv6: true
+      listen: 127.0.0.1:53
       default-nameserver:
         - 223.5.5.5
         - 119.29.29.29
@@ -95,7 +96,7 @@ shortcutSystemProxy: ""
 editor: 0
 fontFamily: Avenir Light
 connProxy: 1
-iconSpeed: true
+iconSpeed: false
 trayColorTransparent: true
 trayText: "Hovic "
 shortcutRunTrayScript: ""
