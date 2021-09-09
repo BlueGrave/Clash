@@ -68,6 +68,11 @@ experimental:
 #   'dl.google.com': 180.163.151.161
 #   'dl.l.google.com': 180.163.151.161
 
+#   'api-bg.vercel.app': 76.223.126.88
+#   'sub-bg.vercel.app': 76.223.126.88
+#   'vercel.com': 76.223.126.88
+#   'www.vercel.com': 76.223.126.88
+
 #   'services.googleapis.cn': 74.125.203.94
 #   'raw.githubusercontent.com': 151.101.228.133
 
@@ -75,6 +80,35 @@ dns:
   enable: true # 是否启用 dns false
   ipv6: false
 # listen: 0.0.0.0:53
+  nameserver-policy:
+    '*.tw': 1.1.1.1
+    'testflight.apple.com': 8.8.8.8
+    '*.tmall.com': 223.5.5.5
+    '*.taobao.com': 223.5.5.5
+    '*.alicdn.com': 223.5.5.5
+    '*.aliyun.com': 223.5.5.5
+    '*.alipay*.com': 223.5.5.5
+    '*.alibaba*.com': 223.5.5.5
+    '*.alimama*.com': 223.5.5.5
+    '*.qq.com': 119.29.29.29
+    '*.tencent.com': 119.29.29.29
+    '*.weixin.com': 119.29.29.29
+    '*.qpic.cn': 119.29.29.29
+    '*.jd.com': 119.29.29.29
+    '*.bilibili.com': 119.29.29.29
+    'hdslb.com': 119.29.29.29
+    '*.163.com': 119.29.29.29
+    '*.126.com': 119.29.29.29
+    '*.126.net': 119.29.29.29
+    '*.127.net': 119.29.29.29
+    '*.netease.com': 119.29.29.29
+    '*.10010.com': 119.29.29.29
+    '*.unicompayment.com': 119.29.29.29
+    '*.vercel.app': 119.29.29.29
+    '*.vercel.com': 119.29.29.29
+    '*.ximalaya.com': 119.29.29.29
+    '*.baidu.com': 180.76.76.76
+    '*.bdstatic.com': 180.76.76.76
   default-nameserver:
     - 223.5.5.5 # 阿里 AliDNS
 #   - 223.6.6.6 # 阿里 AliDNS
@@ -169,6 +203,7 @@ dns:
 #      - "*.*.stun.playstation.net"
 #      - xbox.*.*.microsoft.com
 #      - "*.*.xboxlive.com"
+# use-hosts: true
   nameserver:
     - https://dns.alidns.com/dns-query # Ali DoH
     - https://doh.pub/dns-query # Tencent DoH
@@ -193,6 +228,7 @@ dns:
 #   - tls://101.101.101.101
   fallback-filter:
      geoip: true # 默认
+     geoip-code: CN
      ipcidr: # 在这个网段内的 IP 地址会被考虑为被污染的 IP
        - 0.0.0.0/32
        - 127.0.0.1/32
