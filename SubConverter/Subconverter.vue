@@ -402,7 +402,7 @@ export default {
     this.isPC = this.$getOS().isPc;
   },
   mounted() {
-    this.form.clientType = "Surge4";
+    this.form.clientType = "surge&ver=4";
     this.notify();
     this.getBackendVersion();
   },
