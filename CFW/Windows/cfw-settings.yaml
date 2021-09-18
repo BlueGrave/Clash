@@ -78,8 +78,7 @@ mixinText: |-
         - 223.5.5.5
         - 119.29.29.29
         - 8.8.8.8
-  #   interface-name: 以太网
-      enhanced-mode: redir-host # or fake-ip
+      enhanced-mode: redir-host
       nameserver:
         - https://dns.alidns.com/dns-query
         - https://doh.pub/dns-query
@@ -88,10 +87,10 @@ mixinText: |-
         - https://public.dns.iij.jp/dns-query
         - https://dns.google/dns-query
         - https://cloudflare-dns.com/dns-query
-        - https://jp.tiar.app/dns-query
       fallback-filter:
-        geoip: true # Default
-        ipcidr: # 在这个网段内的 IP 地址会被考虑为污染的 IP
+        geoip: true
+        geoip-code: CN
+        ipcidr:
           - 0.0.0.0/32
           - 127.0.0.1/32
           - 240.0.0.0/4
@@ -104,13 +103,13 @@ mixinText: |-
           - +.google.cn
           - +.googleapis.cn
           - +.gvt1.com
-    tun: # 需要开启 Service Mode
+    tun:
       enable: true
       stack: system
       dns-hijack:
         - 198.18.0.2:53
       auto-route: true
-      auto-detect-interface: true # 自动检测出口网卡
+      auto-detect-interface: true
 connProxy: 2
 connProfile: true
 connMode: true
