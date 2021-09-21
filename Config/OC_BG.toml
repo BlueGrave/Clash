@@ -255,106 +255,106 @@ interval = 600
 # [[rulesets]]
 # group = "REJECT"
 # ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ZhihuAds/ZhihuAds.list"
-# 
-# [[rulesets]]
-# group = "AppleOS Update"
-# ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Ruleset/AppleOS_Update.list"
-# 
-# [[rulesets]]
-# group = "DEFAULT"
-# ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Ruleset/RedList.list"
-# 
-# [[rulesets]]
-# group = "Netflix"
-# ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Netflix/Netflix.list"
-# 
-# [[rulesets]]
-# group = "Netflix"
-# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/AmazonIp.list"
-# 
-# [[rulesets]]
-# group = "YouTube"
-# ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTubeMusic/YouTubeMusic.list"
-# 
-# [[rulesets]]
-# group = "YouTube"
-# ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list"
-# 
-# [[rulesets]]
-# group = "Emby"
-# ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Ruleset/Emby.list"
-# 
-# [[rulesets]]
-# group = "Spotify"
-# ruleset = "https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Surge/Spotify/Spotify.list"
-# 
-# [[rulesets]]
-# group = "DEFAULT"
-# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list"
-# 
-# [[rulesets]]
-# group = "PayPal"
-# ruleset = "https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/PayPal.list"
-# 
-# [[rulesets]]
-# group = "GitHub"
-# ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list"
-# 
-# [[rulesets]]
-# group = "OneDrive"
-# ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OneDrive/OneDrive.list"
-# 
-# [[rulesets]]
-# group = "GoogleDrive"
-# ruleset = "https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Google/GoogleDrive.list"
-# 
-# [[rulesets]]
-# group = "Google"
-# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list"
-# 
-# [[rulesets]]
-# group = "Google"
-# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleCN.list"
-# 
-# [[rulesets]]
-# group = "Google"
-# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Google.list"
-# 
-# [[rulesets]]
-# group = "Telegram"
-# ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list"
-# 
-# [[rulesets]]
-# group = "Speedtest"
-# ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Speedtest/Speedtest.list"
-# 
-# [[rulesets]]
-# group = "Games"
-# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Steam.list"
-# 
-# [[rulesets]]
-# group = "Games"
-# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Epic.list"
-# 
-# [[rulesets]]
-# group = "DEFAULT"
-# ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TestFlight/TestFlight.list"
-# 
-# [[rulesets]]
-# group = "Apple"
-# ruleset = "https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Surge/AppStore/AppStore.list"
-# 
-# [[rulesets]]
-# group = "Apple"
-# ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple.list"
-# 
-# [[rulesets]]
-# group = "DIRECT"
-# ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Microsoft/Microsoft.list"
-# 
-# [[rulesets]]
-# group = "DIRECT"
-# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list"
+
+[[rulesets]]
+group = "AppleOS Update"
+ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Ruleset/AppleOS_Update.list"
+
+[[rulesets]]
+group = "DEFAULT"
+ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Ruleset/RedList.list"
+
+[[rulesets]]
+group = "Netflix"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Netflix/Netflix.list"
+
+[[rulesets]]
+group = "Netflix"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/AmazonIp.list"
+
+[[rulesets]]
+group = "YouTube"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTubeMusic/YouTubeMusic.list"
+
+[[rulesets]]
+group = "YouTube"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list"
+
+[[rulesets]]
+group = "Emby"
+ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Ruleset/Emby.list"
+
+[[rulesets]]
+group = "Spotify"
+ruleset = "https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Surge/Spotify/Spotify.list"
+
+[[rulesets]]
+group = "DEFAULT"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list"
+
+[[rulesets]]
+group = "PayPal"
+ruleset = "https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/PayPal.list"
+
+[[rulesets]]
+group = "GitHub"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list"
+
+[[rulesets]]
+group = "OneDrive"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OneDrive/OneDrive.list"
+
+[[rulesets]]
+group = "GoogleDrive"
+ruleset = "https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Google/GoogleDrive.list"
+
+[[rulesets]]
+group = "Google"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list"
+
+[[rulesets]]
+group = "Google"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleCN.list"
+
+[[rulesets]]
+group = "Google"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Google.list"
+
+[[rulesets]]
+group = "Telegram"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list"
+
+[[rulesets]]
+group = "Speedtest"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Speedtest/Speedtest.list"
+
+[[rulesets]]
+group = "Games"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Steam.list"
+
+[[rulesets]]
+group = "Games"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Epic.list"
+
+[[rulesets]]
+group = "DEFAULT"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TestFlight/TestFlight.list"
+
+[[rulesets]]
+group = "Apple"
+ruleset = "https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Surge/AppStore/AppStore.list"
+
+[[rulesets]]
+group = "Apple"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple.list"
+
+[[rulesets]]
+group = "DIRECT"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Microsoft/Microsoft.list"
+
+[[rulesets]]
+group = "DIRECT"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list"
 
 [[rulesets]]
 group = "DIRECT"
