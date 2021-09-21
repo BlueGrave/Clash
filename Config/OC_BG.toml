@@ -8,14 +8,14 @@ clash_rule_base = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Gene
 name = "DEFAULT"
 type = "select"
 rule = [
-    "[]Blinkload | 香港"
-    "[]Blinkload | 日本"
-    "[]Blinkload | 新加坡"
-    "[]Blinkload | 美国"
-    "[]FlowerCloud | 香港"
-    "[]FlowerCloud | 新加坡"
-    "[]FlowerCloud | 日本"
-    "[]FlowerCloud | 美国"
+    "[]Blinkload | 香港",
+    "[]Blinkload | 日本",
+    "[]Blinkload | 新加坡",
+    "[]Blinkload | 美国",
+    "[]FlowerCloud | 香港",
+    "[]FlowerCloud | 新加坡",
+    "[]FlowerCloud | 日本",
+    "[]FlowerCloud | 美国",
     "[]PROXY"
 ]
 
@@ -23,7 +23,7 @@ rule = [
 name = "YouTube"
 type = "select"
 rule = [
-    "[]DEFAULT"
+    "[]DEFAULT",
     "[]PROXY"
 ]
 
@@ -31,8 +31,8 @@ rule = [
 name = "Netflix"
 type = "select"
 rule = [
-    "[]Blinkload | 新加坡"
-    "[]FlowerCloud | 新加坡"
+    "[]Blinkload | 新加坡",
+    "[]FlowerCloud | 新加坡",
     "[]PROXY"
 ]
 
@@ -40,7 +40,7 @@ rule = [
 name = "Emby"
 type = "select"
 rule = [
-    "[]FlowerCloud | Emby 专用"
+    "[]FlowerCloud | Emby 专用",
     "[]PROXY"
 ]
 
@@ -48,9 +48,9 @@ rule = [
 name = "Spotify"
 type = "select"
 rule = [
-    "[]DEFAULT"
-    "[]Blinkload | 台湾"
-    "[]FlowerCloud | 台湾"
+    "[]DEFAULT",
+    "[]Blinkload | 台湾",
+    "[]FlowerCloud | 台湾",
     "[]PROXY"
 ]
 
@@ -58,9 +58,9 @@ rule = [
 name = "PayPal"
 type = "select"
 rule = [
-    "[]DEFAULT"
-    "[]Blinkload | 台湾"
-    "[]FlowerCloud | 台湾"
+    "[]DEFAULT",
+    "[]Blinkload | 台湾",
+    "[]FlowerCloud | 台湾",
     "[]PROXY"
 ]
 
@@ -68,7 +68,7 @@ rule = [
 name = "GitHub"
 type = "select"
 rule = [
-    "[]DEFAULT"
+    "[]DEFAULT",
     "[]PROXY"
 ]
 
@@ -76,7 +76,7 @@ rule = [
 name = "OneDrive"
 type = "select"
 rule = [
-    "[]DEFAULT"
+    "[]DEFAULT",
     "[]PROXY"
 ]
 
@@ -84,7 +84,7 @@ rule = [
 name = "GoogleDrive"
 type = "select"
 rule = [
-    "[]DEFAULT"
+    "[]DEFAULT",
     "[]PROXY"
 ]
 
@@ -92,7 +92,7 @@ rule = [
 name = "Google"
 type = "select"
 rule = [
-    "[]DEFAULT"
+    "[]DEFAULT",
     "[]PROXY"
 ]
 
@@ -100,7 +100,7 @@ rule = [
 name = "Telegram"
 type = "select"
 rule = [
-    "[]DEFAULT"
+    "[]DEFAULT",
     "[]PROXY"
 ]
 
@@ -108,8 +108,8 @@ rule = [
 name = "Games"
 type = "select"
 rule = [
-    "[]DIRECT"
-    "[]DEFAULT"
+    "[]DIRECT",
+    "[]DEFAULT",
     "[]PROXY"
 ]
 
@@ -117,8 +117,8 @@ rule = [
 name = "AppleOS Update"
 type = "select"
 rule = [
-    "[]DIRECT"
-    "[]REJECT"
+    "[]DIRECT",
+    "[]REJECT",
     "[]DEFAULT"
 ]
 
@@ -126,7 +126,7 @@ rule = [
 name = "Apple"
 type = "select"
 rule = [
-    "[]DIRECT"
+    "[]DIRECT",
     "[]DEFAULT"
 ]
 
@@ -134,7 +134,7 @@ rule = [
 name = "Speedtest"
 type = "select"
 rule = [
-    "[]DIRECT"
+    "[]DIRECT",
     ".*"
 ]
 
