@@ -355,10 +355,10 @@ interval = 600
 # [[rulesets]]
 # group = "DIRECT"
 # ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list"
-# 
-# [[rulesets]]
-# group = "DIRECT"
-# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list"
+
+[[rulesets]]
+group = "DIRECT"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list"
 
 [[rulesets]]
 group = "DEFAULT"
