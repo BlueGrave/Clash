@@ -1,7 +1,7 @@
 version = 1
 [custom]
-enable_rule_generator = true
-overwrite_original_rules = true
+enable_rule_generator = false
+overwrite_original_rules = false
 # clash_rule_base = "https://raw.githubusercontent.com/BlueGrave/Clash/master/GeneralClashConfig.yaml"
 
 [[custom_groups]]
