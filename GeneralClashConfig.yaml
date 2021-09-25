@@ -68,12 +68,6 @@ experimental:
 #   'dl.google.com': 180.163.151.161
 #   'dl.l.google.com': 180.163.151.161
 
-#   'api-bg.vercel.app': 76.223.126.88
-#   'sub-bg.vercel.app': 76.223.126.88
-#   'api-nbg.vercel.app': 76.223.126.88
-#   'vercel.com': 76.223.126.88
-#   'www.vercel.com': 76.223.126.88
-
 #   'services.googleapis.cn': 74.125.203.94
 #   'raw.githubusercontent.com': 151.101.228.133
 
