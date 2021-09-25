@@ -138,6 +138,8 @@ dns:
 #   fake-ip-range: 198.18.0.1/16
 #   fake-ip-filter: # fake ip 白名单列表，如果你不知道这个参数的作用，请勿修改
 #     - "*.lan"
+#     - stun.*.*.*
+#     - stun.*.*
 #     - time.windows.com
 #     - time.nist.gov
 #     - time.apple.com
@@ -203,7 +205,9 @@ dns:
 #     - "*.*.*.srv.nintendo.net"
 #     - "*.*.stun.playstation.net"
 #     - xbox.*.*.microsoft.com
+#     - "*.ipv6.microsoft.com"
 #     - "*.*.xboxlive.com"
+#     - speedtest.cros.wr.pvp.net
 # use-hosts: true
   nameserver:
     - https://dns.alidns.com/dns-query # Ali DoH
@@ -242,7 +246,17 @@ dns:
       - +.xn--ngstr-lra8j.com
       - +.google.cn
       - +.googleapis.cn
+      - +.googleapis.com
       - +.gvt1.com
+      - +.apple.com
+      - +.apple-cloudkit.com
+      - +.apple-mapkit.com
+      - +.cdn-apple.com
+      - +.mzstatic.com
+      - +.microsoft.com
+      - +.bing.com
+      - +.linkedin.com
+      - +.licdn.com
 
 # tun:
 #   enable: true
