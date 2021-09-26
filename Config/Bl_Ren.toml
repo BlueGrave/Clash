@@ -1,3 +1,7 @@
 [[rename_node]]
 match = '(Hong Kong).*(\d{2})'
 replace = "$1 $2 | Media"
+
+[[rename_node]]
+match = '(Hong Kong)'
+replace = "HKG"
