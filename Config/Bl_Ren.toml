@@ -1,8 +1,9 @@
 version = 1
-[[node_pref.rename_node]]
+[custom]
+# [[node_pref.rename_node]]
 # match = '^(Hong Kong).*(\d{2})$'
 # replace = "$1 $2 | Media"
 # 
-# [[rename_node]]
+[[rename_node]]
 match = "(Hong Kong)"
 replace = "HKG"
