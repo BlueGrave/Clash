@@ -236,13 +236,17 @@ ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Ruleset/Whit
 group = "REJECT"
 ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Ruleset/BlackList.list"
 
-[[rulesets]]
-group = "REJECT"
-ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
-
+# [[rulesets]]
+# group = "REJECT"
+# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
+# 
 # [[rulesets]]
 # group = "REJECT"
 # ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
+# 
+# [[rulesets]]
+# group = "REJECT"
+# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyList.list"
 # 
 # [[rulesets]]
 # group = "REJECT"
