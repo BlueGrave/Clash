@@ -236,10 +236,10 @@ ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Ruleset/Whit
 group = "REJECT"
 ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Ruleset/BlackList.list"
 
-# [[rulesets]]
-# group = "REJECT"
-# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
-# 
+[[rulesets]]
+group = "REJECT"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
+
 # [[rulesets]]
 # group = "REJECT"
 # ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
@@ -255,10 +255,10 @@ ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Ruleset/Blac
 # [[rulesets]]
 # group = "REJECT"
 # ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list"
-# 
-# [[rulesets]]
-# group = "REJECT"
-# ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ZhihuAds/ZhihuAds.list"
+
+[[rulesets]]
+group = "REJECT"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ZhihuAds/ZhihuAds.list"
 
 [[rulesets]]
 group = "AppleOS Update"
@@ -356,17 +356,17 @@ ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master
 group = "DIRECT"
 ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Microsoft/Microsoft.list"
 
-# [[rulesets]]
-# group = "DIRECT"
-# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list"
-# 
-# [[rulesets]]
-# group = "DIRECT"
-# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list"
-# 
-# [[rulesets]]
-# group = "DEFAULT"
-# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list"
+[[rulesets]]
+group = "DIRECT"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list"
+
+[[rulesets]]
+group = "DIRECT"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list"
+
+[[rulesets]]
+group = "DEFAULT"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list"
 
 [[rulesets]]
 group = "DIRECT"
