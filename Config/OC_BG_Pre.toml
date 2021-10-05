@@ -229,10 +229,10 @@ group = "REJECT"
 ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Providers/BlackList.yaml"
 type = "clash-classic"
 
-[[rulesets]]
-group = "REJECT"
-ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising_Domain.yaml"
-type = "clash-domain"
+# [[rulesets]]
+# group = "REJECT"
+# ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising_Domain.yaml"
+# type = "clash-domain"
 
 [[rulesets]]
 group = "DIRECT"
