@@ -1,8 +1,24 @@
 # 自己整理的
 # 排除 AdBlock 的误伤
+
+DOMAIN,gm.mmstat.com
+DOMAIN,log.mmstat.com
+DOMAIN,sycm.mmstat.com
+DOMAIN,passportapi.115.com
+DOMAIN,tui.weibo.com
+DOMAIN,msg.umeng.com
+DOMAIN,msg.umengcloud.com
+DOMAIN,analytics.95516.com
+DOMAIN,analytics.strava.com
+DOMAIN,app.adjust.com
+DOMAIN,bdtj.tagtic.cn
+DOMAIN,fairplay.l.qq.com
+DOMAIN,origin-a.akamaihd.net
+DOMAIN,pubads.g.doubleclick.net
 DOMAIN-SUFFIX,tce.alicdn.com
 DOMAIN-SUFFIX,accounts.logi.com
 DOMAIN-SUFFIX,ghub.logitech.io
-DOMAIN,gm.mmstat.com
-DOMAIN,passportapi.115.com
-DOMAIN,tui.weibo.com
+DOMAIN-SUFFIX,dizhensubao.getui.com
+DOMAIN-SUFFIX,f.video.weibocdn.com
+DOMAIN-SUFFIX,fus.cdn.krcom.cn
+DOMAIN-SUFFIX,tracking-protection.cdn.mozilla.net
