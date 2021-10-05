@@ -225,6 +225,11 @@ group = "DIRECT"
 ruleset = "https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml"
 type = "clash-classic"
 
+[[rulesets]]
+group = "REJECT"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising_Domain.yaml"
+type = "clash-domain"
+
 # [[rulesets]]
 # group = "DIRECT"
 # ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list"
