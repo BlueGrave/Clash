@@ -1,0 +1,382 @@
+version = 1
+[custom]
+enable_rule_generator = true
+overwrite_original_rules = true
+clash_rule_base = "https://raw.githubusercontent.com/BlueGrave/Clash/master/GeneralClashConfig.yaml"
+
+[[custom_groups]]
+name = "DEFAULT"
+type = "select"
+rule = [
+    "[]Blinkload | 香港",
+    "[]Blinkload | 日本",
+    "[]Blinkload | 新加坡",
+    "[]Blinkload | 美国",
+    "[]FlowerCloud | 香港",
+    "[]FlowerCloud | 新加坡",
+    "[]FlowerCloud | 日本",
+    "[]FlowerCloud | 美国",
+    "[]PROXY"
+]
+
+[[custom_groups]]
+name = "YouTube"
+type = "select"
+rule = [
+    "[]DEFAULT",
+    "[]PROXY"
+]
+
+[[custom_groups]]
+name = "Netflix"
+type = "select"
+rule = [
+    "[]Blinkload | 新加坡",
+    "[]FlowerCloud | 新加坡",
+    "[]PROXY"
+]
+
+[[custom_groups]]
+name = "Emby"
+type = "select"
+rule = [
+    "[]FlowerCloud | Emby 专用",
+    "[]PROXY"
+]
+
+[[custom_groups]]
+name = "Spotify"
+type = "select"
+rule = [
+    "[]DEFAULT",
+    "[]Blinkload | 台湾",
+    "[]FlowerCloud | 台湾",
+    "[]PROXY"
+]
+
+[[custom_groups]]
+name = "PayPal"
+type = "select"
+rule = [
+    "[]DEFAULT",
+    "[]Blinkload | 台湾",
+    "[]FlowerCloud | 台湾",
+    "[]PROXY"
+]
+
+[[custom_groups]]
+name = "GitHub"
+type = "select"
+rule = [
+    "[]DEFAULT",
+    "[]PROXY"
+]
+
+[[custom_groups]]
+name = "OneDrive"
+type = "select"
+rule = [
+    "[]DEFAULT",
+    "[]PROXY"
+]
+
+[[custom_groups]]
+name = "GoogleDrive"
+type = "select"
+rule = [
+    "[]DEFAULT",
+    "[]PROXY"
+]
+
+[[custom_groups]]
+name = "Google"
+type = "select"
+rule = [
+    "[]DEFAULT",
+    "[]PROXY"
+]
+
+[[custom_groups]]
+name = "Telegram"
+type = "select"
+rule = [
+    "[]DEFAULT",
+    "[]PROXY"
+]
+
+[[custom_groups]]
+name = "Games"
+type = "select"
+rule = [
+    "[]DIRECT",
+    "[]DEFAULT",
+    "[]PROXY"
+]
+
+[[custom_groups]]
+name = "AppleOS Update"
+type = "select"
+rule = [
+    "[]DIRECT",
+    "[]REJECT",
+    "[]DEFAULT"
+]
+
+[[custom_groups]]
+name = "Apple"
+type = "select"
+rule = [
+    "[]DIRECT",
+    "[]DEFAULT"
+]
+
+[[custom_groups]]
+name = "Speedtest"
+type = "select"
+rule = [
+    "[]DIRECT",
+    ".*"
+]
+
+[[custom_groups]]
+name = "PROXY"
+type = "select"
+rule = [".*"]
+
+[[custom_groups]]
+name = "Blinkload | 香港"
+type = "url-test"
+rule = ["Hong Kong"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+
+[[custom_groups]]
+name = "Blinkload | 日本"
+type = "url-test"
+rule = ["Japan"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+
+[[custom_groups]]
+name = "Blinkload | 新加坡"
+type = "url-test"
+rule = ["Singapore"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+
+[[custom_groups]]
+name = "Blinkload | 美国"
+type = "url-test"
+rule = ["United States"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+
+[[custom_groups]]
+name = "Blinkload | 台湾"
+type = "url-test"
+rule = ["Taiwan"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+
+[[custom_groups]]
+name = "FlowerCloud | 香港"
+type = "url-test"
+rule = ["(香港高级|香港标准)"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+
+[[custom_groups]]
+name = "FlowerCloud | 新加坡"
+type = "url-test"
+rule = ["(新加坡高级|新加坡标准)"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+
+[[custom_groups]]
+name = "FlowerCloud | 日本"
+type = "url-test"
+rule = ["(日本高级|日本标准)"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+
+[[custom_groups]]
+name = "FlowerCloud | 美国"
+type = "url-test"
+rule = ["(美国高级|美国标准)"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+
+[[custom_groups]]
+name = "FlowerCloud | 台湾"
+type = "url-test"
+rule = ["(台湾高级|台湾标准)"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+
+[[custom_groups]]
+name = "FlowerCloud | Emby 专用"
+type = "url-test"
+rule = ["(实验性).*(IEPL)"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+
+[[rulesets]]
+group = "DIRECT"
+ruleset = "https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml"
+type = "clash-classic"
+
+# [[rulesets]]
+# group = "DIRECT"
+# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list"
+# 
+# [[rulesets]]
+# group = "DIRECT"
+# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list"
+# 
+# [[rulesets]]
+# group = "DIRECT"
+# ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Ruleset/WhiteList.list"
+# 
+# [[rulesets]]
+# group = "REJECT"
+# ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Ruleset/BlackList.list"
+# 
+# [[rulesets]]
+# group = "REJECT"
+# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
+# 
+# [[rulesets]]
+# group = "REJECT"
+# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
+# 
+# [[rulesets]]
+# group = "REJECT"
+# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyList.list"
+# 
+# [[rulesets]]
+# group = "REJECT"
+# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list"
+# 
+# [[rulesets]]
+# group = "REJECT"
+# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list"
+
+# [[rulesets]]
+# group = "REJECT"
+# ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ZhihuAds/ZhihuAds.list"
+# 
+# [[rulesets]]
+# group = "AppleOS Update"
+# ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Ruleset/AppleOS_Update.list"
+# 
+# [[rulesets]]
+# group = "DEFAULT"
+# ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Ruleset/RedList.list"
+# 
+# [[rulesets]]
+# group = "Netflix"
+# ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Netflix/Netflix.list"
+# 
+# [[rulesets]]
+# group = "Netflix"
+# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/AmazonIp.list"
+# 
+# [[rulesets]]
+# group = "YouTube"
+# ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTubeMusic/YouTubeMusic.list"
+# 
+# [[rulesets]]
+# group = "YouTube"
+# ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list"
+# 
+# [[rulesets]]
+# group = "Emby"
+# ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Ruleset/Emby.list"
+# 
+# [[rulesets]]
+# group = "Spotify"
+# ruleset = "https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Surge/Spotify/Spotify.list"
+# 
+# [[rulesets]]
+# group = "DEFAULT"
+# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list"
+# 
+# [[rulesets]]
+# group = "PayPal"
+# ruleset = "https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/PayPal.list"
+# 
+# [[rulesets]]
+# group = "GitHub"
+# ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list"
+# 
+# [[rulesets]]
+# group = "OneDrive"
+# ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OneDrive/OneDrive.list"
+# 
+# [[rulesets]]
+# group = "GoogleDrive"
+# ruleset = "https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Google/GoogleDrive.list"
+# 
+# [[rulesets]]
+# group = "Google"
+# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list"
+# 
+# [[rulesets]]
+# group = "Google"
+# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleCN.list"
+# 
+# [[rulesets]]
+# group = "Google"
+# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Google.list"
+# 
+# [[rulesets]]
+# group = "Telegram"
+# ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list"
+# 
+# [[rulesets]]
+# group = "Speedtest"
+# ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Speedtest/Speedtest.list"
+# 
+# [[rulesets]]
+# group = "Games"
+# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Steam.list"
+# 
+# [[rulesets]]
+# group = "Games"
+# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Epic.list"
+# 
+# [[rulesets]]
+# group = "DEFAULT"
+# ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TestFlight/TestFlight.list"
+# 
+# [[rulesets]]
+# group = "Apple"
+# ruleset = "https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Surge/AppStore/AppStore.list"
+# 
+# [[rulesets]]
+# group = "Apple"
+# ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple.list"
+# 
+# [[rulesets]]
+# group = "DIRECT"
+# ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Microsoft/Microsoft.list"
+# 
+# [[rulesets]]
+# group = "DIRECT"
+# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list"
+# 
+# [[rulesets]]
+# group = "DIRECT"
+# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list"
+# 
+# [[rulesets]]
+# group = "DEFAULT"
+# ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list"
+# 
+[[rulesets]]
+group = "DIRECT"
+ruleset = "[]GEOIP,CN"
+
+[[rulesets]]
+group = "DEFAULT"
+ruleset = "[]FINAL"
