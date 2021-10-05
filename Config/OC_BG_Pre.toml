@@ -143,7 +143,7 @@ name = "PROXY"
 type = "select"
 rule = [".*"]
 
-#[[custom_groups]]
+[[custom_groups]]
 name = "Blinkload | 香港"
 type = "url-test"
 rule = ["Hong Kong"]
