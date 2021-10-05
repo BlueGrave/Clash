@@ -1,5 +1,6 @@
 payload:
   # 屏蔽 AppleOS 更新
+  
   # iOS Update
   - DOMAIN,ns.itunes.apple.com
   - DOMAIN,gdmf.apple.com
