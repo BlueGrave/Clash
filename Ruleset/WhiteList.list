@@ -13,8 +13,12 @@ DOMAIN,analytics.strava.com
 DOMAIN,app.adjust.com
 DOMAIN,bdtj.tagtic.cn
 DOMAIN,fairplay.l.qq.com
+DOMAIN,livew.l.qq.com
+DOMAIN,vd.l.qq.com
 DOMAIN,origin-a.akamaihd.net
 DOMAIN,pubads.g.doubleclick.net
+DOMAIN,analytics.95516.com
+DOMAIN,tracking.miui.com
 DOMAIN-SUFFIX,tce.alicdn.com
 DOMAIN-SUFFIX,accounts.logi.com
 DOMAIN-SUFFIX,ghub.logitech.io
