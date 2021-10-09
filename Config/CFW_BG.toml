@@ -89,23 +89,6 @@ rule = [
 ]
 
 [[custom_groups]]
-name = "AppleOS Update"
-type = "select"
-rule = [
-    "[]DIRECT",
-    "[]REJECT",
-    "[]DEFAULT"
-]
-
-[[custom_groups]]
-name = "Apple"
-type = "select"
-rule = [
-    "[]DIRECT",
-    "[]DEFAULT"
-]
-
-[[custom_groups]]
 name = "Speedtest"
 type = "select"
 rule = [
@@ -260,7 +243,7 @@ type = "clash-classic"
 interval = 7200
 
 [[rulesets]]
-group = "AppleOS Update"
+group = "DIRECT"
 ruleset = "https://cdn.jsdelivr.net/gh/BlueGrave/Clash@master/Providers/AppleOS_Update.yaml"
 type = "clash-classic"
 interval = 7200
@@ -356,19 +339,19 @@ type = "clash-classic"
 interval = 7200
 
 [[rulesets]]
-group = "TestFlight"
+group = "DEFAULT"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/rule/Clash/TestFlight/TestFlight.yaml"
 type = "clash-classic"
 interval = 7200
 
 [[rulesets]]
-group = "Apple"
+group = "DIRECT"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/rule/Clash/AppStore/AppStore.yaml"
 type = "clash-classic"
 interval = 7200
 
 [[rulesets]]
-group = "Apple"
+group = "DIRECT"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/rule/Clash/Apple/Apple.yaml"
 type = "clash-classic"
 interval = 7200
