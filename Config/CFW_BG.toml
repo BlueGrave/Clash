@@ -8,6 +8,10 @@ clash_rule_base = "https://cdn.jsdelivr.net/gh/BlueGrave/Clash@master/CFW_BaseCo
 name = "DEFAULT"
 type = "select"
 rule = [
+    "[]ImmTelecom | 日本",
+    "[]ImmTelecom | 香港",
+    "[]ImmTelecom | 新加坡",
+    "[]ImmTelecom | 美国",
     "[]FlowerCloud | 香港",
     "[]FlowerCloud | 新加坡",
     "[]FlowerCloud | 日本",
@@ -34,6 +38,7 @@ rule = [
 name = "Emby"
 type = "select"
 rule = [
+    "[]ImmTelecom | 美国",
     "[]FlowerCloud | Emby 专用",
     "[]PROXY"
 ]
@@ -43,6 +48,7 @@ name = "Spotify"
 type = "select"
 rule = [
     "[]DEFAULT",
+    "[]ImmTelecom | 台湾",
     "[]FlowerCloud | 台湾",
     "[]PROXY"
 ]
@@ -52,6 +58,7 @@ name = "PayPal"
 type = "select"
 rule = [
     "[]DEFAULT",
+    "[]ImmTelecom | 台湾",
     "[]FlowerCloud | 台湾",
     "[]PROXY"
 ]
@@ -112,11 +119,52 @@ type = "select"
 rule = [".*"]
 
 [[custom_groups]]
+name = "ImmTelecom | 日本"
+type = "url-test"
+rule = ["JPN"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
+
+[[custom_groups]]
+name = "ImmTelecom | 香港"
+type = "url-test"
+rule = ["HKG"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
+
+[[custom_groups]]
+name = "ImmTelecom | 新加坡"
+type = "url-test"
+rule = ["SGP"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
+
+[[custom_groups]]
+name = "ImmTelecom | 美国"
+type = "url-test"
+rule = ["USA"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
+
+[[custom_groups]]
+name = "ImmTelecom | 台湾"
+type = "url-test"
+rule = ["TWN"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
+
+[[custom_groups]]
 name = "FlowerCloud | 香港"
 type = "url-test"
 rule = ["(香港高级|香港标准)"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
+tolerance = 20
 
 [[custom_groups]]
 name = "FlowerCloud | 新加坡"
@@ -124,6 +172,7 @@ type = "url-test"
 rule = ["(新加坡高级|新加坡标准)"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
+tolerance = 20
 
 [[custom_groups]]
 name = "FlowerCloud | 日本"
@@ -131,6 +180,7 @@ type = "url-test"
 rule = ["(日本高级|日本标准)"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
+tolerance = 20
 
 [[custom_groups]]
 name = "FlowerCloud | 美国"
@@ -138,6 +188,7 @@ type = "url-test"
 rule = ["(美国高级|美国标准)"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
+tolerance = 20
 
 [[custom_groups]]
 name = "FlowerCloud | 台湾"
@@ -145,6 +196,7 @@ type = "url-test"
 rule = ["(台湾高级|台湾标准)"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
+tolerance = 20
 
 [[custom_groups]]
 name = "FlowerCloud | Emby 专用"
@@ -152,6 +204,7 @@ type = "url-test"
 rule = ["(实验性).*(IEPL)"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
+tolerance = 20
 
 [[rulesets]]
 group = "REJECT"
@@ -161,161 +214,194 @@ ruleset = "[]SCRIPT,Quic"
 group = "DIRECT"
 ruleset = "https://cdn.jsdelivr.net/gh/BlueGrave/Clash@master/Providers/WhiteList.yaml"
 type = "clash-classic"
+interval = 7200
+path = "./Providers/WhiteList.yaml"
 
 [[rulesets]]
 group = "REJECT"
 ruleset = "https://cdn.jsdelivr.net/gh/BlueGrave/Clash@master/Providers/BlackList.yaml"
 type = "clash-classic"
+interval = 7200
 
 [[rulesets]]
 group = "DEFAULT"
 ruleset = "https://cdn.jsdelivr.net/gh/BlueGrave/Clash@master/Providers/RedList.yaml"
 type = "clash-classic"
+interval = 7200
 
 [[rulesets]]
 group = "DIRECT"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/rule/Clash/Lan/Lan.yaml"
 type = "clash-classic"
+interval = 7200
 
 [[rulesets]]
 group = "REJECT"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/rule/Clash/Advertising/Advertising_Domain.yaml"
 type = "clash-domain"
+interval = 7200
 
 [[rulesets]]
 group = "REJECT"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/rule/Clash/Hijacking/Hijacking.yaml"
 type = "clash-classic"
+interval = 7200
 
 [[rulesets]]
 group = "REJECT"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/rule/Clash/Privacy/Privacy_Domain.yaml"
 type = "clash-domain"
+interval = 7200
 
 [[rulesets]]
 group = "REJECT"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/rule/Clash/ZhihuAds/ZhihuAds.yaml"
 type = "clash-classic"
+interval = 7200
 
 [[rulesets]]
 group = "AppleOS Update"
 ruleset = "https://cdn.jsdelivr.net/gh/BlueGrave/Clash@master/Providers/AppleOS_Update.yaml"
 type = "clash-classic"
+interval = 7200
 
 [[rulesets]]
 group = "Netflix"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/rule/Clash/Netflix/Netflix.yaml"
 type = "clash-classic"
+interval = 7200
 
 [[rulesets]]
 group = "YouTube"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/rule/Clash/YouTube/YouTube.yaml"
 type = "clash-classic"
+interval = 7200
 
 [[rulesets]]
 group = "Emby"
 ruleset = "https://cdn.jsdelivr.net/gh/BlueGrave/Clash@master/Providers/Emby.yaml"
 type = "clash-classic"
+interval = 7200
 
 [[rulesets]]
 group = "Spotify"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/rule/Clash/Spotify/Spotify.yaml"
 type = "clash-classic"
+interval = 7200
 
 [[rulesets]]
 group = "DEFAULT"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/rule/Clash/GlobalMedia/GlobalMedia.yaml"
 type = "clash-classic"
+interval = 7200
 
 [[rulesets]]
 group = "PayPal"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/PayPal/PayPal.yaml"
 type = "clash-classic"
+interval = 7200
 
 [[rulesets]]
 group = "GitHub"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/rule/Clash/GitHub/GitHub.yaml"
 type = "clash-classic"
+interval = 7200
 
 [[rulesets]]
 group = "DEFAULT"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/rule/Clash/OneDrive/OneDrive.yaml"
 type = "clash-classic"
+interval = 7200
 
 [[rulesets]]
 group = "DEFAULT"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GoogleDrive/GoogleDrive.yaml"
 type = "clash-classic"
+interval = 7200
 
 [[rulesets]]
 group = "GoogleVoice"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/rule/Clash/GoogleVoice/GoogleVoice.yaml"
 type = "clash-classic"
+interval = 7200
 
 [[rulesets]]
 group = "Google"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/rule/Clash/Google/Google.yaml"
 type = "clash-classic"
+interval = 7200
 
 [[rulesets]]
 group = "DEFAULT"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/rule/Clash/Telegram/Telegram.yaml"
 type = "clash-classic"
+interval = 7200
 
 [[rulesets]]
 group = "Speedtest"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/rule/Clash/Speedtest/Speedtest.yaml"
 type = "clash-classic"
+interval = 7200
 
 [[rulesets]]
 group = "Games"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/rule/Clash/Steam/Steam.yaml"
 type = "clash-classic"
+interval = 7200
 
 [[rulesets]]
 group = "Games"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/rule/Clash/Epic/Epic.yaml"
 type = "clash-classic"
+interval = 7200
 
 [[rulesets]]
 group = "TestFlight"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/rule/Clash/TestFlight/TestFlight.yaml"
 type = "clash-classic"
+interval = 7200
 
 [[rulesets]]
 group = "Apple"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/rule/Clash/AppStore/AppStore.yaml"
 type = "clash-classic"
+interval = 7200
 
 [[rulesets]]
 group = "Apple"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/rule/Clash/Apple/Apple.yaml"
 type = "clash-classic"
+interval = 7200
 
 [[rulesets]]
 group = "DIRECT"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/rule/Clash/Microsoft/Microsoft.yaml"
 type = "clash-classic"
+interval = 7200
 
 [[rulesets]]
 group = "DIRECT"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/rule/Clash/ChinaMedia/ChinaMedia.yaml"
 type = "clash-classic"
+interval = 7200
 
 [[rulesets]]
 group = "DIRECT"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/rule/Clash/Download/Download.yaml"
 type = "clash-classic"
+interval = 7200
 
 [[rulesets]]
 group = "DIRECT"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/rule/Clash/PrivateTracker/PrivateTracker.yaml"
 type = "clash-classic"
+interval = 7200
 
 [[rulesets]]
 group = "DEFAULT"
 ruleset = "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/rule/Clash/Global/Global_Domain.yaml"
 type = "clash-domain"
+interval = 7200
 
 [[rulesets]]
 group = "DIRECT"
