@@ -8,10 +8,6 @@ clash_rule_base = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Gene
 name = "DEFAULT"
 type = "select"
 rule = [
-    "[]Blinkload | 香港",
-    "[]Blinkload | 日本",
-    "[]Blinkload | 新加坡",
-    "[]Blinkload | 美国",
     "[]FlowerCloud | 香港",
     "[]FlowerCloud | 新加坡",
     "[]FlowerCloud | 日本",
@@ -31,8 +27,6 @@ rule = [
 name = "Netflix"
 type = "select"
 rule = [
-    "[]Blinkload | 新加坡",
-    "[]FlowerCloud | 新加坡",
     "[]PROXY"
 ]
 
@@ -49,7 +43,6 @@ name = "Spotify"
 type = "select"
 rule = [
     "[]DEFAULT",
-    "[]Blinkload | 台湾",
     "[]FlowerCloud | 台湾",
     "[]PROXY"
 ]
@@ -59,7 +52,6 @@ name = "PayPal"
 type = "select"
 rule = [
     "[]DEFAULT",
-    "[]Blinkload | 台湾",
     "[]FlowerCloud | 台湾",
     "[]PROXY"
 ]
@@ -73,31 +65,7 @@ rule = [
 ]
 
 [[custom_groups]]
-name = "OneDrive"
-type = "select"
-rule = [
-    "[]DEFAULT",
-    "[]PROXY"
-]
-
-[[custom_groups]]
-name = "GoogleDrive"
-type = "select"
-rule = [
-    "[]DEFAULT",
-    "[]PROXY"
-]
-
-[[custom_groups]]
 name = "Google"
-type = "select"
-rule = [
-    "[]DEFAULT",
-    "[]PROXY"
-]
-
-[[custom_groups]]
-name = "Telegram"
 type = "select"
 rule = [
     "[]DEFAULT",
@@ -142,41 +110,6 @@ rule = [
 name = "PROXY"
 type = "select"
 rule = [".*"]
-
-[[custom_groups]]
-name = "Blinkload | 香港"
-type = "url-test"
-rule = ["Hong Kong"]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 600
-
-[[custom_groups]]
-name = "Blinkload | 日本"
-type = "url-test"
-rule = ["Japan"]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 600
-
-[[custom_groups]]
-name = "Blinkload | 新加坡"
-type = "url-test"
-rule = ["Singapore"]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 600
-
-[[custom_groups]]
-name = "Blinkload | 美国"
-type = "url-test"
-rule = ["United States"]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 600
-
-[[custom_groups]]
-name = "Blinkload | 台湾"
-type = "url-test"
-rule = ["Taiwan"]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 600
 
 [[custom_groups]]
 name = "FlowerCloud | 香港"
@@ -296,12 +229,12 @@ ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master
 type = "clash-classic"
 
 [[rulesets]]
-group = "OneDrive"
+group = "DEFAULT"
 ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.yaml"
 type = "clash-classic"
 
 [[rulesets]]
-group = "GoogleDrive"
+group = "DEFAULT"
 ruleset = "https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/Google/GoogleDrive.yaml"
 type = "clash-classic"
 
@@ -316,7 +249,7 @@ ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master
 type = "clash-classic"
 
 [[rulesets]]
-group = "Telegram"
+group = "DEFAULT"
 ruleset = "https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/Telegram/Telegram.yaml"
 type = "clash-classic"
 
@@ -351,7 +284,7 @@ ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master
 type = "clash-classic"
 
 [[rulesets]]
-group = "REJECT"
+group = "DIRECT"
 ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml"
 type = "clash-classic"
 
