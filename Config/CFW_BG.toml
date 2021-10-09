@@ -110,7 +110,8 @@ name = "Speedtest"
 type = "select"
 rule = [
     "[]DIRECT",
-    ".*"
+    "[]DEFAULT",
+    "[]PROXY"
 ]
 
 [[custom_groups]]
@@ -215,7 +216,6 @@ group = "DIRECT"
 ruleset = "https://cdn.jsdelivr.net/gh/BlueGrave/Clash@master/Providers/WhiteList.yaml"
 type = "clash-classic"
 interval = 7200
-path = "./Providers/WhiteList.yaml"
 
 [[rulesets]]
 group = "REJECT"
