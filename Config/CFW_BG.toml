@@ -8,6 +8,10 @@ clash_rule_base = "https://raw.githubusercontent.com/BlueGrave/Clash/master/CFW_
 name = "DEFAULT"
 type = "select"
 rule = [
+    "[]ImmTelecom | 日本",
+    "[]ImmTelecom | 香港",
+    "[]ImmTelecom | 新加坡",
+    "[]ImmTelecom | 美国",
     "[]FlowerCloud | 香港",
     "[]FlowerCloud | 新加坡",
     "[]FlowerCloud | 日本",
@@ -34,6 +38,7 @@ rule = [
 name = "Emby"
 type = "select"
 rule = [
+    "[]ImmTelecom | 美国",
     "[]FlowerCloud | Emby 专用",
     "[]PROXY"
 ]
@@ -43,6 +48,7 @@ name = "Spotify"
 type = "select"
 rule = [
     "[]DEFAULT",
+    "[]ImmTelecom | 台湾",
     "[]FlowerCloud | 台湾",
     "[]PROXY"
 ]
@@ -52,6 +58,7 @@ name = "PayPal"
 type = "select"
 rule = [
     "[]DEFAULT",
+    "[]ImmTelecom | 台湾",
     "[]FlowerCloud | 台湾",
     "[]PROXY"
 ]
@@ -112,11 +119,52 @@ type = "select"
 rule = [".*"]
 
 [[custom_groups]]
+name = "ImmTelecom | 日本"
+type = "url-test"
+rule = ["JPN"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
+
+[[custom_groups]]
+name = "ImmTelecom | 香港"
+type = "url-test"
+rule = ["HKG"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
+
+[[custom_groups]]
+name = "ImmTelecom | 新加坡"
+type = "url-test"
+rule = ["SGP"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
+
+[[custom_groups]]
+name = "ImmTelecom | 美国"
+type = "url-test"
+rule = ["USA"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
+
+[[custom_groups]]
+name = "ImmTelecom | 台湾"
+type = "url-test"
+rule = ["TWN"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
+
+[[custom_groups]]
 name = "FlowerCloud | 香港"
 type = "url-test"
 rule = ["(香港高级|香港标准)"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
+tolerance = 20
 
 [[custom_groups]]
 name = "FlowerCloud | 新加坡"
@@ -124,6 +172,7 @@ type = "url-test"
 rule = ["(新加坡高级|新加坡标准)"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
+tolerance = 20
 
 [[custom_groups]]
 name = "FlowerCloud | 日本"
@@ -131,6 +180,7 @@ type = "url-test"
 rule = ["(日本高级|日本标准)"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
+tolerance = 20
 
 [[custom_groups]]
 name = "FlowerCloud | 美国"
@@ -138,6 +188,7 @@ type = "url-test"
 rule = ["(美国高级|美国标准)"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
+tolerance = 20
 
 [[custom_groups]]
 name = "FlowerCloud | 台湾"
@@ -145,6 +196,7 @@ type = "url-test"
 rule = ["(台湾高级|台湾标准)"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
+tolerance = 20
 
 [[custom_groups]]
 name = "FlowerCloud | Emby 专用"
@@ -152,6 +204,7 @@ type = "url-test"
 rule = ["(实验性).*(IEPL)"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
+tolerance = 20
 
 [[rulesets]]
 group = "DIRECT"
