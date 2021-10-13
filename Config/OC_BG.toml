@@ -181,7 +181,7 @@ type = "clash-classic"
 
 [[rulesets]]
 group = "REJECT"
-ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising.yaml"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising_Classcial.yaml"
 type = "clash-classic"
 
 [[rulesets]]
@@ -191,7 +191,7 @@ type = "clash-classic"
 
 [[rulesets]]
 group = "REJECT"
-ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Privacy/Privacy.yaml"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Privacy/Privacy_Classical.yaml"
 type = "clash-classic"
 
 [[rulesets]]
@@ -316,7 +316,7 @@ type = "clash-classic"
 
 [[rulesets]]
 group = "DEFAULT"
-ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global.yaml"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global_Classcial.yaml"
 type = "clash-classic"
 
 [[rulesets]]
