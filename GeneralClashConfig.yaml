@@ -206,16 +206,16 @@ dns:
   nameserver:
     - https://dns.alidns.com/dns-query # Ali DoH
     - https://doh.pub/dns-query # Tencent DoH
-    - https://doh.opendns.com/dns-query # OpenDNS DoH
     - https://dns.rubyfish.cn/dns-query # Rubyfish DoH
+#   - https://doh.opendns.com/dns-query # OpenDNS DoH
   fallback:
     - https://public.dns.iij.jp/dns-query # IIJ.JP DoH
-    - https://jp.tiar.app/dns-query
-#   - https://dns.switch.ch/dns-query # SWITCH DoH
-#   - https://dns.east.comss.one/dns-query # Comss.ru DoH
     - https://dns.google/dns-query # Google DoH
 #   - https://dns.adguard.com/dns-query # Adguard DoH
 #   - https://cloudflare-dns.com/dns-query # Cloudflare DoH
+    - https://jp.tiar.app/dns-query
+#   - https://dns.switch.ch/dns-query # SWITCH DoH
+#   - https://dns.east.comss.one/dns-query # Comss.ru DoH
 #   - https://dns.twnic.tw/dns-query # Quad101 DoH
 #   - tls://public.dns.iij.jp
 #   - tls://jp.tiar.app
