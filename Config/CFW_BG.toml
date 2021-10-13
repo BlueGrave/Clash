@@ -242,8 +242,8 @@ type = "clash-classic"
 
 [[rulesets]]
 group = "REJECT"
-ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Privacy/Privacy_Domain.yaml"
-type = "clash-domain"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Privacy/Privacy.yaml"
+type = "clash-classic"
 
 [[rulesets]]
 group = "REJECT"
@@ -367,8 +367,8 @@ type = "clash-classic"
 
 [[rulesets]]
 group = "DEFAULT"
-ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global_Domain.yaml"
-type = "clash-domain"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global.yaml"
+type = "clash-classic"
 
 [[rulesets]]
 group = "DIRECT"
