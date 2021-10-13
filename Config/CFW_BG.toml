@@ -207,6 +207,10 @@ interval = 600
 tolerance = 20
 
 [[rulesets]]
+group = "REJECT"
+ruleset = "[]SCRIPT,Quic"
+
+[[rulesets]]
 group = "DIRECT"
 ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Providers/WhiteList.yaml"
 type = "clash-classic"
