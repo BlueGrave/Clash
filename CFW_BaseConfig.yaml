@@ -69,6 +69,7 @@ dns:
     - https://public.dns.iij.jp/dns-query # IIJ.JP DoH
     - https://dns.cloudflare.com/dns-query # CloudFlare DoH
     - https://dns.google/dns-query # Google DoH
+#   - https://dns.adguard.com/dns-query # Adguard DoH
   fallback-filter:
     geoip: true # 默认
     geoip-code: CN
