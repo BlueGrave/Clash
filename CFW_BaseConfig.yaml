@@ -63,11 +63,11 @@ dns:
   nameserver:
     - https://dns.alidns.com/dns-query # Ali DoH
     - https://doh.pub/dns-query # Tencent DoH
-    - https://doh.opendns.com/dns-query # OpenDNS DoH
     - https://dns.rubyfish.cn/dns-query # Rubyfish DoH
+#   - https://doh.opendns.com/dns-query # OpenDNS DoH
   fallback:
     - https://public.dns.iij.jp/dns-query # IIJ.JP DoH
-    - https://jp.tiar.app/dns-query
+    - https://dns.cloudflare.com/dns-query # CloudFlare DoH
     - https://dns.google/dns-query # Google DoH
   fallback-filter:
     geoip: true # 默认
