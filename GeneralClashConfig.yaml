@@ -121,6 +121,8 @@ dns:
     - 8.8.8.8 # Google DNS
 #   - 8.8.4.4 # Google DNS
 #   - 9.9.9.9 # IBM Quad9
+#   - 4.2.2.1 # Level3 DNS
+#   - 4.2.2.2 # Level3 DNS
 #   - 208.67.222.222 # OpenDNS
 #   - 208.67.220.220 # OpenDNS
 #   - 199.91.73.222 # V2EX DNS
