@@ -36,11 +36,6 @@ bypassText: |-
     - <local>
 mixinText: |-
   mixin: # object
-  # hosts:
-  #   'api-bg.vercel.app': 76.223.126.88
-  #   'sub-bg.vercel.app': 76.223.126.88
-  #   'vercel.com': 76.223.126.88
-  #   'www.vercel.com': 76.223.126.88
     dns:
       enable: true
       ipv6: false
@@ -74,37 +69,10 @@ mixinText: |-
         '*.ximalaya.com': 119.29.29.29
         '*.baidu.com': 180.76.76.76
         '*.bdstatic.com': 180.76.76.76
-  #   default-nameserver:
-  #     - 223.5.5.5
-  #     - 119.29.29.29
-  #     - 8.8.8.8
       enhanced-mode: redir-host
       nameserver:
         - 223.5.5.5
         - 119.29.29.29
-  #     - https://dns.alidns.com/dns-query
-  #     - https://doh.pub/dns-query
-  #     - https://dns.rubyfish.cn/dns-query
-  #   fallback:
-  #     - https://dns.google/dns-query
-  #     - https://cloudflare-dns.com/dns-query
-  #     - https://public.dns.iij.jp/dns-query
-  #   fallback-filter:
-  #     geoip: true
-  #     geoip-code: CN
-  #     ipcidr:
-  #       - 0.0.0.0/32
-  #       - 127.0.0.1/32
-  #       - 240.0.0.0/4
-  #     domain:
-  #       - +.google.com
-  #       - +.facebook.com
-  #       - +.twitter.com
-  #       - +.youtube.com
-  #       - +.xn--ngstr-lra8j.com
-  #       - +.google.cn
-  #       - +.googleapis.cn
-  #       - +.gvt1.com
     tun:
       enable: true
       stack: system
@@ -116,3 +84,5 @@ connProxy: 2
 connProfile: true
 connMode: true
 connChainType: 2
+editor: 0
+mixinType: 0
