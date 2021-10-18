@@ -48,6 +48,7 @@ external-controller: '127.0.0.1:9090'
 # 实验性功能
 experimental:
   ignore-resolve-fail: true # 忽略 DNS 解析失败，默认值为 true
+
 #	interface-name: en0 # outbound interface name
 
 # 本地 SOCKS5 / HTTP(S) 服务认证
@@ -129,7 +130,6 @@ dns:
 #   - 178.79.131.110 # V2EX DNS
 #   - 185.222.222.222 # DNS.SB
 #   - 185.184.222.222 # DNS.SB
-# interface-name: en0 # 出口网卡名称，或者使用下方的自动检测
   enhanced-mode: redir-host # or fake-ip
 #   fake-ip-range: 198.18.0.1/16
 #   fake-ip-filter: # fake ip 白名单列表，如果你不知道这个参数的作用，请勿修改
