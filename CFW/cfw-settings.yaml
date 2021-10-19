@@ -36,6 +36,8 @@ bypassText: |-
     - <local>
 mixinText: |-
   mixin: # object
+    hosts:
+      'router.asus.com': 192.168.186.1
     dns:
       enable: true
       ipv6: false
@@ -67,8 +69,8 @@ mixinText: |-
         '*.vercel.app': 119.29.29.29
         '*.vercel.com': 119.29.29.29
         '*.ximalaya.com': 119.29.29.29
-        '*.baidu.com': 180.76.76.76
-        '*.bdstatic.com': 180.76.76.76
+        '*.baidu.com': 119.29.29.29
+        '*.bdstatic.com': 119.29.29.29
       enhanced-mode: redir-host
       nameserver:
         - 223.5.5.5
