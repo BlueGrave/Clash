@@ -88,3 +88,13 @@ connMode: true
 connChainType: 2
 editor: 0
 mixinType: 0
+profileParsersText: |-
+  parsers: # array
+    - reg: .?
+      yaml:
+        prepend-rules:
+          - SCRIPT,quic,REJECT
+        mix-object:
+          script:
+            shortcuts:
+              quic: network == 'udp' and dst_port == 443
