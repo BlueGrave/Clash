@@ -258,6 +258,17 @@ type = "clash-classic"
 group = "AppleOS Update"
 ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Providers/AppleOS_Update.yaml"
 type = "clash-classic"
+type = "clash-classic"
+
+[[rulesets]]
+group = "DIRECT"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Download/Download.yaml"
+type = "clash-classic"
+
+[[rulesets]]
+group = "DIRECT"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PrivateTracker/PrivateTracker.yaml"
+type = "clash-classic"
 
 [[rulesets]]
 group = "YouTube"
@@ -357,17 +368,6 @@ type = "clash-classic"
 [[rulesets]]
 group = "DIRECT"
 ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMedia/ChinaMedia.yaml"
-type = "clash-classic"
-
-[[rulesets]]
-group = "DIRECT"
-ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Download/Download.yaml"
-type = "clash-classic"
-
-[[rulesets]]
-group = "DIRECT"
-ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PrivateTracker/PrivateTracker.yaml"
-type = "clash-classic"
 
 [[rulesets]]
 group = "DEFAULT"
