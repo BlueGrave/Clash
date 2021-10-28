@@ -156,11 +156,10 @@ tolerance = 20
 
 [[custom_groups]]
 name = "FlowerCloud | Emby 专用"
-type = "url-test"
+type = "fallback"
 rule = ["实验性"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
-tolerance = 20
 
 [[rulesets]]
 group = "DIRECT"
