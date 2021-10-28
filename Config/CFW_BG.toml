@@ -30,16 +30,12 @@ rule = [
 [[custom_groups]]
 name = "Netflix"
 type = "select"
-rule = [
-    "[]PROXY"
-]
+rule = ["SGP|TWN|新加坡|台湾"]
 
 [[custom_groups]]
 name = "Disney+"
 type = "select"
-rule = [
-    "[]PROXY"
-]
+rule = ["HKG|SGP|香港|新加坡"]
 
 [[custom_groups]]
 name = "Emby"
@@ -169,7 +165,7 @@ tolerance = 20
 [[custom_groups]]
 name = "FlowerCloud | 香港"
 type = "url-test"
-rule = ["(香港高级|香港标准)"]
+rule = ["香港高级|香港标准"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
@@ -177,7 +173,7 @@ tolerance = 20
 [[custom_groups]]
 name = "FlowerCloud | 新加坡"
 type = "url-test"
-rule = ["(新加坡高级|新加坡标准)"]
+rule = ["新加坡高级|新加坡标准"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
@@ -185,7 +181,7 @@ tolerance = 20
 [[custom_groups]]
 name = "FlowerCloud | 日本"
 type = "url-test"
-rule = ["(日本高级|日本标准)"]
+rule = ["日本高级|日本标准"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
@@ -193,7 +189,7 @@ tolerance = 20
 [[custom_groups]]
 name = "FlowerCloud | 美国"
 type = "url-test"
-rule = ["(美国高级|美国标准)"]
+rule = ["美国高级|美国标准"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
@@ -201,18 +197,17 @@ tolerance = 20
 [[custom_groups]]
 name = "FlowerCloud | 台湾"
 type = "url-test"
-rule = ["(台湾高级|台湾标准)"]
+rule = ["台湾高级|台湾标准"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
 
 [[custom_groups]]
 name = "FlowerCloud | Emby 专用"
-type = "url-test"
-rule = ["(实验性).*(IEPL)"]
+type = "fallback"
+rule = ["实验性"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
-tolerance = 20
 
 [[rulesets]]
 group = "DIRECT"
