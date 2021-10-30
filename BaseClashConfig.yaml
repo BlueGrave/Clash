@@ -79,6 +79,7 @@ dns:
   nameserver-policy:
     '*.tw': 1.1.1.1
     'testflight.apple.com': 8.8.8.8
+    'gist.github.com': 8.8.8.8
     '*.tmall.com': 223.5.5.5
     '*.taobao.com': 223.5.5.5
     '*.alicdn.com': 223.5.5.5
