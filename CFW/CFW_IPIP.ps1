@@ -14,7 +14,7 @@ Start-Process -WindowStyle Hidden C:\Users\BlueGrave\.config\clash\service\servi
 # alechw china_ip_list + 纯真 CN 数据库 + MaxMind
 # Invoke-WebRequest -Uri "https://raw.githubusercontent.com/alecthw/mmdb_china_ip_list/release/Country.mmdb" -OutFile "Country.mmdb"
 cd C:\Users\BlueGrave\.config\clash
-Invoke-WebRequest -Uri "https://cdn.jsdelivr.net/gh/alecthw/mmdb_china_ip_list@release/Country.mmdb" -OutFile "Country.mmdb"
+Invoke-WebRequest -Uri "https://cdn.jsdelivr.net/gh/Hackl0us/GeoIP2-CN@release/Country.mmdb" -OutFile "Country.mmdb"
 cd C:\Users\BlueGrave\.config\clash\service
 Start-Process -WindowStyle Hidden C:\Users\BlueGrave\.config\clash\service\service.exe install
 Start-Sleep -Seconds 1
