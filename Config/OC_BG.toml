@@ -12,6 +12,7 @@ rule = [
     "[]FlowerCloud | 新加坡",
     "[]FlowerCloud | 日本",
     "[]FlowerCloud | 美国",
+    "[]FlowerCloud | 台湾",
     "[]PROXY"
 ]
 
@@ -26,7 +27,7 @@ rule = [
 [[custom_groups]]
 name = "Netflix"
 type = "select"
-rule = ["新加坡|台湾"]
+rule = ["台湾"]
 
 [[custom_groups]]
 name = "Disney+"
@@ -36,7 +37,7 @@ rule = ["香港|新加坡"]
 [[custom_groups]]
 name = "HBO GO"
 type = "select"
-rule = ["香港"]
+rule = ["香港|台湾"]
 
 [[custom_groups]]
 name = "Emby"
