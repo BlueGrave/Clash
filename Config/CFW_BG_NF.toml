@@ -12,10 +12,12 @@ rule = [
     "[]Nexitally | 香港",
     "[]Nexitally | 新加坡",
     "[]Nexitally | 美国",
+    "[]Nexitally | 台湾",
     "[]FlowerCloud | 香港",
     "[]FlowerCloud | 新加坡",
     "[]FlowerCloud | 日本",
     "[]FlowerCloud | 美国",
+    "[]FlowerCloud | 台湾",
     "[]PROXY"
 ]
 
@@ -30,17 +32,17 @@ rule = [
 [[custom_groups]]
 name = "Netflix"
 type = "select"
-rule = ["Singapore|Taiwan|新加坡|台湾"]
+rule = ["Taiwan|台湾"]
 
 [[custom_groups]]
 name = "Disney+"
 type = "select"
-rule = ["Hong Kong|Singapore|香港|新加坡"]
+rule = ["Hong Kong|Singapore|新加坡|日本"]
 
 [[custom_groups]]
 name = "HBO GO"
 type = "select"
-rule = ["Hong Kong|香港"]
+rule = ["Hong Kong|Taiwan|香港|台湾"]
 
 [[custom_groups]]
 name = "Emby"
