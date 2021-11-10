@@ -12,10 +12,12 @@ rule = [
     "[]ImmTelecom | 香港",
     "[]ImmTelecom | 新加坡",
     "[]ImmTelecom | 美国",
+    "[]ImmTelecom | 台湾",
     "[]FlowerCloud | 香港",
     "[]FlowerCloud | 新加坡",
     "[]FlowerCloud | 日本",
     "[]FlowerCloud | 美国",
+    "[]FlowerCloud | 台湾",
     "[]PROXY"
 ]
 
@@ -30,17 +32,17 @@ rule = [
 [[custom_groups]]
 name = "Netflix"
 type = "select"
-rule = ["SGP|TWN|新加坡|台湾"]
+rule = ["TWN|台湾"]
 
 [[custom_groups]]
 name = "Disney+"
 type = "select"
-rule = ["HKG|SGP|香港|新加坡"]
+rule = ["HKG|SGP|新加坡|日本"]
 
 [[custom_groups]]
 name = "HBO GO"
 type = "select"
-rule = ["HKG|香港"]
+rule = ["HKG|SGP|香港|新加坡"]
 
 [[custom_groups]]
 name = "Emby"
