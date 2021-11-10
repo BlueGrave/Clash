@@ -42,7 +42,7 @@ rule = ["HKG|SGP|新加坡|日本"]
 [[custom_groups]]
 name = "HBO GO"
 type = "select"
-rule = ["HKG|SGP|香港|新加坡"]
+rule = ["HKG|TWN|香港|台湾"]
 
 [[custom_groups]]
 name = "Emby"
