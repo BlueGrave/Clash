@@ -10,9 +10,6 @@ hideUnselectableGroup: true
 fontFamily: Avenir Light
 bypassText: |-
   bypass:
-    - qq.com
-    - 'music.163.com' # 网易云域名1
-    - '*.music.126.net' # 网易云域名2
     - localhost
     - 127.*
     - 10.*
@@ -81,6 +78,9 @@ mixinText: |-
         - "*.lan"
         - stun.*.*.*
         - stun.*.*
+        - music.163.com
+        - "*.music.163.com"
+        - "*.126.net"
         - musicapi.taihe.com
         - music.taihe.com
         - songsearch.kugou.com
@@ -109,6 +109,36 @@ mixinText: |-
         - "*.ipv6.microsoft.com"
         - "*.*.xboxlive.com"
         - speedtest.cros.wr.pvp.net
+      fallback:
+        - https://dns.google/dns-query
+        - https://dns.cloudflare.com/dns-query
+        - https://public.dns.iij.jp/dns-query
+      fallback-filter:
+        geoip: true
+        geoip-core: CN
+        ipcidr:
+          - 0.0.0.0/32
+          - 127.0.0.1/32
+          - 240.0.0.0/4
+        domain:
+          - +.google.com
+          - +.facebook.com
+          - +.twitter.com
+          - +.youtube.com
+          - +.xn--ngstr-lra8j.com
+          - +.google.cn
+          - +.googleapis.cn
+          - +.googleapis.com
+          - +.gvt1.com
+          - +.apple.com
+          - +.apple-cloudkit.com
+          - +.apple-mapkit.com
+          - +.cdn-apple.com
+          - +.mzstatic.com
+          - +.microsoft.com
+          - +.bing.com
+          - +.linkedin.com
+          - +.licdn.com
     tun:
       enable: true
       stack: system
