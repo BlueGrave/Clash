@@ -72,10 +72,43 @@ mixinText: |-
         '*.ximalaya.com': 119.29.29.29
         '*.baidu.com': 119.29.29.29
         '*.bdstatic.com': 119.29.29.29
-      enhanced-mode: redir-host
+      enhanced-mode: fake-ip
       nameserver:
         - 223.5.5.5
         - 119.29.29.29
+      fake-ip-range: 198.18.0.1/16
+      fake-ip-filter:
+        - "*.lan"
+        - stun.*.*.*
+        - stun.*.*
+        - musicapi.taihe.com
+        - music.taihe.com
+        - songsearch.kugou.com
+        - trackercdn.kugou.com
+        - "*.kuwo.cn"
+        - api-jooxtt.sanook.com
+        - api.joox.com
+        - joox.com
+        - y.qq.com
+        - "*.y.qq.com"
+        - streamoc.music.tc.qq.com
+        - mobileoc.music.tc.qq.com
+        - isure.stream.qqmusic.qq.com
+        - dl.stream.qqmusic.qq.com
+        - aqqmusic.tc.qq.com
+        - amobile.music.tc.qq.com
+        - "*.xiami.com"
+        - "*.music.migu.cn"
+        - music.migu.cn
+        - "*.msftconnecttest.com"
+        - "*.msftncsi.com"
+        - localhost.ptlogin2.qq.com
+        - "*.*.*.srv.nintendo.net"
+        - "*.*.stun.playstation.net"
+        - xbox.*.*.microsoft.com
+        - "*.ipv6.microsoft.com"
+        - "*.*.xboxlive.com"
+        - speedtest.cros.wr.pvp.net
     tun:
       enable: true
       stack: system
@@ -83,6 +116,9 @@ mixinText: |-
         - 198.18.0.2:53
       auto-route: true
       auto-detect-interface: true
+    profile:
+      tracing: false
+      store-fake-ip: true
 connProxy: 2
 connProfile: true
 connMode: true
@@ -106,3 +142,4 @@ trayOrders:
     - text
 trayColorTransparent: false
 useSystemEmoji: false
+editorCustomCommand: ""
