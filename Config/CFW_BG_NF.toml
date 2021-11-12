@@ -37,7 +37,7 @@ rule = ["Taiwan|台湾"]
 [[custom_groups]]
 name = "Disney+"
 type = "select"
-rule = ["Hong Kong|Singapore|新加坡|日本"]
+rule = ["Hong Kong|Singapore|Taiwan|新加坡|日本|台湾"]
 
 [[custom_groups]]
 name = "HBO GO"
