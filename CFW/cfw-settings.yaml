@@ -142,4 +142,3 @@ trayOrders:
     - text
 trayColorTransparent: false
 useSystemEmoji: false
-editorCustomCommand: ""
