@@ -10,9 +10,6 @@ hideUnselectableGroup: true
 fontFamily: Avenir Light
 bypassText: |-
   bypass:
-    - qq.com
-    - 'music.163.com' # 网易云域名1
-    - '*.music.126.net' # 网易云域名2
     - localhost
     - 127.*
     - 10.*
