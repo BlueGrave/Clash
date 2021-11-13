@@ -1,0 +1,174 @@
+showNewVersionIcon: true
+hideAfterStartup: true
+randomControllerPort: true
+runTimeFormat: "hh : mm : ss"
+theme: 0
+showNotifications: true
+systemTheme: true
+latencyUrl: http://cp.cloudflare.com/generate_204
+hideUnselectableGroup: true
+fontFamily: Avenir Light
+bypassText: |-
+  bypass:
+    - localhost
+    - 127.*
+    - 10.*
+    - 172.16.*
+    - 172.17.*
+    - 172.18.*
+    - 172.19.*
+    - 172.20.*
+    - 172.21.*
+    - 172.22.*
+    - 172.23.*
+    - 172.24.*
+    - 172.25.*
+    - 172.26.*
+    - 172.27.*
+    - 172.28.*
+    - 172.29.*
+    - 172.30.*
+    - 172.31.*
+    - 192.168.*
+    - <local>
+mixinText: |-
+  mixin: # object
+    hosts:
+      'router.asus.com': 192.168.186.1
+    dns:
+      enable: true
+      ipv6: false
+      listen: 127.0.0.1:53
+      nameserver-policy:
+        '*.tw': 1.1.1.1
+        'testflight.apple.com': 8.8.8.8
+        'gist.github.com': 8.8.8.8
+        '*.tmall.com': 223.5.5.5
+        '*.taobao.com': 223.5.5.5
+        '*.alicdn.com': 223.5.5.5
+        '*.aliyun.com': 223.5.5.5
+        '*.alipay*.com': 223.5.5.5
+        '*.alibaba*.com': 223.5.5.5
+        '*.alimama*.com': 223.5.5.5
+        '*.qq.com': 119.29.29.29
+        '*.tencent.com': 119.29.29.29
+        '*.weixin.com': 119.29.29.29
+        '*.qpic.cn': 119.29.29.29
+        '*.jd.com': 119.29.29.29
+        '*.bilibili.com': 119.29.29.29
+        'hdslb.com': 119.29.29.29
+        '*.163.com': 119.29.29.29
+        '*.126.com': 119.29.29.29
+        '*.126.net': 119.29.29.29
+        '*.127.net': 119.29.29.29
+        '*.netease.com': 119.29.29.29
+        '*.10010.com': 119.29.29.29
+        '*.unicompayment.com': 119.29.29.29
+        '*.vercel.app': 119.29.29.29
+        '*.vercel.com': 119.29.29.29
+        '*.ximalaya.com': 119.29.29.29
+        '*.baidu.com': 119.29.29.29
+        '*.bdstatic.com': 119.29.29.29
+      enhanced-mode: fake-ip
+      nameserver:
+        - 223.5.5.5
+        - 119.29.29.29
+      fake-ip-range: 198.18.0.1/16
+      fake-ip-filter:
+        - "*.lan"
+        - stun.*.*.*
+        - stun.*.*
+        - music.163.com
+        - "*.music.163.com"
+        - "*.126.net"
+        - musicapi.taihe.com
+        - music.taihe.com
+        - songsearch.kugou.com
+        - trackercdn.kugou.com
+        - "*.kuwo.cn"
+        - api-jooxtt.sanook.com
+        - api.joox.com
+        - joox.com
+        - y.qq.com
+        - "*.y.qq.com"
+        - streamoc.music.tc.qq.com
+        - mobileoc.music.tc.qq.com
+        - isure.stream.qqmusic.qq.com
+        - dl.stream.qqmusic.qq.com
+        - aqqmusic.tc.qq.com
+        - amobile.music.tc.qq.com
+        - "*.xiami.com"
+        - "*.music.migu.cn"
+        - music.migu.cn
+        - "*.msftconnecttest.com"
+        - "*.msftncsi.com"
+        - localhost.ptlogin2.qq.com
+        - "*.*.*.srv.nintendo.net"
+        - "*.*.stun.playstation.net"
+        - xbox.*.*.microsoft.com
+        - "*.ipv6.microsoft.com"
+        - "*.*.xboxlive.com"
+        - speedtest.cros.wr.pvp.net
+      fallback:
+        - https://dns.google/dns-query
+        - https://dns.cloudflare.com/dns-query
+        - https://public.dns.iij.jp/dns-query
+      fallback-filter:
+        geoip: true
+        geoip-core: CN
+        ipcidr:
+          - 0.0.0.0/32
+          - 127.0.0.1/32
+          - 240.0.0.0/4
+        domain:
+          - +.google.com
+          - +.facebook.com
+          - +.twitter.com
+          - +.youtube.com
+          - +.xn--ngstr-lra8j.com
+          - +.google.cn
+          - +.googleapis.cn
+          - +.googleapis.com
+          - +.gvt1.com
+          - +.apple.com
+          - +.apple-cloudkit.com
+          - +.apple-mapkit.com
+          - +.cdn-apple.com
+          - +.mzstatic.com
+          - +.microsoft.com
+          - +.bing.com
+          - +.linkedin.com
+          - +.licdn.com
+    tun:
+      enable: true
+      stack: system
+      dns-hijack:
+        - 198.18.0.2:53
+      auto-route: true
+      auto-detect-interface: true
+    profile:
+      tracing: false
+      store-fake-ip: true
+connProxy: 2
+connProfile: true
+connMode: true
+connChainType: 2
+editor: 0
+mixinType: 0
+profileParsersText: |-
+  parsers: # array
+    - reg: .?
+      yaml:
+        prepend-rules:
+          - SCRIPT,quic,REJECT
+        mix-object:
+          script:
+            shortcuts:
+              quic: network == 'udp' and dst_port == 443
+trayOrders:
+  - - icon
+  - - status
+    - traffic
+    - text
+trayColorTransparent: false
+useSystemEmoji: false
