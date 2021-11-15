@@ -45,15 +45,6 @@ type = "select"
 rule = ["HKG|TWN|香港|台湾"]
 
 [[custom_groups]]
-name = "Emby"
-type = "select"
-rule = [
-    "[]ImmTelecom | 美国",
-    "[]FlowerCloud | Emby 专用",
-    "[]PROXY"
-]
-
-[[custom_groups]]
 name = "Spotify"
 type = "select"
 rule = [
@@ -209,13 +200,6 @@ url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
 
-[[custom_groups]]
-name = "FlowerCloud | Emby 专用"
-type = "fallback"
-rule = ["实验性"]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 600
-
 [[rulesets]]
 group = "DIRECT"
 ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Providers/WhiteList.yaml"
@@ -309,11 +293,6 @@ type = "clash-classic"
 [[rulesets]]
 group = "HBO GO"
 ruleset = "https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/StreamingMedia/Video/HBO-Asia.yaml"
-type = "clash-classic"
-
-[[rulesets]]
-group = "Emby"
-ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Providers/Emby.yaml"
 type = "clash-classic"
 
 [[rulesets]]
