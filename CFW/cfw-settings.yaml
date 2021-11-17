@@ -111,9 +111,9 @@ mixinText: |-
         - "*.*.xboxlive.com"
         - speedtest.cros.wr.pvp.net
       fallback:
-        - https://dns.google/dns-query
-        - https://dns.cloudflare.com/dns-query
-        - https://public.dns.iij.jp/dns-query
+        - 8.8.8.8
+        - 1.1.1.1
+        - 94.140.14.14
       fallback-filter:
         geoip: true
         geoip-core: CN
@@ -129,17 +129,9 @@ mixinText: |-
           - +.xn--ngstr-lra8j.com
           - +.google.cn
           - +.googleapis.cn
-          - +.googleapis.com
           - +.gvt1.com
-          - +.apple.com
-          - +.apple-cloudkit.com
-          - +.apple-mapkit.com
-          - +.cdn-apple.com
-          - +.mzstatic.com
-          - +.microsoft.com
-          - +.bing.com
-          - +.linkedin.com
-          - +.licdn.com
+          - +.github.com
+          - +.githubusercontent.com
     tun:
       enable: true
       stack: system
