@@ -106,7 +106,7 @@ dns:
     '*.ximalaya.com': 119.29.29.29
     '*.baidu.com': 119.29.29.29
     '*.bdstatic.com': 119.29.29.29
-  default-nameserver:
+  default-nameserver: # 用于解析 nameserver 里面 DoH/DoT 的域名
     - 223.5.5.5 # 阿里 AliDNS
 #   - 223.6.6.6 # 阿里 AliDNS
     - 119.29.29.29 # 腾讯 DNSPod DNS+
@@ -131,6 +131,7 @@ dns:
 #   - 178.79.131.110 # V2EX DNS
 #   - 185.222.222.222 # DNS.SB
 #   - 185.184.222.222 # DNS.SB
+# use-hosts: true
   enhanced-mode: redir-host # or fake-ip
 #   fake-ip-range: 198.18.0.1/16
 #   fake-ip-filter: # fake ip 白名单列表，如果你不知道这个参数的作用，请勿修改
@@ -205,7 +206,6 @@ dns:
 #     - "*.ipv6.microsoft.com"
 #     - "*.*.xboxlive.com"
 #     - speedtest.cros.wr.pvp.net
-# use-hosts: true
   nameserver:
     - https://dns.alidns.com/dns-query # Ali DoH
     - https://doh.pub/dns-query # Tencent DoH
