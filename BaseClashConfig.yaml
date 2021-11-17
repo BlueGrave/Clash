@@ -245,15 +245,6 @@ dns:
       - +.googleapis.cn
       - +.googleapis.com
       - +.gvt1.com
-      - +.apple.com
-      - +.apple-cloudkit.com
-      - +.apple-mapkit.com
-      - +.cdn-apple.com
-      - +.mzstatic.com
-      - +.microsoft.com
-      - +.bing.com
-      - +.linkedin.com
-      - +.licdn.com
 
 # tun:
 #   enable: true
