@@ -39,7 +39,6 @@ mixinText: |-
       enable: true
       ipv6: true
       listen: 127.0.0.1:53
-      use-hosts: true
       nameserver-policy:
         '*.tw': 1.1.1.1
         'testflight.apple.com': 8.8.8.8
@@ -70,12 +69,13 @@ mixinText: |-
         '*.ximalaya.com': 119.29.29.29
         '*.baidu.com': 119.29.29.29
         '*.bdstatic.com': 119.29.29.29
+      use-hosts: true
       enhanced-mode: fake-ip
       nameserver:
         - 223.5.5.5
         - 119.29.29.29
       fake-ip-range: 198.18.0.1/16
-      fake-ip-filter:
+      fake-ip-filter: # fake ip 白名单
         - "*.lan"
         - stun.*.*.*
         - stun.*.*
@@ -117,7 +117,7 @@ mixinText: |-
       fallback-filter:
         geoip: true
         geoip-core: CN
-        ipcidr:
+        ipcidr: # 在这个网段内的 IP 地址会被考虑为被污染的 IP
           - 0.0.0.0/32
           - 127.0.0.1/32
           - 240.0.0.0/4
