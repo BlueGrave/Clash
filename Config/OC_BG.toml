@@ -27,17 +27,17 @@ rule = [
 [[custom_groups]]
 name = "Netflix"
 type = "select"
-rule = ["台湾"]
+rule = ["Taiwan|台湾"]
 
 [[custom_groups]]
 name = "Disney+"
 type = "select"
-rule = ["香港|台湾"]
+rule = ["Hong Kong|Taiwan|香港|台湾"]
 
 [[custom_groups]]
 name = "HBO GO"
 type = "select"
-rule = ["香港|台湾"]
+rule = ["Hong Kong|Taiwan|香港|台湾"]
 
 [[custom_groups]]
 name = "Spotify"
