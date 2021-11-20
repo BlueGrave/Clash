@@ -32,7 +32,7 @@ rule = [
 [[custom_groups]]
 name = "Netflix"
 type = "select"
-rule = ["TWN|台湾"]
+rule = ["SGP|TWN|新加坡|台湾"]
 
 [[custom_groups]]
 name = "Disney+"
