@@ -136,8 +136,8 @@ dns:
 # use-hosts: true
 # fake-ip-filter: # fake ip 白名单列表，如果你不知道这个参数的作用，请勿修改
 #   - "*.lan"
-#   - stun.*.*.*
-#   - stun.*.*
+#   - "stun.*.*.*"
+#   - "stun.*.*"
 #   - time.windows.com
 #   - time.nist.gov
 #   - time.apple.com
@@ -202,7 +202,7 @@ dns:
 #   - localhost.ptlogin2.qq.com
 #   - "*.*.*.srv.nintendo.net"
 #   - "*.*.stun.playstation.net"
-#   - xbox.*.*.microsoft.com
+#   - "xbox.*.*.microsoft.com"
 #   - "*.ipv6.microsoft.com"
 #   - "*.*.xboxlive.com"
 #   - speedtest.cros.wr.pvp.net
