@@ -106,3 +106,5 @@ dns:
       - +.googleapis.cn
       - +.googleapis.com
       - +.gvt1.com
+      - +.github.com
+      - +.githubusercontent.com
