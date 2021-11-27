@@ -30,7 +30,7 @@ rule = [
 [[custom_groups]]
 name = "Netflix"
 type = "select"
-rule = ["Singapore|Taiwan|新加坡|狮城|台湾"]
+rule = ["Japan|Taiwan|Singapore|日本|台湾|新加坡|狮城"]
 
 [[custom_groups]]
 name = "Disney+"
