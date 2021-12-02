@@ -8,11 +8,6 @@ clash_rule_base = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Gene
 name = "DEFAULT"
 type = "select"
 rule = [
-    "[]Nexitally | 日本",
-    "[]Nexitally | 香港",
-    "[]Nexitally | 新加坡",
-    "[]Nexitally | 美国",
-    "[]Nexitally | 台湾",
     "[]FlowerCloud | 香港",
     "[]FlowerCloud | 新加坡",
     "[]FlowerCloud | 日本",
@@ -32,24 +27,23 @@ rule = [
 [[custom_groups]]
 name = "Netflix"
 type = "select"
-rule = ["Japan|Taiwan|Singapore|JPN|TWN|SGP|日本|台湾|新加坡|狮城"]
+rule = ["日本|台湾|新加坡|狮城|JPN|TWN|SGP"]
 
 [[custom_groups]]
 name = "Disney+"
 type = "select"
-rule = ["Hong Kong|Taiwan|HKG|TWN|香港|台湾"]
+rule = ["香港|台湾|HKG|TWN"]
 
 [[custom_groups]]
 name = "HBO GO"
 type = "select"
-rule = ["Hong Kong|Taiwan|HKG|TWN|香港|台湾"]
+rule = ["香港|台湾|HKG|TWN"]
 
 [[custom_groups]]
 name = "Spotify"
 type = "select"
 rule = [
     "[]DEFAULT",
-    "[]Nexitally | 台湾",
     "[]FlowerCloud | 台湾",
     "[]PROXY"
 ]
@@ -59,7 +53,6 @@ name = "PayPal"
 type = "select"
 rule = [
     "[]DEFAULT",
-    "[]Nexitally | 台湾",
     "[]FlowerCloud | 台湾",
     "[]PROXY"
 ]
@@ -76,7 +69,6 @@ rule = [
 name = "GoogleVoice"
 type = "select"
 rule = [
-    "[]Nexitally | 美国",
     "[]FlowerCloud | 美国",
     "[]PROXY"
 ]
@@ -119,46 +111,6 @@ rule = [
 name = "PROXY"
 type = "select"
 rule = [".*"]
-
-[[custom_groups]]
-name = "Nexitally | 日本"
-type = "url-test"
-rule = ["Japan"]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 600
-tolerance = 20
-
-[[custom_groups]]
-name = "Nexitally | 香港"
-type = "url-test"
-rule = ["Hong Kong"]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 600
-tolerance = 20
-
-[[custom_groups]]
-name = "Nexitally | 新加坡"
-type = "url-test"
-rule = ["Singapore"]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 600
-tolerance = 20
-
-[[custom_groups]]
-name = "Nexitally | 美国"
-type = "url-test"
-rule = ["United States"]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 600
-tolerance = 20
-
-[[custom_groups]]
-name = "Nexitally | 台湾"
-type = "url-test"
-rule = ["Taiwan"]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 600
-tolerance = 20
 
 [[custom_groups]]
 name = "FlowerCloud | 香港"
