@@ -224,6 +224,8 @@ dns:
 #   - https://dns.switch.ch/dns-query # SWITCH DoH
 #   - https://dns.east.comss.one/dns-query # Comss.ru DoH
 #   - https://dns.twnic.tw/dns-query # Quad101 DoH
+#   - "[2001:4860:4860::8888]:53" # Google IPv6 DNS
+#   - "[2001:4860:4860::8844]:53" # Google IPv6 DNS
 #   - tls://public.dns.iij.jp
 #   - tls://jp.tiar.app
 #   - tls://dns.switch.ch
