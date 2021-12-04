@@ -8,11 +8,9 @@ clash_rule_base = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Gene
 name = "DEFAULT"
 type = "select"
 rule = [
-    "[]FlowerCloud | 香港",
-    "[]FlowerCloud | 新加坡",
-    "[]FlowerCloud | 日本",
-    "[]FlowerCloud | 美国",
-    "[]FlowerCloud | 台湾",
+    "[]JPN",
+    "[]HKG",
+    "[]FlowerCloud",
     "[]PROXY"
 ]
 
@@ -44,7 +42,7 @@ name = "Spotify"
 type = "select"
 rule = [
     "[]DEFAULT",
-    "[]FlowerCloud | 台湾",
+    "[]TWN",
     "[]PROXY"
 ]
 
@@ -53,7 +51,7 @@ name = "PayPal"
 type = "select"
 rule = [
     "[]DEFAULT",
-    "[]FlowerCloud | 台湾",
+    "[]TWN",
     "[]PROXY"
 ]
 
@@ -62,14 +60,6 @@ name = "GitHub"
 type = "select"
 rule = [
     "[]DEFAULT",
-    "[]PROXY"
-]
-
-[[custom_groups]]
-name = "GoogleVoice"
-type = "select"
-rule = [
-    "[]FlowerCloud | 美国",
     "[]PROXY"
 ]
 
@@ -113,41 +103,33 @@ type = "select"
 rule = [".*"]
 
 [[custom_groups]]
-name = "FlowerCloud | 香港"
+name = "JPN"
+type = "url-test"
+rule = ["JPN"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
+
+[[custom_groups]]
+name = "HKG"
+type = "url-test"
+rule = ["HKG"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
+
+[[custom_groups]]
+name = "TWN"
+type = "url-test"
+rule = ["TWN"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
+
+[[custom_groups]]
+name = "FlowerCloud"
 type = "url-test"
 rule = ["香港高级|香港标准"]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 600
-tolerance = 20
-
-[[custom_groups]]
-name = "FlowerCloud | 新加坡"
-type = "url-test"
-rule = ["新加坡高级|新加坡标准"]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 600
-tolerance = 20
-
-[[custom_groups]]
-name = "FlowerCloud | 日本"
-type = "url-test"
-rule = ["日本高级|日本标准"]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 600
-tolerance = 20
-
-[[custom_groups]]
-name = "FlowerCloud | 美国"
-type = "url-test"
-rule = ["美国高级|美国标准"]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 600
-tolerance = 20
-
-[[custom_groups]]
-name = "FlowerCloud | 台湾"
-type = "url-test"
-rule = ["台湾高级|台湾标准"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
@@ -275,11 +257,6 @@ type = "clash-classic"
 [[rulesets]]
 group = "DEFAULT"
 ruleset = "https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/Google/GoogleDrive.yaml"
-type = "clash-classic"
-
-[[rulesets]]
-group = "GoogleVoice"
-ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleVoice/GoogleVoice.yaml"
 type = "clash-classic"
 
 [[rulesets]]
