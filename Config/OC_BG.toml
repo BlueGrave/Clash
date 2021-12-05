@@ -44,7 +44,7 @@ name = "Spotify"
 type = "select"
 rule = [
     "[]DEFAULT",
-    "[]TW",
+    "[]台湾",
     "[]PROXY"
 ]
 
@@ -53,7 +53,7 @@ name = "PayPal"
 type = "select"
 rule = [
     "[]DEFAULT",
-    "[]TW",
+    "[]台湾",
     "[]PROXY"
 ]
 
@@ -121,7 +121,7 @@ interval = 600
 tolerance = 20
 
 [[custom_groups]]
-name = "TW"
+name = "台湾"
 type = "url-test"
 rule = ["台湾高级|台湾标准"]
 url = "http://cp.cloudflare.com/generate_204"
