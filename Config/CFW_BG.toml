@@ -8,8 +8,7 @@ clash_rule_base = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Gene
 name = "DEFAULT"
 type = "select"
 rule = [
-    "[]日本",
-    "[]香港",
+    "[]Blinkload",
     "[]FlowerCloud",
     "[]PROXY"
 ]
@@ -25,17 +24,17 @@ rule = [
 [[custom_groups]]
 name = "Netflix"
 type = "select"
-rule = ["日本|台湾|新加坡|狮城|JPN|TWN|SGP"]
+rule = ["日本|台湾|新加坡|狮城"]
 
 [[custom_groups]]
 name = "Disney+"
 type = "select"
-rule = ["香港|新加坡|狮城|台湾|HKG|SGP|TWN"]
+rule = ["香港|新加坡|狮城|台湾"]
 
 [[custom_groups]]
 name = "HBO GO"
 type = "select"
-rule = ["香港|新加坡|狮城|台湾|HKG|SGP|TWN"]
+rule = ["香港|新加坡|狮城|台湾"]
 
 [[custom_groups]]
 name = "Spotify"
@@ -103,25 +102,9 @@ type = "select"
 rule = [".*"]
 
 [[custom_groups]]
-name = "日本"
+name = "Blinkload"
 type = "url-test"
-rule = ["JPN"]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 600
-tolerance = 20
-
-[[custom_groups]]
-name = "香港"
-type = "url-test"
-rule = ["HKG"]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 600
-tolerance = 20
-
-[[custom_groups]]
-name = "台湾"
-type = "url-test"
-rule = ["TWN"]
+rule = ["Hong Kong"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
@@ -130,6 +113,14 @@ tolerance = 20
 name = "FlowerCloud"
 type = "url-test"
 rule = ["香港高级|香港标准"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
+
+[[custom_groups]]
+name = "台湾"
+type = "url-test"
+rule = ["台湾高级|台湾标准"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
