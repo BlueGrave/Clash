@@ -8,8 +8,8 @@ clash_rule_base = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Gene
 name = "DEFAULT"
 type = "select"
 rule = [
-    "[]JPN",
-    "[]HKG",
+    "[]日本",
+    "[]香港",
     "[]FlowerCloud",
     "[]PROXY"
 ]
@@ -42,7 +42,7 @@ name = "Spotify"
 type = "select"
 rule = [
     "[]DEFAULT",
-    "[]TWN",
+    "[]台湾",
     "[]PROXY"
 ]
 
@@ -51,7 +51,7 @@ name = "PayPal"
 type = "select"
 rule = [
     "[]DEFAULT",
-    "[]TWN",
+    "[]台湾",
     "[]PROXY"
 ]
 
@@ -103,7 +103,7 @@ type = "select"
 rule = [".*"]
 
 [[custom_groups]]
-name = "JPN"
+name = "日本"
 type = "url-test"
 rule = ["JPN"]
 url = "http://cp.cloudflare.com/generate_204"
@@ -111,7 +111,7 @@ interval = 600
 tolerance = 20
 
 [[custom_groups]]
-name = "HKG"
+name = "香港"
 type = "url-test"
 rule = ["HKG"]
 url = "http://cp.cloudflare.com/generate_204"
@@ -119,7 +119,7 @@ interval = 600
 tolerance = 20
 
 [[custom_groups]]
-name = "TWN"
+name = "台湾"
 type = "url-test"
 rule = ["TWN"]
 url = "http://cp.cloudflare.com/generate_204"
