@@ -8,8 +8,6 @@ clash_rule_base = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Gene
 name = "DEFAULT"
 type = "select"
 rule = [
-    "[]Blinkload",
-    "[]FlowerCloud",
     "[]Netflix",
     "[]Disney+",
     "[]HBO GO",
@@ -27,24 +25,23 @@ rule = [
 [[custom_groups]]
 name = "Netflix"
 type = "select"
-rule = ["日本|台湾|新加坡|狮城"]
+rule = ["^(?=.*(日本|台湾|新加坡|狮城))(?=.*标准).*$"]
 
 [[custom_groups]]
 name = "Disney+"
 type = "select"
-rule = ["香港|新加坡|狮城|台湾"]
+rule = ["^(?=.*(香港|新加坡|狮城|台湾))(?=.*标准).*$"]
 
 [[custom_groups]]
 name = "HBO GO"
 type = "select"
-rule = ["香港|新加坡|狮城|台湾"]
+rule = ["^(?=.*(香港|新加坡|狮城|台湾))(?=.*标准).*$"]
 
 [[custom_groups]]
 name = "Spotify"
 type = "select"
 rule = [
-    "[]DEFAULT",
-    "[]台湾",
+    "[]FlowerCloud | 台湾",
     "[]PROXY"
 ]
 
@@ -52,16 +49,7 @@ rule = [
 name = "PayPal"
 type = "select"
 rule = [
-    "[]DEFAULT",
-    "[]台湾",
-    "[]PROXY"
-]
-
-[[custom_groups]]
-name = "GitHub"
-type = "select"
-rule = [
-    "[]DEFAULT",
+    "[]FlowerCloud | 台湾",
     "[]PROXY"
 ]
 
@@ -105,23 +93,7 @@ type = "select"
 rule = [".*"]
 
 [[custom_groups]]
-name = "Blinkload"
-type = "url-test"
-rule = ["Hong Kong"]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 600
-tolerance = 20
-
-[[custom_groups]]
-name = "FlowerCloud"
-type = "url-test"
-rule = ["香港高级|香港标准"]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 600
-tolerance = 20
-
-[[custom_groups]]
-name = "台湾"
+name = "FlowerCloud | 台湾"
 type = "url-test"
 rule = ["台湾高级|台湾标准"]
 url = "http://cp.cloudflare.com/generate_204"
@@ -236,11 +208,6 @@ type = "clash-classic"
 [[rulesets]]
 group = "PayPal"
 ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PayPal/PayPal.yaml"
-type = "clash-classic"
-
-[[rulesets]]
-group = "GitHub"
-ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml"
 type = "clash-classic"
 
 [[rulesets]]
