@@ -8,6 +8,7 @@ clash_rule_base = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Gene
 name = "DEFAULT"
 type = "select"
 rule = [
+    "[]FlowerCloud | 日本",
     "[]FlowerCloud | 香港",
     "[]PROXY"
 ]
@@ -89,6 +90,14 @@ rule = [
 name = "PROXY"
 type = "select"
 rule = [".*"]
+
+[[custom_groups]]
+name = "FlowerCloud | 日本"
+type = "url-test"
+rule = ["日本高级|日本标准"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
 
 [[custom_groups]]
 name = "FlowerCloud | 香港"
