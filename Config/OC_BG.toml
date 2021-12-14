@@ -25,17 +25,17 @@ rule = [
 [[custom_groups]]
 name = "Netflix"
 type = "select"
-rule = ["(^(?=.*(新加坡|狮城|台湾))(?=.*标准).*$)|(^(?=.*Singapore)(?=.*(Premium|12).*$)|Taiwan"]
+rule = ["(^(?=.*(新加坡|狮城|台湾))(?=.*标准).*$)|Taiwan|(^(?=.*Singapore)(?=.*(Premium|12)).*$)"]
 
 [[custom_groups]]
 name = "Disney+"
 type = "select"
-rule = ["(^(?=.*(香港|新加坡|狮城|台湾))(?=.*标准).*$)|(^(?=.*Hong Kong)(?=.*(Premium|23).*$)|(^(?=.*Singapore)(?=.*(Premium|12).*$)|Taiwan"]
+rule = ["(^(?=.*(香港|新加坡|狮城|台湾))(?=.*标准).*$)|Taiwan|(^(?=.*Singapore)(?=.*(Premium|12)).*$)|(^(?=.*Hong Kong)(?=.*(Premium|23)).*$)"]
 
 [[custom_groups]]
 name = "HBO GO"
 type = "select"
-rule = ["(^(?=.*(香港|新加坡|狮城|台湾))(?=.*标准).*$)|(^(?=.*Hong Kong)(?=.*(Premium|23).*$)|(^(?=.*Singapore)(?=.*(Premium|12).*$)|Taiwan"]
+rule = ["(^(?=.*(香港|新加坡|狮城|台湾))(?=.*标准).*$)|Taiwan|(^(?=.*Singapore)(?=.*(Premium|12)).*$)|(^(?=.*Hong Kong)(?=.*(Premium|23)).*$)"]
 
 [[custom_groups]]
 name = "Spotify"
