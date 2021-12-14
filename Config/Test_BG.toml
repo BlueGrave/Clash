@@ -34,7 +34,7 @@ rule = ["(^(?=.*(香港|新加坡|狮城|台湾))(?=.*标准).*$)|Hong Kong|Sing
 [[custom_groups]]
 name = "HBO GO"
 type = "select"
-rule = ["(^(?=.*(香港|新加坡|狮城|台湾))(?=.*标准).*$)|Hong Kong|Singapore|Taiwan"]
+rule = ["(^(?=.*台湾)(?=.*标准).*$)|Taiwan"]
 
 [[custom_groups]]
 name = "Spotify"
