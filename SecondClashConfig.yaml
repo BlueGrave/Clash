@@ -1,0 +1,120 @@
+mixed-port: 7890
+allow-lan: true
+mode: Rule
+log-level: debug
+external-controller: '127.0.0.1:9090'
+experimental:
+  ignore-resolve-fail: true
+hosts:
+  'router.asus.com': 192.168.186.1
+dns:
+  enable: true
+  ipv6: true
+  listen: 127.0.0.1:53
+  nameserver-policy:
+    '*.tw': 1.1.1.1
+    'testflight.apple.com': 8.8.8.8
+    'gist.github.com': 8.8.8.8
+    '*.tmall.com': 223.5.5.5
+    '*.taobao.com': 223.5.5.5
+    '*.alicdn.com': 223.5.5.5
+    '*.aliyun.com': 223.5.5.5
+    '*.alipay*.com': 223.5.5.5
+    '*.alibaba*.com': 223.5.5.5
+    '*.alimama*.com': 223.5.5.5
+    '*.qq.com': 119.29.29.29
+    '*.tencent.com': 119.29.29.29
+    '*.weixin.com': 119.29.29.29
+    '*.qpic.cn': 119.29.29.29
+    '*.jd.com': 119.29.29.29
+    '*.bilibili.com': 119.29.29.29
+    'hdslb.com': 119.29.29.29
+    '*.163.com': 119.29.29.29
+    '*.126.com': 119.29.29.29
+    '*.126.net': 119.29.29.29
+    '*.127.net': 119.29.29.29
+    '*.netease.com': 119.29.29.29
+    '*.10010.com': 119.29.29.29
+    '*.unicompayment.com': 119.29.29.29
+    '*.vercel.app': 119.29.29.29
+    '*.vercel.com': 119.29.29.29
+    '*.ximalaya.com': 119.29.29.29
+    '*.baidu.com': 119.29.29.29
+    '*.bdstatic.com': 119.29.29.29
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  use-hosts: true
+  fake-ip-filter: # fake ip 白名单
+    - "*.lan"
+    - stun.*.*.*
+    - stun.*.*
+    - music.163.com
+    - "*.music.163.com"
+    - "*.126.net"
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - "*.kuwo.cn"
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - y.qq.com
+    - "*.y.qq.com"
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - "*.xiami.com"
+    - "*.music.migu.cn"
+    - music.migu.cn
+    - "*.msftconnecttest.com"
+    - "*.msftncsi.com"
+    - localhost.ptlogin2.qq.com
+    - "*.*.*.srv.nintendo.net"
+    - "*.*.stun.playstation.net"
+    - xbox.*.*.microsoft.com
+    - "*.ipv6.microsoft.com"
+    - "*.*.xboxlive.com"
+    - speedtest.cros.wr.pvp.net
+  nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+    - "[2400:3200::1]:53"
+    - "[240C::6666]:53"
+  fallback:
+    - 8.8.8.8
+    - 1.1.1.1
+    - 94.140.14.14
+    - "[2001:4860:4860::8888]:53"
+  fallback-filter:
+    geoip: true
+    geoip-core: CN
+    ipcidr: # 在这个网段内的 IP 地址会被考虑为被污染的 IP
+      - 0.0.0.0/8
+      - 100.64.0.0/10
+      - 169.254.0.0/16
+      - 198.18.0.0/15
+      - 240.0.0.0/4
+      - 240.0.0.0/4
+      - 255.255.255.255/32
+    domain:
+      - +.google.com
+      - +.facebook.com
+      - +.twitter.com
+      - +.youtube.com
+      - +.xn--ngstr-lra8j.com
+      - +.google.cn
+      - +.googleapis.cn
+      - +.gvt1.com
+      - +.github.com
+      - +.githubusercontent.com
+# tun:
+#   enable: true
+#   stack: system
+#   dns-hijack:
+#     - 198.18.0.2:53
+#   auto-route: true
+#   auto-detect-interface: true
