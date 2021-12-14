@@ -94,7 +94,7 @@ rule = [".*"]
 [[custom_groups]]
 name = "FlowerCloud | 日本"
 type = "url-test"
-rule = ["日本高级|日本标准"]
+rule = ["日本标准"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
@@ -102,7 +102,7 @@ tolerance = 20
 [[custom_groups]]
 name = "FlowerCloud | 香港"
 type = "url-test"
-rule = ["香港高级|香港标准"]
+rule = ["香港标准"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
