@@ -17,12 +17,11 @@ mixed-port: 7890
 # 允许局域网的连接（可用来共享代理）
 allow-lan: true
 
-# 仅在将allow-lan设置为true时适用
-# "*": 绑定所有IP地址
-# 192.168.122.11: 绑定单个IPv4地址
-# "[aaaa::a8aa:ff:fe09:57d8]": 绑定单个IPv6地址
+# 仅在将 allow-lan 设置为 true 时适用
+# "*": 绑定所有 IP 地址
+# 192.168.122.11: 绑定单个 IPv4 地址
+# "[aaaa::a8aa:ff:fe09:57d8]": 绑定单个 IPv6 地址
 # bind-address: "*"
-# ipv6: true
 
 # 规则模式：Rule（规则） / Global（全局代理）/ Direct（全局直连）
 mode: Rule
@@ -30,6 +29,9 @@ mode: Rule
 # 设置日志输出级别 (默认级别：silent，即不输出任何内容，以避免因日志内容过大而导致程序内存溢出）。
 # 5 个级别：silent / error / warning / info / debug。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
 log-level: info
+
+# 当设置为 false 时，不会将主机名解析为 IPv6 地址
+ipv6: false
 
 # Clash 的 RESTful API
 external-controller: '127.0.0.1:9090'
@@ -44,10 +46,6 @@ external-controller: '127.0.0.1:9090'
 
 # RESTful API 的口令 (可选)
 # secret: ""
-
-# 实验性功能
-experimental:
-  ignore-resolve-fail: true # 忽略 DNS 解析失败，默认值为 true
 
 #	interface-name: en0 # outbound interface name
 
@@ -74,7 +72,6 @@ experimental:
 
 dns:
   enable: true # 是否启用 dns false
-  ipv6: false
   listen: 127.0.0.1:53
   nameserver-policy:
     '*.tw': 1.1.1.1
@@ -259,6 +256,8 @@ dns:
       - +.googleapis.cn
       - +.googleapis.com
       - +.gvt1.com
+      - +.github.com
+      - +.githubusercontent.com
 
 # tun:
 #   enable: true
