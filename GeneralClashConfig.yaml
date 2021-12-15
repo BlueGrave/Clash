@@ -40,24 +40,22 @@ dns:
     '*.baidu.com': 119.29.29.29
     '*.bdstatic.com': 119.29.29.29
   default-nameserver:
-    - 223.5.5.5 # 阿里 AliDNS
-    - 119.29.29.29 # 腾讯 DNSPod DNS+
-    - 8.8.8.8 # Google DNS
+    - 223.5.5.5
+    - 119.29.29.29
+    - 8.8.8.8
   enhanced-mode: redir-host
   nameserver:
-    - https://dns.alidns.com/dns-query # Ali DoH
-    - https://doh.pub/dns-query # Tencent DoH
-    - https://dns.rubyfish.cn/dns-query # Rubyfish DoH
-#   - https://doh.opendns.com/dns-query # OpenDNS DoH
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    - https://dns.rubyfish.cn/dns-query
   fallback:
-    - https://public.dns.iij.jp/dns-query # IIJ.JP DoH
-    - https://dns.cloudflare.com/dns-query # CloudFlare DoH
-    - https://dns.google/dns-query # Google DoH
-#   - https://dns.adguard.com/dns-query # Adguard DoH
+    - https://public.dns.iij.jp/dns-query
+    - https://dns.cloudflare.com/dns-query
+    - https://dns.google/dns-query
   fallback-filter:
-    geoip: true # 默认，当 geoip 匹配 geoip-code ，Clash 将使用 nameserver 查询的结果，否则 Clash 将仅使用 fallback 查询的结果
+    geoip: true
     geoip-code: CN
-    ipcidr: # 在这个网段内的 IP 地址会被考虑为被污染的 IP ，当 nameserver 查询的结果匹配这些 IP ，Clash 将使用 fallback 查询的结果
+    ipcidr:
       - 0.0.0.0/8
       - 10.0.0.0/8
       - 100.64.0.0/10
