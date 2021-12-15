@@ -43,39 +43,39 @@ dns:
   fake-ip-range: 198.18.0.1/16
   use-hosts: true
   fake-ip-filter: # fake ip 白名单
-    - "*.lan"
+    - '*.lan'
     - stun.*.*.*
     - stun.*.*
     - music.163.com
-    - "*.music.163.com"
-    - "*.126.net"
+    - '*.music.163.com'
+    - '*.126.net'
     - musicapi.taihe.com
     - music.taihe.com
     - songsearch.kugou.com
     - trackercdn.kugou.com
-    - "*.kuwo.cn"
+    - '*.kuwo.cn'
     - api-jooxtt.sanook.com
     - api.joox.com
     - joox.com
     - y.qq.com
-    - "*.y.qq.com"
+    - '*.y.qq.com'
     - streamoc.music.tc.qq.com
     - mobileoc.music.tc.qq.com
     - isure.stream.qqmusic.qq.com
     - dl.stream.qqmusic.qq.com
     - aqqmusic.tc.qq.com
     - amobile.music.tc.qq.com
-    - "*.xiami.com"
-    - "*.music.migu.cn"
+    - '*.xiami.com'
+    - '*.music.migu.cn'
     - music.migu.cn
-    - "*.msftconnecttest.com"
-    - "*.msftncsi.com"
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
     - localhost.ptlogin2.qq.com
-    - "*.*.*.srv.nintendo.net"
-    - "*.*.stun.playstation.net"
+    - '*.*.*.srv.nintendo.net'
+    - '*.*.stun.playstation.net'
     - xbox.*.*.microsoft.com
-    - "*.ipv6.microsoft.com"
-    - "*.*.xboxlive.com"
+    - '*.ipv6.microsoft.com'
+    - '*.*.xboxlive.com'
     - speedtest.cros.wr.pvp.net
   nameserver:
     - 223.5.5.5
