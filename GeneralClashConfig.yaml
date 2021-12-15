@@ -29,7 +29,6 @@ hosts:
 
 dns:
   enable: true # 是否启用 dns false
-  ipv6: false
   listen: 127.0.0.1:53
   nameserver-policy:
     '*.tw': 1.1.1.1
