@@ -78,20 +78,20 @@
                       <el-checkbox-button v-model="form.nodeList" label="Node List"></el-checkbox-button>
                       <el-checkbox-button v-model="form.udp" label="UDP"></el-checkbox-button>
                       <el-checkbox-button v-model="form.tfo" label="TFO"></el-checkbox-button>
-                      <el-checkbox-button v-model="form.emoji" label="Emoji"></el-checkbox-button>
+                      <el-checkbox-button v-model="form.scv" label="SCV"></el-checkbox-button>
                     </el-col>
                     <el-popover placement="bottom" v-model="form.extraset">
                       <el-row>
                         <el-checkbox v-model="form.new_name" label="Clash New Field"></el-checkbox>
                       </el-row>
                       <el-row>
+                        <el-checkbox v-model="form.emoji" label="Emoji"></el-checkbox>
+                      </el-row>
+                      <el-row>
                         <el-checkbox v-model="form.appendType" label="插入节点类型"></el-checkbox>
                       </el-row>
                       <el-row>
                         <el-checkbox v-model="form.sort" label="排序节点"></el-checkbox>
-                      </el-row>
-                      <el-row>
-                        <el-checkbox v-model="form.scv" label="跳过证书验证"></el-checkbox>
                       </el-row>
                       <el-row>
                         <el-checkbox v-model="form.fdn" label="过滤非法节点"></el-checkbox>
@@ -368,8 +368,8 @@ export default {
         extraset: false,
         sort: false,
         udp: true,
-        tfo: true,
-        scv: false,
+        tfo: false,
+        scv: true,
         fdn: false,
         appendType: false,
         insert: false, // 是否插入默认订阅的节点，对应配置项 insert_url
@@ -402,7 +402,7 @@ export default {
     this.isPC = this.$getOS().isPc;
   },
   mounted() {
-    this.form.clientType = "surge&ver=4";
+    this.form.clientType = "clash";
     this.notify();
     this.getBackendVersion();
   },
