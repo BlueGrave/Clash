@@ -2,12 +2,12 @@ mixed-port: 7890
 allow-lan: true
 mode: Rule
 log-level: info
-ipv6: false
 external-controller: '127.0.0.1:9090'
 hosts:
   'router.asus.com': 192.168.186.1
 dns:
   enable: true
+  ipv6: false
   listen: 127.0.0.1:53
   nameserver-policy:
     '*.tw': 1.1.1.1
