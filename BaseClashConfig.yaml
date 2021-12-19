@@ -30,6 +30,9 @@ mode: Rule
 # 5 个级别：silent / error / warning / info / debug。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
 log-level: info
 
+# 此项为 false 时，则不将主机名解析为 IPv6 地址
+ipv6: false
+
 # Clash 的 RESTful API
 external-controller: '127.0.0.1:9090'
 
@@ -69,7 +72,7 @@ external-controller: '127.0.0.1:9090'
 
 dns:
   enable: true # 是否启用 dns false
-  ipv6: false # # 当此选项为 false 时, AAAA 请求将返回空
+  ipv6: false # 当此选项为 false 时, AAAA 请求将返回空
   listen: 127.0.0.1:53
   nameserver-policy:
     '*.tw': 1.1.1.1
