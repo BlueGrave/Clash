@@ -33,6 +33,7 @@ bypassText: |-
     - <local>
 mixinText: |-
   mixin: # object
+    ipv6: true
     hosts:
       'router.asus.com': 192.168.186.1
     dns:
