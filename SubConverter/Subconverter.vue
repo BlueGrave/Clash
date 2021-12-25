@@ -364,7 +364,7 @@ export default {
         includeRemarks: "",
         filename: "",
         emoji: false,
-        nodeList: true,
+        nodeList: false,
         extraset: false,
         sort: false,
         udp: true,
