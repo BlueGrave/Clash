@@ -118,6 +118,7 @@ tun:
   enable: true
   stack: system
   dns-hijack:
-    - 198.18.0.2:53
+    - 8.8.8.8:53
+    - 1.1.1.1:53
   auto-route: true
   auto-detect-interface: true
