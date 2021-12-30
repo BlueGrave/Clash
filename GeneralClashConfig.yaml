@@ -48,11 +48,10 @@ dns:
   nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-    - https://dns.rubyfish.cn/dns-query
   fallback:
-    - https://public.dns.iij.jp/dns-query
-    - https://dns.cloudflare.com/dns-query
     - https://dns.google/dns-query
+    - https://dns.cloudflare.com/dns-query
+    - https://public.dns.iij.jp/dns-query
   fallback-filter:
     geoip: true
     geoip-code: CN
@@ -80,3 +79,11 @@ dns:
       - +.gvt1.com
       - +.github.com
       - +.githubusercontent.com
+tun:
+  enable: true
+  stack: system
+  dns-hijack:
+    - 8.8.8.8:53
+    - 1.1.1.1:53
+  auto-route: true
+  auto-detect-interface: true
