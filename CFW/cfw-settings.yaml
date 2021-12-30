@@ -174,3 +174,4 @@ trayOrders:
 trayColorTransparent: false
 useSystemEmoji: false
 hideTrayIcon: false
+logPreloadLineCount: 0
