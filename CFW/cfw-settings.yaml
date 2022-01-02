@@ -175,3 +175,9 @@ trayColorTransparent: false
 useSystemEmoji: false
 hideTrayIcon: false
 logPreloadLineCount: 0
+childProcessText: |-
+  processes: # array
+    - command: subconverter.exe
+      options:
+        cwd: C:\Tools\subconverter
+      log: true
