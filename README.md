@@ -12,16 +12,18 @@
 ### 规则应用环境：
 - [OpenClash](https://github.com/vernesong/OpenClash/tree/master) (OpenWrt 用的是 eSir 编译的高大全2020年7月份版)
 
-- [Clash for Windows](https://github.com/Fndroid/clash_for_windows_pkg) (Windows 10)
+- [Clash for Windows](https://github.com/Fndroid/clash_for_windows_pkg) (Windows 10/11)
+
+- [Clash.Mini](https://github.com/MetaCubeX/Clash.Mini) (Windows 10/11)
 
 ### 配置文件应用环境：
 - [subconverter](https://github.com/tindy2013/subconverter) v0.6.4 (部署在 [vercel.com](https://vercel.com) 上面，参见 [@tindy2013/subconverter](https://github.com/tindy2013/subconverter) 和 [@tindy2013/now-subconverter](https://github.com/tindy2013/now-subconverter))
 
 - [sub-web](https://github.com/CareyWang/sub-web) v1.0 (部署在 [vercel.com](https://vercel.com) 上面，参见 [@CareyWang/sub-web](https://github.com/CareyWang/sub-web))
 
-- [OC_BG.ini](https://github.com/BlueGrave/Clash/blob/master/Config/OC_BG.ini), [GeneralClashConfig.yaml](https://github.com/BlueGrave/Clash/blob/master/GeneralClashConfig.yaml) 和 [pref_064.ini](https://github.com/BlueGrave/Clash/blob/master/pref_064.ini) 提供给 [subconverter](https://github.com/tindy2013/subconverter) v0.6.4 使用
+- [OC_BG.ini](https://github.com/BlueGrave/Clash/blob/master/Config/OC_BG.ini), [OpenClashConfig.yaml](https://github.com/BlueGrave/Clash/blob/master/OpenClashConfig.yaml) 和 [pref_064.ini](https://github.com/BlueGrave/Clash/blob/master/pref_064.ini) 提供给 [subconverter](https://github.com/tindy2013/subconverter) v0.6.4 使用
 
-- [CFW_BG.toml](https://github.com/BlueGrave/Clash/blob/master/Config/CFW_BG.toml)/[OC_BG.toml](https://github.com/BlueGrave/Clash/blob/master/Config/OC_BG.toml), [GeneralClashConfig.yaml](https://github.com/BlueGrave/Clash/blob/master/GeneralClashConfig.yaml) 和 [pref_071.toml](https://github.com/BlueGrave/Clash/blob/master/SubConverter/pref_071.toml) 提供给 [subconverter](https://github.com/tindy2013/subconverter) v0.7.1 使用，由于 Vercel 下调了性能，就不再更新部署了，改部署在自用的 OpenWrt 上面了
+- [CFW_BG.toml](https://github.com/BlueGrave/Clash/blob/master/Config/CFW_BG.toml)/[OC_BG.toml](https://github.com/BlueGrave/Clash/blob/master/Config/OC_BG.toml)/[CM_BG.toml](https://github.com/BlueGrave/Clash/blob/master/Config/CM_BG.toml), [CFWClashConfig.yaml](https://github.com/BlueGrave/Clash/blob/master/CFWClashConfig.yaml)/[OpenClashConfig.yaml](https://github.com/BlueGrave/Clash/blob/master/OpenClashConfig.yaml) 和 [pref_071.toml](https://github.com/BlueGrave/Clash/blob/master/SubConverter/pref_071.toml) 提供给 [subconverter](https://github.com/tindy2013/subconverter) v0.7.1 使用，由于 Vercel 下调了性能，就不再更新部署了，改部署在自用的 OpenWrt 上面了
 
 - [Subconverter.vue](https://github.com/BlueGrave/Clash/blob/master/Subconverter.vue) 提供给 [sub-web](https://github.com/CareyWang/sub-web) 使用
 
