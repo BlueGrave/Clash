@@ -1,0 +1,5 @@
+log-level: info
+allow-lan: false
+ipv6: true
+hosts:
+  'router.asus.com': 192.168.186.1
