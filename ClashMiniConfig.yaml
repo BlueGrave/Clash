@@ -40,21 +40,32 @@ dns:
     '*.ximalaya.com': 119.29.29.29
     '*.baidu.com': 119.29.29.29
     '*.bdstatic.com': 119.29.29.29
-  default-nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
-    - 8.8.8.8
   enhanced-mode: redir-host
   nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
+    - 223.5.5.5
+    - 119.29.29.29
+    - "[2400:3200::1]:53"
+    - "[240C::6666]:53"
   fallback:
-    - https://dns.google/dns-query
-    - https://dns.cloudflare.com/dns-query
-    - https://public.dns.iij.jp/dns-query
+    - 8.8.8.8
+    - 1.1.1.1
+    - 94.140.14.14
+    - "[2001:4860:4860::8888]:53"
   fallback-filter:
-    geoip: true
-    geoip-code: CN
+    geoip: false
+    geosite:
+      - gfw
+    domain:
+      - +.google.com
+      - +.facebook.com
+      - +.twitter.com
+      - +.youtube.com
+      - +.xn--ngstr-lra8j.com
+      - +.google.cn
+      - +.googleapis.cn
+      - +.gvt1.com
+      - +.github.com
+      - +.githubusercontent.com
     ipcidr:
       - 0.0.0.0/8
       - 10.0.0.0/8
@@ -67,23 +78,9 @@ dns:
       - 224.0.0.0/4
       - 240.0.0.0/4
       - 255.255.255.255/32
-    domain:
-      - +.google.com
-      - +.facebook.com
-      - +.twitter.com
-      - +.youtube.com
-      - +.xn--ngstr-lra8j.com
-      - +.google.cn
-      - +.googleapis.cn
-      - +.googleapis.com
-      - +.gvt1.com
-      - +.github.com
-      - +.githubusercontent.com
 tun:
   enable: true
-  stack: system
+  stack: gvisor
   dns-hijack:
-    - 8.8.8.8:53
-    - 1.1.1.1:53
+    - 0.0.0.0:53
   auto-route: true
-  auto-detect-interface: true
