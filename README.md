@@ -1,7 +1,7 @@
 # Clash
 自用的 Clash 规则、配置和脚本
 
-主要结合整理 [@blackmatrix7/ios_rule_script/rule/QuantumultX](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/QuantumultX), [@DivineEngine/Profiles/Quantumult](https://github.com/DivineEngine/Profiles/tree/master/Quantumult/Filter) 和 [@ACL4SSR/ACL4SSR/Clash](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash) 的规则
+主要结合整理 [@blackmatrix7](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/QuantumultX), [@DivineEngine](https://github.com/DivineEngine/Profiles/tree/master/Quantumult/Filter) 和 [@ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master/Clash) 的规则
 
 ### 自用的特殊规则
 - [WhiteList.list](https://github.com/BlueGrave/Clash/blob/master/Ruleset/WhiteList.list) 需要 DIRECT 放行的规则
