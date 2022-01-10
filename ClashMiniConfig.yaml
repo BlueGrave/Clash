@@ -1,0 +1,89 @@
+mixed-port: 7890
+allow-lan: true
+mode: Rule
+log-level: info
+ipv6: false
+external-controller: '127.0.0.1:9090'
+hosts:
+  'router.asus.com': 192.168.186.1
+dns:
+  enable: true
+  ipv6: false
+  listen: 127.0.0.1:53
+  nameserver-policy:
+    '*.tw': 1.1.1.1
+    'testflight.apple.com': 8.8.8.8
+    'gist.github.com': 8.8.8.8
+    '*.tmall.com': 223.5.5.5
+    '*.taobao.com': 223.5.5.5
+    '*.alicdn.com': 223.5.5.5
+    '*.aliyun.com': 223.5.5.5
+    '*.alipay*.com': 223.5.5.5
+    '*.alibaba*.com': 223.5.5.5
+    '*.alimama*.com': 223.5.5.5
+    '*.qq.com': 119.29.29.29
+    '*.tencent.com': 119.29.29.29
+    '*.weixin.com': 119.29.29.29
+    '*.qpic.cn': 119.29.29.29
+    '*.jd.com': 119.29.29.29
+    '*.bilibili.com': 119.29.29.29
+    'hdslb.com': 119.29.29.29
+    '*.163.com': 119.29.29.29
+    '*.126.com': 119.29.29.29
+    '*.126.net': 119.29.29.29
+    '*.127.net': 119.29.29.29
+    '*.netease.com': 119.29.29.29
+    '*.10010.com': 119.29.29.29
+    '*.unicompayment.com': 119.29.29.29
+    '*.vercel.app': 119.29.29.29
+    '*.vercel.com': 119.29.29.29
+    '*.ximalaya.com': 119.29.29.29
+    '*.baidu.com': 119.29.29.29
+    '*.bdstatic.com': 119.29.29.29
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+    - 8.8.8.8
+  enhanced-mode: redir-host
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  fallback:
+    - https://dns.google/dns-query
+    - https://dns.cloudflare.com/dns-query
+    - https://public.dns.iij.jp/dns-query
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 0.0.0.0/8
+      - 10.0.0.0/8
+      - 100.64.0.0/10
+      - 127.0.0.0/8
+      - 169.254.0.0/16
+      - 172.16.0.0/12
+      - 192.168.0.0/16
+      - 198.18.0.0/15
+      - 224.0.0.0/4
+      - 240.0.0.0/4
+      - 255.255.255.255/32
+    domain:
+      - +.google.com
+      - +.facebook.com
+      - +.twitter.com
+      - +.youtube.com
+      - +.xn--ngstr-lra8j.com
+      - +.google.cn
+      - +.googleapis.cn
+      - +.googleapis.com
+      - +.gvt1.com
+      - +.github.com
+      - +.githubusercontent.com
+tun:
+  enable: true
+  stack: system
+  dns-hijack:
+    - 8.8.8.8:53
+    - 1.1.1.1:53
+  auto-route: true
+  auto-detect-interface: true
