@@ -29,7 +29,7 @@
 
 - [cfw-settings.yaml](https://github.com/BlueGrave/Clash/blob/master/cfw-settings.yaml) 提供给 [Clash for Windows](https://github.com/Fndroid/clash_for_windows_pkg) 使用
 
--[general.yaml](https://github.com/BlueGrave/Clash/blob/master/CM/general.yaml), [dns.yaml](https://github.com/BlueGrave/Clash/blob/master/CM/dns.yaml) 和 [tun.yaml](https://github.com/BlueGrave/Clash/blob/master/CM/tun.yaml) 提供给 [Clash.Mini](https://github.com/MetaCubeX/Clash.Mini) 使用
+- [general.yaml](https://github.com/BlueGrave/Clash/blob/master/CM/general.yaml), [dns.yaml](https://github.com/BlueGrave/Clash/blob/master/CM/dns.yaml) 和 [tun.yaml](https://github.com/BlueGrave/Clash/blob/master/CM/tun.yaml) 提供给 [Clash.Mini](https://github.com/MetaCubeX/Clash.Mini) 使用
 
 ### 脚本文件应用环境：
 - Windows 10 PowerShell
