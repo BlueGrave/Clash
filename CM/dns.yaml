@@ -44,7 +44,8 @@ dns:
     - 94.140.14.14
     - "[2001:4860:4860::8888]:53"
   fallback-filter:
-    geoip: false
+    geoip: true
+    geoip-core: CN
     geosite:
       - gfw
     domain:
