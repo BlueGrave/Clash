@@ -24,17 +24,12 @@ rule = [
 [[custom_groups]]
 name = "Netflix"
 type = "select"
-rule = ["(^(?=.*(新加坡|台湾))(?=.*标准).*$)|Singapore|Taiwan"]
+rule = ["Singapore"]
 
 [[custom_groups]]
 name = "Disney+"
 type = "select"
-rule = ["(^(?=.*(香港|新加坡|台湾))(?=.*标准).*$)|Hong Kong|Singapore|Taiwan"]
-
-[[custom_groups]]
-name = "HBO GO"
-type = "select"
-rule = ["台湾|Taiwan"]
+rule = ["^(?=.*(Singapore|Hong Kong))(?=.*Premium).*$"]
 
 [[custom_groups]]
 name = "Spotify"
@@ -197,16 +192,6 @@ type = "clash-classic"
 [[rulesets]]
 group = "Disney+"
 ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.yaml"
-type = "clash-classic"
-
-[[rulesets]]
-group = "HBO GO"
-ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/HBOHK/HBOHK.yaml"
-type = "clash-classic"
-
-[[rulesets]]
-group = "HBO GO"
-ruleset = "https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/StreamingMedia/Video/HBO-Asia.yaml"
 type = "clash-classic"
 
 [[rulesets]]
