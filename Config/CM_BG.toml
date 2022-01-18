@@ -22,9 +22,20 @@ rule = [
 ]
 
 [[custom_groups]]
+name = "NetflixRelay"
+type = "relay"
+rule = [
+    "[]Singapore Premium",
+    "[]Singapore GreenCloud"
+]
+
+[[custom_groups]]
 name = "Netflix"
 type = "select"
-rule = ["Singapore"]
+rule = [
+    "[]Singapore Premium",
+    "[]NetflixRelay"
+]
 
 [[custom_groups]]
 name = "Disney+"
@@ -105,6 +116,22 @@ tolerance = 20
 name = "FlowerCloud | 台湾"
 type = "url-test"
 rule = ["台湾高级"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
+
+[[custom_groups]]
+name = "Singapore Premium"
+type = "url-test"
+rule = ["^(?=.*Singapore)(?=.*Premium).*$"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
+
+[[custom_groups]]
+name = "Singapore GreenCloud"
+type = "url-test"
+rule = ["^(?=.*Singapore)(?=.*GreenCloud).*$"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
