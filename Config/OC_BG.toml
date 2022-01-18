@@ -25,17 +25,20 @@ rule = [
 [[custom_groups]]
 name = "Netflix"
 type = "select"
-rule = ["Singapore|Taiwan"]
+rule = [
+    "[]Singapore Premium",
+    "[]NetflixRelay"
+]
 
 [[custom_groups]]
 name = "Disney+"
 type = "select"
-rule = ["Hong Kong|Singapore"]
+rule = ["^(?=.*(Singapore|Hong Kong))(?=.*Premium).*$"]
 
 [[custom_groups]]
 name = "HBO GO"
 type = "select"
-rule = ["台湾|Taiwan"]
+rule = ["台湾"]
 
 [[custom_groups]]
 name = "Spotify"
@@ -114,6 +117,30 @@ rule = ["台湾高级"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
+
+[[custom_groups]]
+name = "Singapore Premium"
+type = "url-test"
+rule = ["^(?=.*Singapore)(?=.*Premium).*$"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
+
+[[custom_groups]]
+name = "Singapore GreenCloud"
+type = "url-test"
+rule = ["^(?=.*Singapore)(?=.*GreenCloud).*$"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
+
+[[custom_groups]]
+name = "NetflixRelay"
+type = "relay"
+rule = [
+    "[]Singapore Premium",
+    "[]Singapore GreenCloud"
+]
 
 [[rulesets]]
 group = "DIRECT"
