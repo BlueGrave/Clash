@@ -53,8 +53,10 @@ dns:
     - "[2001:4860:4860::8888]:53"
   fallback-filter:
     geoip: false
-    geosite:
+    geosite: # `geosite` filter only use fallback server to resolve ip, prevent DNS leaks to unsafe DNS providers.
+      - geolocation-!cn
       - gfw
+      - greatfire
     domain:
       - +.google.com
       - +.facebook.com
