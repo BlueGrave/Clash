@@ -34,7 +34,7 @@ rule = ["^(?=.*(Singapore|Hong Kong))(?=.*Premium).*$"]
 [[custom_groups]]
 name = "HBO GO"
 type = "select"
-rule = ["台湾"]
+rule = ["(?!.*实验).*台湾"]
 
 [[custom_groups]]
 name = "Spotify"
@@ -101,15 +101,16 @@ rule = [".*"]
 
 [[custom_groups]]
 name = "FlowerCloud | 日本"
-type = "fallback"
-rule = ["日本高级"]
+type = "url-test"
+rule = ["((?!.*2).*日本高级)|日本标准"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
+tolerance = 20
 
 [[custom_groups]]
 name = "FlowerCloud | 香港"
 type = "url-test"
-rule = ["香港高级"]
+rule = ["(?!.*实验).*香港"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
@@ -117,7 +118,7 @@ tolerance = 20
 [[custom_groups]]
 name = "FlowerCloud | 美国"
 type = "url-test"
-rule = ["美国高级"]
+rule = ["(?!.*实验).*美国"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
@@ -125,7 +126,7 @@ tolerance = 20
 [[custom_groups]]
 name = "FlowerCloud | 台湾"
 type = "url-test"
-rule = ["台湾高级"]
+rule = ["(?!.*实验).*台湾"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
