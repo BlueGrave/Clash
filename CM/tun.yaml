@@ -2,5 +2,5 @@ tun:
   enable: true
   stack: gvisor
   dns-hijack:
-    - 0.0.0.0:53
+    - 0.0.0.0:5353
   auto-route: true
