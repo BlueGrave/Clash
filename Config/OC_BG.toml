@@ -10,7 +10,6 @@ type = "select"
 rule = [
     "[]FlowerCloud | 日本",
     "[]FlowerCloud | 香港",
-    "[]Netflix",
     "[]PROXY"
 ]
 
