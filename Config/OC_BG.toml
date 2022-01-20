@@ -27,7 +27,7 @@ name = "Netflix"
 type = "select"
 rule = [
     "[]Singapore Premium",
-    "[]NetflixRelay"
+    "[]Netflix Relay"
 ]
 
 [[custom_groups]]
@@ -136,7 +136,7 @@ interval = 600
 tolerance = 20
 
 [[custom_groups]]
-name = "NetflixRelay"
+name = "Netflix Relay"
 type = "relay"
 rule = [
     "[]Singapore Premium",
