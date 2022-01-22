@@ -142,13 +142,13 @@ group = "tcp,DIRECT"
 ruleset = "[]DOMAIN-SUFFIX,bilibili.com"
 
 [[rulesets]]
-group = "REJECT,udp"
+group = "udp,REJECT"
 ruleset = "[]DOMAIN-SUFFIX,bilibili.com"
 
 [[rulesets]]
-group = "REJECT,udp"
+group = "udp,REJECT"
 ruleset = "[]DST-PORT,443"
 
 [[rulesets]]
-group = "REJECT,udp"
+group = "udp,DIRECT"
 ruleset = "[]DST-PORT,123/136/137-139"
