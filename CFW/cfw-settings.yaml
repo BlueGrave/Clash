@@ -163,13 +163,13 @@ profileParsersText: |-
         prepend-rules:
           - SCRIPT,p2pshit,REJECT
           - SCRIPT,tcpp2pshit,REJECT
-          - SCRIPT,quic,REJECT
+          - SCRIPT,ytbquic,REJECT
         mix-object:
           script:
             shortcuts:
               p2pshit: network == 'udp' and ('bilibili' in host or 'mcdn' in host or 'douyu' in host)
               tcpp2pshit: network == 'tcp' and 'stun' in host and 'douyu' in host
-              quic: network == 'udp' and dst_port == 443
+              ytbquic: network == 'udp' and dst_port == 443 and 'googlevideo' in host
 trayOrders:
   - - icon
   - - status
