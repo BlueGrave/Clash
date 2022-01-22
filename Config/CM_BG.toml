@@ -153,6 +153,22 @@ ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Providers/Re
 type = "clash-classic"
 
 [[rulesets]]
+group = "tcp,DIRECT"
+ruleset = "[]DOMAIN-SUFFIX,bilibili.com"
+
+[[rulesets]]
+group = "udp,REJECT"
+ruleset = "[]DOMAIN-SUFFIX,bilibili.com"
+
+[[rulesets]]
+group = "udp,REJECT"
+ruleset = "[]DST-PORT,443"
+
+[[rulesets]]
+group = "udp,DIRECT"
+ruleset = "[]DST-PORT,123/136/137-139"
+
+[[rulesets]]
 group = "DIRECT"
 ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml"
 type = "clash-classic"
