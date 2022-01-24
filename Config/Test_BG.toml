@@ -33,7 +33,7 @@ rule = ["^(?=.*(Singapore|Hong Kong))(?=.*Premium).*$"]
 
 [[custom_groups]]
 name = "HBO GO"
-type = "select"
+type = "url-test"
 rule = ["(?!.*实验).*台湾"]
 
 [[custom_groups]]
