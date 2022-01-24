@@ -38,6 +38,9 @@ rule = ["^(?=.*(Singapore|Hong Kong))(?=.*Premium).*$"]
 name = "HBO GO"
 type = "url-test"
 rule = ["(?!.*实验).*台湾"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
 
 [[custom_groups]]
 name = "Spotify"
