@@ -26,6 +26,8 @@ name = "Netflix"
 type = "select"
 rule = [
     "[]Singapore Premium",
+    "[]Korea Premium",
+    "[]CHUNCHEON",
     "[]Netflix Relay"
 ]
 
@@ -131,9 +133,25 @@ interval = 600
 tolerance = 20
 
 [[custom_groups]]
+name = "Korea Premium"
+type = "url-test"
+rule = ["^(?=.*Korea)(?=.*Premium).*$"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
+
+[[custom_groups]]
 name = "Singapore GreenCloud"
 type = "url-test"
 rule = ["^(?=.*Singapore)(?=.*GreenCloud).*$"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
+
+[[custom_groups]]
+name = "CHUNCHEON"
+type = "url-test"
+rule = ["CHUNCHEON"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
