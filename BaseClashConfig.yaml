@@ -33,6 +33,16 @@ log-level: info
 # 此项为 false 时，则不将主机名解析为 IPv6 地址
 ipv6: false
 
+profile:
+# store the `select` results in $HOME/.cache
+# when two different configurations have groups with the same name, the selected values are shared
+# set false if you don't want this behavior
+# store-selected: false
+# open tracing exporter API
+  tracing: true
+# persistence fakeip
+  store-fake-ip: true
+
 # Clash 的 RESTful API
 external-controller: '127.0.0.1:9090'
 
