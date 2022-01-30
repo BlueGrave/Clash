@@ -151,7 +151,7 @@ tolerance = 20
 [[custom_groups]]
 name = "CHUNCHEON"
 type = "url-test"
-rule = ["CHUNCHEON"]
+rule = ["^(?=.*Korea)(?=.*CHUNCHEON).*$"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
