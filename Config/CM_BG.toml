@@ -27,7 +27,7 @@ type = "select"
 rule = [
     "[]Singapore Premium",
     "[]Korea Premium",
-    "[]CHUNCHEON",
+    "[]Korea CHUNCHEON",
     "[]Netflix Relay"
 ]
 
