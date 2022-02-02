@@ -6,7 +6,6 @@
 ### 自用的特殊规则
 - [WhiteList.list](https://github.com/BlueGrave/Clash/blob/master/Ruleset/WhiteList.list) 需要 DIRECT 放行的规则
 - [BlackList.list](https://github.com/BlueGrave/Clash/blob/master/Ruleset/BlackList.list) 需要 REJECT 阻止的规则
-- [RedList.list](https://github.com/BlueGrave/Clash/blob/master/Ruleset/RedList.list) 需要 PROXY 代理的规则
 - [AppleOS_Update.list](https://github.com/BlueGrave/Clash/blob/master/Ruleset/AppleOS_Update.list) 结合多个大佬的相关规则整理出来的各 Apple OS OTA 规则
 
 ### 规则应用环境：
