@@ -159,11 +159,6 @@ ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Providers/Bl
 type = "clash-classic"
 
 [[rulesets]]
-group = "DEFAULT"
-ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Providers/RedList.yaml"
-type = "clash-classic"
-
-[[rulesets]]
 group = "tcp,DIRECT"
 ruleset = "[]DOMAIN-SUFFIX,bilibili.com"
 
