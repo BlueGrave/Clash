@@ -38,7 +38,7 @@ rule = ["^(?=.*(Singapore|Hong Kong))(?=.*Premium).*$"]
 
 [[custom_groups]]
 name = "HBO GO"
-type = "url-test"
+type = "select"
 rule = [
     "[]FlowerCloud | 台湾",
     "[]PROXY"
