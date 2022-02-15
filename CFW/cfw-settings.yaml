@@ -155,7 +155,7 @@ connMode: true
 connChainType: 2
 editor: 0
 mixinType: 0
-profileParsersText: |-
+profileParsersText: >-
   parsers: # array
     - reg: .?
       yaml:
@@ -178,9 +178,12 @@ trayColorTransparent: false
 useSystemEmoji: false
 hideTrayIcon: false
 logPreloadLineCount: 0
-childProcessText: |-
-  processes: # array
-    - command: subconverter.exe
-      options:
-        cwd: C:\Tools\subconverter
-      log: true
+childProcessText: "processes: # array\r
+
+  # - command: subconverter.exe\r
+
+  #   option:\r
+
+  #     cwd: C:\\Tools\\subconverter\r
+
+  #   log: true"
