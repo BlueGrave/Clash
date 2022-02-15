@@ -27,9 +27,7 @@ name = "Netflix"
 type = "select"
 rule = [
     "[]Singapore Premium",
-    "[]Korea Premium",
-    "[]Korea [CHUNCHEON]",
-    "[]Netflix Relay"
+    "[]Korea Premium"
 ]
 
 [[custom_groups]]
@@ -155,14 +153,6 @@ rule = ["^(?=.*Korea)(?=.*Premium).*$"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
-
-[[custom_groups]]
-name = "Netflix Relay"
-type = "relay"
-rule = [
-    "[]Singapore Premium",
-    "[]Singapore [GreenCloud]"
-]
 
 [[rulesets]]
 group = "DIRECT"
