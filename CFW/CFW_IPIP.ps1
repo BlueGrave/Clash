@@ -3,18 +3,22 @@ $arguments = "& '" + $myinvocation.mycommand.definition + "'"
 Start-Process powershell -Verb runAs -ArgumentList $arguments
 Break
 }
+cd C:\Users\BlueGrave\.config\clash
+Remove-Item Country.mmdb.new -Force
+Invoke-WebRequest -Uri "https://github.com/Hackl0us/GeoIP2-CN/raw/release/Country.mmdb" -OutFile "Country.mmdb.new"
 cd C:\Users\BlueGrave\.config\clash\service
 Stop-Process -Name 'Clash for*'
 Stop-Process -Name 'clash-win64*' -Force
 Start-Sleep -Seconds 1
 Start-Process -WindowStyle Hidden C:\Users\BlueGrave\.config\clash\service\service.exe stop
 Start-Process -WindowStyle Hidden C:\Users\BlueGrave\.config\clash\service\service.exe uninstall
-# Hackl0us ‰∏≠ÂõΩÂ§ßÈôÜ IP ÊÆµ + GeoIP2 Êï∞ÊçÆÂ∫ì
+# Hackl0us ÷–π˙¥Û¬Ω IP ∂Œ + GeoIP2  ˝æ›ø‚
 # Invoke-WebRequest -Uri "https://github.com/Hackl0us/GeoIP2-CN/raw/release/Country.mmdb" -OutFile "Country.mmdb"
-# alechw china_ip_list + Á∫ØÁúü CN Êï∞ÊçÆÂ∫ì + MaxMind
+# alechw china_ip_list + ¥ø’Ê CN  ˝æ›ø‚ + MaxMind
 # Invoke-WebRequest -Uri "https://raw.githubusercontent.com/alecthw/mmdb_china_ip_list/release/Country.mmdb" -OutFile "Country.mmdb"
 cd C:\Users\BlueGrave\.config\clash
-Invoke-WebRequest -Uri "https://cdn.jsdelivr.net/gh/Hackl0us/GeoIP2-CN@release/Country.mmdb" -OutFile "Country.mmdb"
+Remove-Item Country.mmdb -Force
+Rename-Item Country.mmdb.new -NewName Country.mmdb -Force
 cd C:\Users\BlueGrave\.config\clash\service
 Start-Process -WindowStyle Hidden C:\Users\BlueGrave\.config\clash\service\service.exe install
 Start-Sleep -Seconds 1
