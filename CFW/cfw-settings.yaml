@@ -35,7 +35,6 @@ bypassText: |-
 mixinText: |-
   mixin: # object
     ipv6: true
-    listen: 127.0.0.1:8686
     profile:
       tracing: false
       store-fake-ip: true
@@ -44,7 +43,7 @@ mixinText: |-
     dns:
       enable: true
       ipv6: true
-      listen: 127.0.0.1:53
+      listen: 127.0.0.1:8686
       nameserver-policy:
         '*.tw': 1.1.1.1
         'testflight.apple.com': 8.8.8.8
@@ -175,7 +174,7 @@ trayOrders:
     - traffic
     - text
 trayColorTransparent: false
-useSystemEmoji: false
+useSystemEmoji: true
 hideTrayIcon: false
 logPreloadLineCount: 0
 childProcessText: "processes: # array\r
@@ -187,3 +186,4 @@ childProcessText: "processes: # array\r
   #     cwd: C:\\Tools\\subconverter\r
 
   #   log: true"
+specifyHttpProxyProtocol: false
