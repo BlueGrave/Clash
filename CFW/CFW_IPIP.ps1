@@ -10,8 +10,8 @@ cd C:\Users\BlueGrave\.config\clash\service
 Stop-Process -Name 'Clash for*'
 Stop-Process -Name 'clash-win64*' -Force
 Start-Sleep -Seconds 1
-Start-Process -WindowStyle Hidden C:\Users\BlueGrave\.config\clash\service\service.exe stop
-Start-Process -WindowStyle Hidden C:\Users\BlueGrave\.config\clash\service\service.exe uninstall
+# Start-Process -WindowStyle Hidden C:\Users\BlueGrave\.config\clash\service\service.exe stop
+# Start-Process -WindowStyle Hidden C:\Users\BlueGrave\.config\clash\service\service.exe uninstall
 # Hackl0us 中国大陆 IP 段 + GeoIP2 数据库
 # Invoke-WebRequest -Uri "https://github.com/Hackl0us/GeoIP2-CN/raw/release/Country.mmdb" -OutFile "Country.mmdb"
 # alechw china_ip_list + 纯真 CN 数据库 + MaxMind
