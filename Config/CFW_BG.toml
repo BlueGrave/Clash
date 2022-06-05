@@ -56,7 +56,7 @@ name = "GoogleVoice"
 type = "select"
 rule = [
     "[]FlowerCloud | 美国",
-    "[]United States Premium",
+    "[]USA Premium",
     "[]PROXY"
 ]
 
@@ -139,9 +139,9 @@ interval = 600
 tolerance = 20
 
 [[custom_groups]]
-name = "United States Premium"
+name = "USA Premium"
 type = "url-test"
-rule = ["^(?=.*United States)(?=.*Premium).*$"]
+rule = ["^(?=.*USA)(?=.*Premium).*$"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
