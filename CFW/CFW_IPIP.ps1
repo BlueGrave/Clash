@@ -1,10 +1,14 @@
 If (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
-$arguments = "& '" + $myinvocation.mycommand.definition + "'"
-Start-Process powershell -Verb runAs -ArgumentList $arguments
-Break
+    $arguments = "& '" + $myinvocation.mycommand.definition + "'"
+    Start-Process powershell -Verb runAs -ArgumentList $arguments
+    Break
 }
 cd C:\Users\BlueGrave\.config\clash
-Remove-Item Country.mmdb.new -Force
+$CONFIG_PATH_FILE = "C:\Users\BlueGrave\.config\clash\Country.mmdb.new"
+$TRUE_FALSE_EXIST = (Test-Path $CONFIG_PATH_FILE)
+if($TRUE_FALSE_EXIST -eq "True") {
+    Remove-Item Country.mmdb.new -Force
+}
 Invoke-WebRequest -Uri "https://github.com/Hackl0us/GeoIP2-CN/raw/release/Country.mmdb" -OutFile "Country.mmdb.new"
 cd C:\Users\BlueGrave\.config\clash\service
 Stop-Process -Name 'Clash for*'
