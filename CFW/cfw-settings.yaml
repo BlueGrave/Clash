@@ -6,7 +6,7 @@ theme: 0
 showNotifications: true
 systemTheme: true
 latencyUrl: http://cp.cloudflare.com/generate_204
-hideUnselectableGroup: true
+hideUnselectableGroup: false
 fontFamily: Avenir Light
 bypassText: |-
   bypass:
@@ -45,6 +45,7 @@ mixinText: |-
       ipv6: true
       listen: 127.0.0.1:8686
       nameserver-policy:
+        'gist.github.com': 223.5.5.5
         '*.tw': 1.1.1.1
         'testflight.apple.com': 8.8.8.8
         '*.tmall.com': 223.5.5.5
@@ -73,44 +74,7 @@ mixinText: |-
         '*.ximalaya.com': 119.29.29.29
         '*.baidu.com': 119.29.29.29
         '*.bdstatic.com': 119.29.29.29
-      enhanced-mode: fake-ip
-      fake-ip-range: 198.18.0.1/16
-      use-hosts: true
-      fake-ip-filter: # fake ip 白名单
-        - "*.lan"
-        - stun.*.*.*
-        - stun.*.*
-        - music.163.com
-        - "*.music.163.com"
-        - "*.126.net"
-        - musicapi.taihe.com
-        - music.taihe.com
-        - songsearch.kugou.com
-        - trackercdn.kugou.com
-        - "*.kuwo.cn"
-        - api-jooxtt.sanook.com
-        - api.joox.com
-        - joox.com
-        - y.qq.com
-        - "*.y.qq.com"
-        - streamoc.music.tc.qq.com
-        - mobileoc.music.tc.qq.com
-        - isure.stream.qqmusic.qq.com
-        - dl.stream.qqmusic.qq.com
-        - aqqmusic.tc.qq.com
-        - amobile.music.tc.qq.com
-        - "*.xiami.com"
-        - "*.music.migu.cn"
-        - music.migu.cn
-        - "*.msftconnecttest.com"
-        - "*.msftncsi.com"
-        - localhost.ptlogin2.qq.com
-        - "*.*.*.srv.nintendo.net"
-        - "*.*.stun.playstation.net"
-        - xbox.*.*.microsoft.com
-        - "*.ipv6.microsoft.com"
-        - "*.*.xboxlive.com"
-        - speedtest.cros.wr.pvp.net
+      enhanced-mode: redir-host
       nameserver:
         - 223.5.5.5
         - 119.29.29.29
@@ -187,3 +151,4 @@ childProcessText: "processes: # array\r
 
   #   log: true"
 specifyHttpProxyProtocol: false
+connShowProcess: true
