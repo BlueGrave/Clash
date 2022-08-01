@@ -47,6 +47,7 @@ mixinText: |-
       store-fake-ip: true
     hosts:
       'router.asus.com': 192.168.186.1
+      'gist.github.com': 52.69.186.44
     dns:
       enable: true
       ipv6: true
@@ -54,7 +55,6 @@ mixinText: |-
       nameserver-policy:
         '*.tw': 1.1.1.1
         'testflight.apple.com': 8.8.8.8
-        'gist.github.com': 1.1.1.1
         '*.tmall.com': 223.5.5.5
         '*.taobao.com': 223.5.5.5
         '*.alicdn.com': 223.5.5.5
