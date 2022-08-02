@@ -132,10 +132,10 @@ dns:
       - +.gvt1.com
       - +.github.com
       - +.githubusercontent.com
-tun:
-  enable: true
-  stack: system
-  dns-hijack:
-    - 192.18.0.2:53
-  auto-route: true
-  auto-detect-interface: true
+# tun:
+#   enable: true
+#   stack: system
+#   dns-hijack:
+#     - 192.18.0.2:53
+#   auto-route: true
+#   auto-detect-interface: true
