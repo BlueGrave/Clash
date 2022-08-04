@@ -13,8 +13,6 @@
 
 - [Clash for Windows](https://github.com/Fndroid/clash_for_windows_pkg) (Windows 10/11)
 
-- [Clash.Mini](https://github.com/MetaCubeX/Clash.Mini) (Windows 10/11)
-
 ### 配置文件应用环境：
 - [subconverter](https://github.com/tindy2013/subconverter) v0.6.4 (部署在 [vercel.com](https://vercel.com) 上面，参见 [@tindy2013/subconverter](https://github.com/tindy2013/subconverter) 和 [@tindy2013/now-subconverter](https://github.com/tindy2013/now-subconverter))
 
@@ -22,15 +20,13 @@
 
 - [OC_BG.ini](https://github.com/BlueGrave/Clash/blob/master/Config/OC_BG.ini), [OpenClashConfig.yaml](https://github.com/BlueGrave/Clash/blob/master/OpenClashConfig.yaml) 和 [pref_064.ini](https://github.com/BlueGrave/Clash/blob/master/pref_064.ini) 提供给 [subconverter](https://github.com/tindy2013/subconverter) v0.6.4 使用
 
-- [CFW_BG.toml](https://github.com/BlueGrave/Clash/blob/master/Config/CFW_BG.toml)/[OC_BG.toml](https://github.com/BlueGrave/Clash/blob/master/Config/OC_BG.toml)/[CM_BG.toml](https://github.com/BlueGrave/Clash/blob/master/Config/CM_BG.toml), [CFWClashConfig.yaml](https://github.com/BlueGrave/Clash/blob/master/CFWClashConfig.yaml)/[OpenClashConfig.yaml](https://github.com/BlueGrave/Clash/blob/master/OpenClashConfig.yaml) 和 [pref_071.toml](https://github.com/BlueGrave/Clash/blob/master/SubConverter/pref_071.toml) 提供给 [subconverter](https://github.com/tindy2013/subconverter) v0.7.1 使用，由于 Vercel 下调了性能，就不再更新部署了，改部署在自用的 OpenWrt 上面了
+- [CFW_BG.toml](https://github.com/BlueGrave/Clash/blob/master/Config/CFW_BG.toml)/[OC_BG.toml](https://github.com/BlueGrave/Clash/blob/master/Config/OC_BG.toml), [CFWClashConfig.yaml](https://github.com/BlueGrave/Clash/blob/master/CFWClashConfig.yaml)/[OpenClashConfig.yaml](https://github.com/BlueGrave/Clash/blob/master/OpenClashConfig.yaml) 和 [pref_071.toml](https://github.com/BlueGrave/Clash/blob/master/SubConverter/pref_071.toml) 提供给 [subconverter](https://github.com/tindy2013/subconverter) v0.7.1/v0.7.2 使用，由于 Vercel 下调了性能，就不再更新部署了，改部署在自用的 OpenWrt 上面了
 
 - [Subconverter.vue](https://github.com/BlueGrave/Clash/blob/master/Subconverter.vue) 提供给 [sub-web](https://github.com/CareyWang/sub-web) 使用
 
 - [cfw-settings.yaml](https://github.com/BlueGrave/Clash/blob/master/cfw-settings.yaml) 提供给 [Clash for Windows](https://github.com/Fndroid/clash_for_windows_pkg) 使用
 
-- [general.yaml](https://github.com/BlueGrave/Clash/blob/master/CM/general.yaml), [dns.yaml](https://github.com/BlueGrave/Clash/blob/master/CM/dns.yaml) 和 [tun.yaml](https://github.com/BlueGrave/Clash/blob/master/CM/tun.yaml) 提供给 [Clash.Mini](https://github.com/MetaCubeX/Clash.Mini) 使用
-
 ### 脚本文件应用环境：
 - Windows 10 PowerShell
 
-仅适用于 [Clash for Windows v0.14.1](https://github.com/Fndroid/clash_for_windows_pkg/releases) 及以上版本 (Windows 10) 的 GeoIP2 数据库更新
+仅适用于 [Clash for Windows v0.19.0](https://github.com/Fndroid/clash_for_windows_pkg/releases) 及以上版本 (Windows 10) 的 GeoIP2 数据库更新
