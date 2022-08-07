@@ -225,14 +225,14 @@ dns:
 #   - https://dns.twnic.tw/dns-query # Quad101 DoH
 #   - "[2001:4860:4860::8888]:53" # Google IPv6 DNS
 #   - "[2001:4860:4860::8844]:53" # Google IPv6 DNS
-#   - tls://public.dns.iij.jp
-#   - tls://jp.tiar.app
-#   - tls://dns.switch.ch
-#   - tls://dns.east.comss.one
-#   - tls://dns.google
-#   - tls://dns.adguard.com
-#   - tls://1.1.1.1
-#   - tls://101.101.101.101
+#   - tls://public.dns.iij.jp:853
+#   - tls://jp.tiar.app:853
+#   - tls://dns.switch.ch:853
+#   - tls://dns.east.comss.one:853
+#   - tls://dns.google:853
+#   - tls://dns.adguard.com:853
+#   - tls://1.1.1.1:853
+#   - tls://101.101.101.101:853
   fallback-filter:
     geoip: true # 默认，当 geoip 匹配 geoip-code ，Clash 将使用 nameserver 查询的结果，否则 Clash 将仅使用 fallback 查询的结果
     geoip-code: CN
