@@ -258,7 +258,10 @@ dns:
 #   auto-detect-interface: true # 自动检测出口网卡，conflict with interface-name
 #   dns-hijack:
 #     - 198.18.0.2:53 # when `fake-ip-range` is 198.18.0.1/16, should hijack 198.18.0.2:53 (Windows)
-#     - 8.8.8.8 # macOS 可任意设置，但为了保证CFW关闭后能不影响联网，建议设置真实能访问的DNS服务器
+#     - 8.8.8.8:53 # macOS 可任意设置，但为了保证CFW关闭后能不影响联网，建议设置真实能访问的DNS服务器
+#     - tcp://8.8.8.8:53
+#     - any:53
+#     - tcp://any:53
 
 # 1. clash DNS 请求逻辑：
 #   (1) 当访问一个域名时， nameserver 与 fallback 列表内的所有服务器并发请求，得到域名对应的 IP 地址。
