@@ -35,8 +35,6 @@ dns:
     '*.netease.com': 119.29.29.29
     '*.10010.com': 119.29.29.29
     '*.unicompayment.com': 119.29.29.29
-    '*.vercel.app': 119.29.29.29
-    '*.vercel.com': 119.29.29.29
     '*.ximalaya.com': 119.29.29.29
     '*.baidu.com': 119.29.29.29
     '*.bdstatic.com': 119.29.29.29
