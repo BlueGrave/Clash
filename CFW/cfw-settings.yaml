@@ -11,7 +11,6 @@ fontFamily: Avenir Light
 bypassText: |-
   bypass:
     - localhost
-    - <local>
     - '*.local'
     - passenger.t3go.cn
     - e.crashlytics.com
@@ -137,6 +136,7 @@ bypassText: |-
     - 253.*
     - 254.*
     - 255.*
+    - <local>
 mixinText: |-
   mixin: # object
     ipv6: true
@@ -145,7 +145,8 @@ mixinText: |-
       store-fake-ip: true
     hosts:
       'router.asus.com': 192.168.186.1
-      'gist.github.com': 52.69.186.44
+  #   'gist.github.com': 52.69.186.44
+      'gist.github.com': 20.27.177.113
     dns:
       enable: true
       ipv6: true
@@ -174,8 +175,6 @@ mixinText: |-
         '*.netease.com': 119.29.29.29
         '*.10010.com': 119.29.29.29
         '*.unicompayment.com': 119.29.29.29
-        '*.vercel.app': 119.29.29.29
-        '*.vercel.com': 119.29.29.29
         '*.ximalaya.com': 119.29.29.29
         '*.baidu.com': 119.29.29.29
         '*.bdstatic.com': 119.29.29.29
@@ -286,7 +285,7 @@ editor: 0
 mixinType: 0
 profileParsersText: >-
   parsers: # array
-    - reg: .?
+    - reg: .*
       yaml:
         prepend-rules:
           - SCRIPT,p2pshit,REJECT
@@ -318,3 +317,4 @@ childProcessText: "processes: # array\r
   \    log: true"
 specifyHttpProxyProtocol: false
 connShowProcess: true
+showTrayProxyDelayIndicator: true
