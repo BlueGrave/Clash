@@ -11,6 +11,7 @@ rule = [
     "[]FlowerCloud | 日本",
     "[]FlowerCloud | 香港",
     "[]Japan Premium",
+    "[]Hong Kong Premium",
     "[]PROXY"
 ]
 
@@ -126,6 +127,14 @@ tolerance = 20
 name = "Japan Premium"
 type = "url-test"
 rule = ["^(?=.*Japan)(?=.*Premium).*$"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
+
+[[custom_groups]]
+name = "Hong Kong Premium"
+type = "url-test"
+rule = ["^(?=.*Hong Kong)(?=.*Premium).*$"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
