@@ -1,0 +1,11 @@
+mixed-port: 7890
+allow-lan: false
+external-controller: 127.0.0.1:56297
+secret: f13104b2-63bb-4c6f-b54e-c5f7d013308e
+tun:
+  enable: true
+  stack: system
+  auto-route: false
+  auto-detect-interface: true
+ipv6: true
+log-level: debug
