@@ -34,7 +34,7 @@ rule = [
 [[custom_groups]]
 name = "Disney+"
 type = "select"
-rule = ["^(?=.*(Singapore|Hong Kong))(?=.*Premium).*$"]
+rule = ["^(?=.*Hong Kong|Singapore|香港标准|新加坡标准.*$"]
 
 [[custom_groups]]
 name = "HBO GO"
