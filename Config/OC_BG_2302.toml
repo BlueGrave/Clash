@@ -67,7 +67,6 @@ name = "GoogleVoice"
 type = "select"
 rule = [
     "[]FlowerCloud | 美国",
-    "[]USA Premium",
     "[]PROXY"
 ]
 
