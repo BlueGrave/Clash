@@ -105,12 +105,16 @@ name = "AmyTelecom | 日本"
 type = "url-test"
 rule = ["日本"]
 url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
 
 [[custom_groups]]
 name = "AmyTelecom | 香港"
 type = "url-test"
 rule = ["(?!.*03).*香港"]
 url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
 
 
 [[custom_groups]]
@@ -118,6 +122,8 @@ name = "AmyTelecom | 新加坡"
 type = "url-test"
 rule = ["新加坡"]
 url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
 
 [[custom_groups]]
 name = "AmyTelecom | 美国"
