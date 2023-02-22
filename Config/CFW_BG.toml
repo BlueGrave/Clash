@@ -157,7 +157,7 @@ tolerance = 20
 [[custom_groups]]
 name = "AmyTelecom | 日本"
 type = "url-test"
-rule = ["(日本 \d{2})"]
+rule = ["日本 (0|1)"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
