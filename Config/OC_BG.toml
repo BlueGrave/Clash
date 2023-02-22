@@ -6,68 +6,85 @@ clash_rule_base = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Open
 
 [[custom_groups]]
 name = "DEFAULT"
-type = "select"
+type = "fallback"
 rule = [
-    "[]FlowerCloud | 日本",
-    "[]FlowerCloud | 香港",
-    "[]Japan Premium",
-    "[]Hong Kong Premium",
+    "[]AmyTelecom | 日本",
+    "[]AmyTelecom | 香港",
+    "[]FlowerCloud | 日本标准",
+    "[]FlowerCloud | 日本高级",
+    "[]FlowerCloud | 香港标准",
+    "[]FlowerCloud | 香港高级",
     "[]PROXY"
 ]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 300
 
 [[custom_groups]]
 name = "YouTube"
-type = "select"
+type = "fallback"
 rule = [
-    "[]DEFAULT",
+    "[]AmyTelecom | 日本",
+    "[]AmyTelecom | 香港",
+    "[]FlowerCloud | 日本标准",
+    "[]FlowerCloud | 香港标准",
     "[]PROXY"
 ]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 300
 
 [[custom_groups]]
 name = "Netflix"
 type = "select"
-rule = [
-    "[]Singapore Premium",
-    "[]Korea Premium"
-]
+rule = ["新加坡"]
 
 [[custom_groups]]
 name = "Disney+"
 type = "select"
-rule = ["^Hong Kong|Singapore|香港标准|新加坡标准.*$"]
+rule = ["((?!.*03).*香港)|新加坡"]
 
 [[custom_groups]]
 name = "HBO GO"
-type = "select"
+type = "fallback"
 rule = [
+    "[]AmyTelecom | 台湾",
     "[]FlowerCloud | 台湾",
     "[]PROXY"
 ]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 300
 
 [[custom_groups]]
 name = "Spotify"
-type = "select"
+type = "fallback"
 rule = [
+    "[]AmyTelecom | 台湾",
     "[]FlowerCloud | 台湾",
     "[]PROXY"
 ]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 300
 
 [[custom_groups]]
 name = "PayPal"
-type = "select"
+type = "fallback"
 rule = [
+    "[]AmyTelecom | 台湾",
     "[]FlowerCloud | 台湾",
     "[]PROXY"
 ]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 300
 
 [[custom_groups]]
 name = "GoogleVoice"
-type = "select"
+type = "fallback"
 rule = [
+    "[]AmyTelecom | 美国",
     "[]FlowerCloud | 美国",
-    "[]USA Premium",
     "[]PROXY"
 ]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 300
 
 [[custom_groups]]
 name = "Google"
@@ -100,17 +117,33 @@ type = "select"
 rule = [".*"]
 
 [[custom_groups]]
-name = "FlowerCloud | 日本"
+name = "FlowerCloud | 日本标准"
 type = "url-test"
-rule = ["(?!.*实验).*日本"]
+rule = ["日本标准"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
 
 [[custom_groups]]
-name = "FlowerCloud | 香港"
+name = "FlowerCloud | 日本高级"
 type = "url-test"
-rule = ["(?!.*实验).*香港"]
+rule = ["日本高级"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
+
+[[custom_groups]]
+name = "FlowerCloud | 香港标准"
+type = "url-test"
+rule = ["香港标准"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
+
+[[custom_groups]]
+name = "FlowerCloud | 香港高级"
+type = "url-test"
+rule = ["香港高级"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
@@ -132,41 +165,41 @@ interval = 600
 tolerance = 20
 
 [[custom_groups]]
-name = "Japan Premium"
+name = "AmyTelecom | 日本"
 type = "url-test"
-rule = ["^(?=.*Japan)(?=.*Premium).*$"]
+rule = ["日本 (0|1)"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
 
 [[custom_groups]]
-name = "Hong Kong Premium"
+name = "AmyTelecom | 香港"
 type = "url-test"
-rule = ["^(?=.*Hong Kong)(?=.*Premium).*$"]
+rule = ["(?!.*03).*(香港 (0|1))"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
 
 [[custom_groups]]
-name = "Singapore Premium"
+name = "AmyTelecom | 新加坡"
 type = "url-test"
-rule = ["^(?=.*Singapore)(?=.*Premium).*$"]
+rule = ["新加坡 (0|1)"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
 
 [[custom_groups]]
-name = "USA Premium"
+name = "AmyTelecom | 美国"
 type = "url-test"
-rule = ["^(?=.*USA)(?=.*Premium).*$"]
+rule = ["美国 (0|1)"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
 
 [[custom_groups]]
-name = "Korea Premium"
+name = "AmyTelecom | 台湾"
 type = "url-test"
-rule = ["^(?=.*Korea)(?=.*Premium).*$"]
+rule = ["台湾 (0|1)"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
