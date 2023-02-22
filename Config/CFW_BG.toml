@@ -162,38 +162,6 @@ url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
 
-[[custom_groups]]
-name = "AmyTelecom | 香港"
-type = "url-test"
-rule = ["(?!.*03).*(香港 \d{2})"]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 600
-tolerance = 20
-
-[[custom_groups]]
-name = "AmyTelecom | 新加坡"
-type = "url-test"
-rule = ["新加坡 \d{2}"]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 600
-tolerance = 20
-
-[[custom_groups]]
-name = "AmyTelecom | 美国"
-type = "url-test"
-rule = ["美国 \d{2}"]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 600
-tolerance = 20
-
-[[custom_groups]]
-name = "AmyTelecom | 台湾"
-type = "url-test"
-rule = ["台湾 \d{2}"]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 600
-tolerance = 20
-
 [[rulesets]]
 group = "DIRECT"
 ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Providers/WhiteList.yaml"
