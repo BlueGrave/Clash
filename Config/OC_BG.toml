@@ -151,7 +151,7 @@ tolerance = 20
 [[custom_groups]]
 name = "FlowerCloud | 美国"
 type = "url-test"
-rule = ["(?!.*实验).*美国"]
+rule = ["美国高级|美国标准"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
@@ -159,7 +159,7 @@ tolerance = 20
 [[custom_groups]]
 name = "FlowerCloud | 台湾"
 type = "url-test"
-rule = ["(?!.*实验).*台湾"]
+rule = ["台湾高级|台湾标准"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
