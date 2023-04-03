@@ -21,7 +21,7 @@ interval = 300
 
 [[custom_groups]]
 name = "YouTube"
-type = "fallback"
+type = "select"
 rule = [
     "[]AmyTelecom | 日本",
     "[]AmyTelecom | 香港",
@@ -29,8 +29,6 @@ rule = [
     "[]FlowerCloud | 香港标准",
     "[]PROXY"
 ]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 300
 
 [[custom_groups]]
 name = "Netflix"
