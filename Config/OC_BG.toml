@@ -9,9 +9,9 @@ name = "DEFAULT"
 type = "fallback"
 rule = [
     "[]AmyTelecom | 日本",
-    "[]AmyTelecom | 香港",
     "[]FlowerCloud | 日本标准",
     "[]FlowerCloud | 日本高级",
+    "[]AmyTelecom | 香港",
     "[]FlowerCloud | 香港标准",
     "[]FlowerCloud | 香港高级",
     "[]PROXY"
