@@ -6,27 +6,25 @@ clash_rule_base = "https://raw.githubusercontent.com/BlueGrave/Clash/master/CFWC
 
 [[custom_groups]]
 name = "DEFAULT"
-type = "fallback"
+type = "select"
 rule = [
-    "[]AmyTelecom | 日本",
     "[]FlowerCloud | 日本标准",
+    "[]AmyTelecom | 日本",
     "[]FlowerCloud | 日本高级",
-    "[]AmyTelecom | 香港",
     "[]FlowerCloud | 香港标准",
+    "[]AmyTelecom | 香港",
     "[]FlowerCloud | 香港高级",
     "[]PROXY"
 ]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 300
 
 [[custom_groups]]
 name = "YouTube"
 type = "select"
 rule = [
-    "[]AmyTelecom | 日本",
-    "[]AmyTelecom | 香港",
     "[]FlowerCloud | 日本标准",
     "[]FlowerCloud | 香港标准",
+    "[]AmyTelecom | 日本",
+    "[]AmyTelecom | 香港",
     "[]PROXY"
 ]
 
@@ -44,8 +42,8 @@ rule = ["((?!.*03).*香港)|新加坡"]
 name = "HBO GO"
 type = "fallback"
 rule = [
-    "[]AmyTelecom | 台湾",
     "[]FlowerCloud | 台湾",
+    "[]AmyTelecom | 台湾",
     "[]PROXY"
 ]
 url = "http://cp.cloudflare.com/generate_204"
@@ -55,8 +53,8 @@ interval = 300
 name = "Spotify"
 type = "fallback"
 rule = [
-    "[]AmyTelecom | 台湾",
     "[]FlowerCloud | 台湾",
+    "[]AmyTelecom | 台湾",
     "[]PROXY"
 ]
 url = "http://cp.cloudflare.com/generate_204"
@@ -66,8 +64,8 @@ interval = 300
 name = "PayPal"
 type = "fallback"
 rule = [
-    "[]AmyTelecom | 台湾",
     "[]FlowerCloud | 台湾",
+    "[]AmyTelecom | 台湾",
     "[]PROXY"
 ]
 url = "http://cp.cloudflare.com/generate_204"
@@ -77,8 +75,8 @@ interval = 300
 name = "GoogleVoice"
 type = "fallback"
 rule = [
-    "[]AmyTelecom | 美国",
     "[]FlowerCloud | 美国",
+    "[]AmyTelecom | 美国",
     "[]PROXY"
 ]
 url = "http://cp.cloudflare.com/generate_204"
