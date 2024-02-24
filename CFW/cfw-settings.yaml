@@ -283,20 +283,58 @@ connMode: true
 connChainType: 2
 editor: 0
 mixinType: 0
-profileParsersText: >-
-  parsers: # array
-    - reg: .*
-      yaml:
-        prepend-rules:
-          - SCRIPT,p2pshit,REJECT
-          - SCRIPT,tcpp2pshit,REJECT
-          - SCRIPT,ytbquic,REJECT
-        mix-object:
-          script:
-            shortcuts:
-              p2pshit: network == 'udp' and ('bilibili' in host or 'mcdn' in host or 'douyu' in host)
-              tcpp2pshit: network == 'tcp' and 'stun' in host and 'douyu' in host
-              ytbquic: network == 'udp' and dst_port == 443 and 'googlevideo' in host
+profileParsersText: "parsers: # array
+
+  \  - reg: .*
+
+  \    yaml:
+
+  \      commands:
+
+  \        - proxy-groups.Netflix.proxies.16+TempSG
+
+  \      append-proxies:
+
+  \        - name: TempSG
+
+  \          server: 103.171.27.124
+
+  \          port: 56789
+
+  \          type: ss
+
+  \          cipher: chacha20-ietf-poly1305
+
+  \          password: BlueGrave
+
+  \          udp: true
+
+  \      prepend-rules:
+
+  \        - SCRIPT,p2pshit,REJECT
+
+  \        - SCRIPT,tcpp2pshit,REJECT
+
+  \        - SCRIPT,ytbquic,REJECT
+
+  \        - DOMAIN,orxyji.xyz,DIRECT
+
+  \      mix-object:
+
+  \        script:
+
+  \          shortcuts:
+
+  \            p2pshit: network == 'udp' and ('bilibili' in host or 'mcdn' in
+  host or 'douyu' in host)
+
+  \            tcpp2pshit: network == 'tcp' and 'stun' in host and 'douyu' in
+  host
+
+  \            ytbquic: network == 'udp' and dst_port == 443 and 'googlevideo'
+  in host
+
+  \      "
 trayOrders:
   - - icon
   - - status
@@ -318,3 +356,4 @@ childProcessText: "processes: # array\r
 specifyHttpProxyProtocol: false
 connShowProcess: true
 showTrayProxyDelayIndicator: true
+checkForUpdates: true
