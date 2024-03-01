@@ -77,6 +77,18 @@ rule = [
 ]
 
 [[custom_groups]]
+name = "Blizzard"
+type = "select"
+rule = [
+    "[]FlowerCloud | 香港标准",
+    "[]FlowerCloud | 香港高级",
+    "[]FlowerCloud | 台湾",
+    "[]FlowerCloud | 日本标准",
+    "[]FlowerCloud | 日本高级",
+    "[]PROXY"
+]
+
+[[custom_groups]]
 name = "AppleOS Update"
 type = "select"
 rule = [
@@ -279,6 +291,11 @@ type = "clash-classic"
 [[rulesets]]
 group = "Speedtest"
 ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Speedtest/Speedtest.yaml"
+type = "clash-classic"
+
+[[rulesets]]
+group = "Blizzard"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Battle/Battle.list"
 type = "clash-classic"
 
 [[rulesets]]
