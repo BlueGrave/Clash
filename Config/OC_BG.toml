@@ -33,7 +33,7 @@ rule = [
 [[custom_groups]]
 name = "Netflix"
 type = "select"
-rule = ["新加坡"]
+rule = ["((?!.*03).*香港)|新加坡"]
 
 [[custom_groups]]
 name = "Disney+"
