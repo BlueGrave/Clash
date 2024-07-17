@@ -1,6 +1,6 @@
 mixed-port: 7890
 allow-lan: false
-external-controller: 127.0.0.1:49867
+external-controller: 127.0.0.1:50066
 secret: f13104b2-63bb-4c6f-b54e-c5f7d013308e
 tun:
   enable: true
