@@ -77,6 +77,15 @@ rule = [
 ]
 
 [[custom_groups]]
+name = "Epic"
+type = "select"
+rule = [
+    "[]DIRECT",
+    "[]DEFAULT",
+    "[]PROXY"
+]
+
+[[custom_groups]]
 name = "Blizzard"
 type = "select"
 rule = [
@@ -259,7 +268,7 @@ ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master
 type = "clash-classic"
 
 [[rulesets]]
-group = "DEFAULT"
+group = "Google"
 ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleDrive/GoogleDrive.yaml"
 type = "clash-classic"
 
@@ -299,7 +308,7 @@ ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master
 type = "clash-classic"
 
 [[rulesets]]
-group = "DIRECT"
+group = "Epic"
 ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.yaml"
 type = "clash-classic"
 
