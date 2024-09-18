@@ -319,6 +319,8 @@ profileParsersText: "parsers: # array
 
   \        - DOMAIN,orxyji.xyz,DIRECT
 
+  \        - DOMAIN-SUFFIX,st.dl.eccdnx.com,DIRECT
+
   \      mix-object:
 
   \        script:
