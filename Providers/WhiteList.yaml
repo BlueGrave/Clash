@@ -30,3 +30,5 @@ payload:
   - DOMAIN-SUFFIX,fus.cdn.krcom.cn
   - DOMAIN-SUFFIX,tracking-protection.cdn.mozilla.net
   - DOMAIN-SUFFIX,st.dl.eccdnx.com
+
+  - DOMAIN,orxyji.xyz
