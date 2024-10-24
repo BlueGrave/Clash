@@ -205,11 +205,6 @@ ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master
 type = "clash-classic"
 
 [[rulesets]]
-group = "AppleOS Update"
-ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Providers/AppleOS_Update.yaml"
-type = "clash-classic"
-
-[[rulesets]]
 group = "DIRECT"
 ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Download/Download.yaml"
 type = "clash-classic"
@@ -315,6 +310,11 @@ ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master
 type = "clash-classic"
 
 [[rulesets]]
+group = "AppleOS Update"
+ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Providers/AppleOS_Update.yaml"
+type = "clash-classic"
+
+[[rulesets]]
 group = "DIRECT"
 ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml"
 type = "clash-classic"
@@ -327,6 +327,26 @@ type = "clash-classic"
 [[rulesets]]
 group = "DIRECT"
 ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMedia/ChinaMedia.yaml"
+type = "clash-classic"
+
+[[rulesets]]
+group = "DIRECT"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaCompanyIp.yaml"
+type = "clash-classic"
+
+[[rulesets]]
+group = "DIRECT"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaDomain.yaml"
+type = "clash-classic"
+
+[[rulesets]]
+group = "DIRECT"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaIp.yaml"
+type = "clash-classic"
+
+[[rulesets]]
+group = "DIRECT"
+ruleset = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaIpV6.yaml"
 type = "clash-classic"
 
 [[rulesets]]
