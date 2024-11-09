@@ -152,8 +152,6 @@ mixinText: |-
       ipv6: true
       listen: 127.0.0.1:8686
       nameserver-policy:
-        '*.tw': 1.1.1.1
-        'testflight.apple.com': 8.8.8.8
         '*.tmall.com': 223.5.5.5
         '*.taobao.com': 223.5.5.5
         '*.alicdn.com': 223.5.5.5
@@ -164,20 +162,6 @@ mixinText: |-
         '*.qq.com': 119.29.29.29
         '*.tencent.com': 119.29.29.29
         '*.weixin.com': 119.29.29.29
-        '*.qpic.cn': 119.29.29.29
-        '*.jd.com': 119.29.29.29
-        '*.bilibili.com': 119.29.29.29
-        'hdslb.com': 119.29.29.29
-        '*.163.com': 119.29.29.29
-        '*.126.com': 119.29.29.29
-        '*.126.net': 119.29.29.29
-        '*.127.net': 119.29.29.29
-        '*.netease.com': 119.29.29.29
-        '*.10010.com': 119.29.29.29
-        '*.unicompayment.com': 119.29.29.29
-        '*.ximalaya.com': 119.29.29.29
-        '*.baidu.com': 119.29.29.29
-        '*.bdstatic.com': 119.29.29.29
       enhanced-mode: fake-ip
       fake-ip-range: 198.18.0.1/16
       use-hosts: true
