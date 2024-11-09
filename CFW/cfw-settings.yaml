@@ -285,29 +285,29 @@ editor: 0
 mixinType: 0
 profileParsersText: "parsers: # array
 
-  \  - reg: .*
+  \  - reg: ^CFW*
 
   \    yaml:
 
-  \      commands:
+  #      commands:
 
-  \        - proxy-groups.Netflix.proxies.16+TempSG
+  #        - proxy-groups.Netflix.proxies.16+TempSG
 
-  \      append-proxies:
+  #      append-proxies:
 
-  \        - name: TempSG
+  #        - name: TempSG
 
-  \          server: 103.171.27.124
+  #          server: 103.171.27.124
 
-  \          port: 56789
+  #          port: 56789
 
-  \          type: ss
+  #          type: ss
 
-  \          cipher: chacha20-ietf-poly1305
+  #          cipher: chacha20-ietf-poly1305
 
-  \          password: BlueGrave
+  #          password: BlueGrave
 
-  \          udp: true
+  #          udp: true
 
   \      prepend-rules:
 
@@ -316,10 +316,6 @@ profileParsersText: "parsers: # array
   \        - SCRIPT,tcpp2pshit,REJECT
 
   \        - SCRIPT,ytbquic,REJECT
-
-  \        - DOMAIN,orxyji.xyz,DIRECT
-
-  \        - DOMAIN-SUFFIX,st.dl.eccdnx.com,DIRECT
 
   \      mix-object:
 
