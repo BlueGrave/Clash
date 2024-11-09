@@ -18,9 +18,7 @@
 
 - [sub-web](https://github.com/CareyWang/sub-web) v1.0 (部署在 [vercel.com](https://vercel.com) 上面，参见 [@CareyWang/sub-web](https://github.com/CareyWang/sub-web))
 
-- [OC_BG.ini](https://github.com/BlueGrave/Clash/blob/master/Config/OC_BG.ini), [OpenClashConfig.yaml](https://github.com/BlueGrave/Clash/blob/master/OpenClashConfig.yaml) 和 [pref_064.ini](https://github.com/BlueGrave/Clash/blob/master/pref_064.ini) 提供给 [subconverter](https://github.com/tindy2013/subconverter) v0.6.4 使用
-
-- [CFW_BG.toml](https://github.com/BlueGrave/Clash/blob/master/Config/CFW_BG.toml)/[OC_BG.toml](https://github.com/BlueGrave/Clash/blob/master/Config/OC_BG.toml), [CFWClashConfig.yaml](https://github.com/BlueGrave/Clash/blob/master/CFWClashConfig.yaml)/[OpenClashConfig.yaml](https://github.com/BlueGrave/Clash/blob/master/OpenClashConfig.yaml) 和 [pref_072.toml](https://github.com/BlueGrave/Clash/blob/master/SubConverter/pref_071.toml) 提供给 [subconverter](https://github.com/tindy2013/subconverter) v0.7.2 使用，由于 Vercel 下调了性能，就不再更新部署了，改部署在自用的 OpenWrt 上面了
+- [CFW_BG.toml](https://github.com/BlueGrave/Clash/blob/master/Config/CFW_BG.toml)/[OC_BG.toml](https://github.com/BlueGrave/Clash/blob/master/Config/OC_BG.toml), [CFWClashConfig.yaml](https://github.com/BlueGrave/Clash/blob/master/CFWClashConfig.yaml)/[OpenClashConfig.yaml](https://github.com/BlueGrave/Clash/blob/master/OpenClashConfig.yaml) 和 [pref.toml](https://github.com/BlueGrave/Clash/blob/master/SubConverter/pref_071.toml) 提供给 [subconverter](https://github.com/tindy2013/subconverter) v0.8.2 使用，由于 Vercel 下调了性能，就不再更新部署了，改部署在自用的 OpenWrt 上面了
 
 - [Subconverter.vue](https://github.com/BlueGrave/Clash/blob/master/Subconverter.vue) 提供给 [sub-web](https://github.com/CareyWang/sub-web) 使用
 
