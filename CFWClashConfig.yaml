@@ -6,7 +6,6 @@ ipv6: true
 external-controller: '127.0.0.1:9090'
 hosts:
   'router.asus.com': 192.168.186.1
-  'gist.github.com': 52.69.186.44
 dns:
   enable: true
   ipv6: true
