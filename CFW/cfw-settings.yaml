@@ -301,6 +301,8 @@ profileParsersText: "parsers: # array
 
   \        - SCRIPT,ytbquic,REJECT
 
+  \        - DOMAIN,orxyji.xyz,DIRECT
+
   \      mix-object:
 
   \        script:
