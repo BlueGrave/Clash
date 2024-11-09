@@ -285,7 +285,7 @@ editor: 0
 mixinType: 0
 profileParsersText: "parsers: # array
 
-  \  - reg: ^CFW*
+  \  - reg: CFW*
 
   \    yaml:
 
