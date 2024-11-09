@@ -1,34 +1,53 @@
 payload:
   # 自己整理的
-  # 排除 AdBlock 的误伤
+  # 排除 AdBlock 的误伤，增加一些自用的特殊规则
 
-  - DOMAIN,gm.mmstat.com
-  - DOMAIN,log.mmstat.com
-  - DOMAIN,sycm.mmstat.com
-  - DOMAIN,passportapi.115.com
-  - DOMAIN,tui.weibo.com
-  - DOMAIN,msg.umeng.com
-  - DOMAIN,msg.umengcloud.com
-  - DOMAIN,analytics.95516.com
-  - DOMAIN,analytics.strava.com
+  # 通用
   - DOMAIN,app.adjust.com
   - DOMAIN,bdtj.tagtic.cn
-  - DOMAIN,fairplay.l.qq.com
-  - DOMAIN,livew.l.qq.com
-  - DOMAIN,vd.l.qq.com
+  # 淘宝推广
+  - DOMAIN,tce.alicdn.com
+  # Alibaba
+  - DOMAIN,log.mmstat.com
+  - DOMAIN,sycm.mmstat.com
+  # 罗技官网
+  - DOMAIN-SUFFIX,accounts.logi.com
+  - DOMAIN-SUFFIX,ghub.logitech.io
+  - DOMAIN,gm.mmstat.com
+  # 115 网盘
+  - DOMAIN,passportapi.115.com
+  # 微博推广
+  - DOMAIN,tui.weibo.com
+  # weibo
+  - DOMAIN-SUFFIX,f.video.weibocdn.com
+  # Getui
+  - DOMAIN-SUFFIX,dizhensubao.getui.com
+  # Mozilla
+  - DOMAIN-SUFFIX,tracking-protection.cdn.mozilla.net
+  # Origin
   - DOMAIN,origin-a.akamaihd.net
   - DOMAIN,xivanalysis.com
   - DOMAIN,picanalysis.vivo.com.cn
-  - DOMAIN,pubads.g.doubleclick.net
+  # Strava
+  - DOMAIN,analytics.strava.com
+  # Umeng 友盟+
+  - DOMAIN,msg.umeng.com
+  - DOMAIN,msg.umengcloud.com
+  # Tencent
+  - DOMAIN,fairplay.l.qq.com
+  - DOMAIN,livew.l.qq.com
+  - DOMAIN,vd.l.qq.com
+  # UnionPay
   - DOMAIN,analytics.95516.com
+  # MIUI
   - DOMAIN,tracking.miui.com
-  - DOMAIN-SUFFIX,tce.alicdn.com
-  - DOMAIN-SUFFIX,accounts.logi.com
-  - DOMAIN-SUFFIX,ghub.logitech.io
-  - DOMAIN-SUFFIX,dizhensubao.getui.com
-  - DOMAIN-SUFFIX,f.video.weibocdn.com
+  # Paramount+
+  - DOMAIN,pubads.g.doubleclick.net
+  # Krom 酷燃视频
   - DOMAIN-SUFFIX,fus.cdn.krcom.cn
-  - DOMAIN-SUFFIX,tracking-protection.cdn.mozilla.net
+  # RT-AX86U
+  - DOMAIN,router.asus.com
+  # 应对 edu.cn IPv6
+  - DOMAIN-SUFFIX,edu.cn
+  # 修正 SteamCN
   - DOMAIN-SUFFIX,st.dl.eccdnx.com
-
-  - DOMAIN,orxyji.xyz
