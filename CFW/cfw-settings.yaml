@@ -303,6 +303,20 @@ profileParsersText: "parsers: # array
 
   \        - DOMAIN,orxyji.xyz,DIRECT
 
+  \        - IP-CIDR,43.135.0.0/17,DIRECT
+
+  \        - IP-CIDR,43.154.0.0/16,DIRECT
+
+  \        - IP-CIDR,43.159.106.0/23,DIRECT
+
+  \        - IP-CIDR,43.175.16.0/22,DIRECT
+
+  \        - IP-CIDR,101.33.42.0/21,DIRECT
+
+  \        - IP-CIDR,129.226.96.0/19,DIRECT
+
+  \        - IP-CIDR,47.246.96.0/21,DIRECT
+
   \      mix-object:
 
   \        script:
