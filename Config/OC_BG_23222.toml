@@ -21,8 +21,8 @@ name = "YouTube"
 type = "select"
 rule = [
     "[]AmyTelecom | 日本",
+    "[]AmyTelecom | 美国",
     "[]AmyTelecom | 香港",
-    "[]AmyTelecom | 新加坡",
     "[]PROXY"
 ]
 
