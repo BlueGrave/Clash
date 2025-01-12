@@ -22,8 +22,10 @@ name = "YouTube"
 type = "select"
 rule = [
     "[]FlowerCloud | 日本标准",
+    "[]FlowerCloud | 美国",
     "[]FlowerCloud | 香港标准",
     "[]AmyTelecom | 日本",
+    "[]AmyTelecom | 美国",
     "[]AmyTelecom | 香港",
     "[]PROXY"
 ]
