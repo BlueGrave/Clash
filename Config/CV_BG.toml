@@ -402,7 +402,7 @@ type = "clash-classic"
 
 [[rulesets]]
 group = "DIRECT"
-ruleset = "[]GEOIP,lan"
+ruleset = "[]GEOIP,lan,no-resolve"
 
 [[rulesets]]
 group = "DIRECT"
