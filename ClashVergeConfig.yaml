@@ -1,7 +1,6 @@
 mixed-port: 7897
 allow-lan: false
 mode: rule
-unified-delay: true
 log-level: info
 ipv6: true
 find-process-mode: strict
@@ -25,7 +24,6 @@ geox-url:
   geosite: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
   mmdb: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
   asn: "https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
-global-ua: clash-verge/v2.2.3
 tun:
   enable: true
   stack: mixed
