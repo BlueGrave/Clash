@@ -50,8 +50,8 @@ tun:
   strict-route: false
   #启用 auto-route 时执行严格的路由规则
   dns-hijack:
-  - any:53
-  - tcp://any:53
+    - any:53
+    - tcp://any:53
 hosts:
   router.asus.com: 192.168.186.1
 dns:
@@ -174,7 +174,7 @@ dns:
     geosite:
     # 可选值为对于的 geosite 内包含的集合
     # geosite 列表的内容被视为已污染，匹配到 geosite 的域名，将只使用 fallback解析，不去使用 nameserver
-      -gfw
+      - gfw
     ipcidr:
     # 这些网段的结果会被视为污染，nameserver解析出这些结果时将会采用 fallback的解析结果
       - 240.0.0.0/4
