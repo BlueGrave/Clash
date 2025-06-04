@@ -55,7 +55,7 @@ tun:
 hosts:
   router.asus.com: 192.168.186.1
 dns:
-  enable:true
+  enable: true
   listen: 127.0.0.1:53
   ipv6: true
   use-hosts: true
