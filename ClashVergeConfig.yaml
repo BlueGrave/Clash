@@ -1,0 +1,193 @@
+mixed-port: 7897
+allow-lan: false
+mode: rule
+unified-delay: true
+log-level: info
+ipv6: true
+find-process-mode: strict
+# 控制是否让 Clash 去匹配进程
+# strict 默认，由 Clash 判断是否开启
+external-controller: 127.0.0.1:9097
+secret: 'BlueGrave'
+external-controller-cors:
+  allow-origins:
+    - '*'
+  allow-private-network: true
+profile:
+  store-selected: true
+  # 储存 API 对策略组的选择，以供下次启动时使用
+  store-fake-ip: true
+  # 储存 fakeip 映射表，域名再次发生连接时，使用原有映射地址
+unified-delay: true
+# 开启统一延迟时，会计算 RTT，以消除连接握手等带来的不同类型节点的延迟差异
+tcp-concurrent: true
+# TCP 并发
+geodata-mode: true
+# 更改 geoip 使用文件，mmdb 或者 dat，可选 true/false,true 为 dat
+geodata-loader: standard
+# GEO 文件加载模式
+# standard：标准加载器
+geo-auto-update: true
+geo-update-interval: 24
+geox-url:
+  geoip: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
+  geosite: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
+  mmdb: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
+  asn: "https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
+global-ua: clash-verge/v2.2.3
+# 自定义外部资源下载时使用的的 UA，默认为 clash.meta
+tun:
+  enable: true
+  stack: mixed
+  # tun 模式堆栈，如无使用问题，建议使用 mixed栈，默认 gvisor
+  # system 使用系统协议栈，可以提供更稳定/全面的 tun 体验，且占用相对其他堆栈更低
+  # gvisor 通过在用户空间中实现网络协议栈，可以提供更高的安全性和隔离性，同时可以避免操作系统内核和用户空间之间的切换，从而在特定情况下具有更好的网络处理性能
+  # mixed 混合堆栈，tcp 使用 system栈，udp 使用 gvisor栈，使用体验可能相对更好
+  auto-route: true
+  # 自动设置全局路由，可以自动将全局流量路由进入 tun 网卡。
+  auto-detect-interface: true
+  # 自动选择流量出口接口，多出口网卡同时连接的设备建议手动指定出口网卡
+  strict-route: false
+  #启用 auto-route 时执行严格的路由规则
+  dns-hijack:
+  - any:53
+  - tcp://any:53
+hosts:
+  router.asus.com: 192.168.186.1
+dns:
+  enable:true
+  listen: :53
+  ipv6: true
+  use-hosts: true
+  use-system-hosts: true
+  enhanced-mode: fake-ip
+  # mihomo 的 DNS 处理模式，可选值 fake-ip/redir-host，默认redir-host
+  fake-ip-range: 198.18.0.1/16
+  # fakeip 下的 IP 段设置，tun 的默认 IPV4 地址 也使用此值作为参考
+  fake-ip-filter-mode: blacklist
+  # 可选 blacklist/whitelist，默认blacklist，whitelist 即只有匹配成功才返回 fake-ip
+  fake-ip-filter:
+  # fakeip 过滤，以下地址不会下发 fakeip 映射用于连接
+    - '*.lan'
+    - cable.auth.com
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - network-test.debian.org
+    - detectportal.firefox.com
+    - resolver1.opendns.com
+    - '*.*.*.srv.nintendo.net'
+    - '*.*.stun.playstation.net'
+    - xbox.*.*.microsoft.com
+    - '*.*.xboxlive.com'
+    - stun.*.*.*
+    - stun.*.*
+    - localhost.*.qq.com
+    - '*.logon.battlenet.com.cn'
+    - '*.logon.battle.net'
+    - '*.blzstatic.cn'
+    - music.163.com
+    - '*.music.163.com'
+    - '*.126.net'
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - '*.kuwo.cn'
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - y.qq.com
+    - '*.y.qq.com'
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - '*.xiami.com'
+    - '*.music.migu.cn'
+    - music.migu.cn
+    - proxy.golang.org
+    - '*.mcdn.bilivideo.cn'
+    - '*.cmpassport.com'
+    - id6.me
+    - open.e.189.cn
+    - mdn.open.wo.cn
+    - auth.wosms.cn
+    - '*.jegotrip.com.cn'
+    - '*.icitymobile.mobi'
+    - '*.pingan.com.cn'
+    - '*.cmbchina.com'
+    - pool.ntp.org
+    - '*.pool.ntp.org'
+    - ntp.*.com
+    - time.*.com
+    - ntp?.*.com
+    - time?.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - '*.ntp.org.cn'
+    - PDC._msDCS.*.*
+    - DC._msDCS.*.*
+    - GC._msDCS.*.*
+    - speedtest.cros.wr.pvp.net
+  default-nameserver:
+  # 默认 DNS, 用于解析 DNS 服务器 的域名
+    - 223.6.6.6
+    - 119.29.29.29
+    - 8.8.8.8
+    - 1.1.1.1
+  nameserver-policy:
+    '+.tmall.com': 223.5.5.5
+    '+.taobao.com': 223.5.5.5
+    '+.alicdn.com': 223.5.5.5
+    '+.aliyun.com': 223.5.5.5
+    '+.alipay*.com': 223.5.5.5
+    '+.alibaba*.com': 223.5.5.5
+    '+.alimama*.com': 223.5.5.5
+    '+.qq.com': 119.29.29.29
+    '+.tencent.com': 119.29.29.29
+    '+.weixin.com': 119.29.29.29
+  nameserver:
+  # 默认的域名解析服务器
+    - 223.5.5.5
+    - 119.29.29.29
+    - "[2400:3200::1]:53"
+    - "[240C::6666]:53"
+  proxy-server-nameserver:
+  # 代理节点域名解析服务器，仅用于解析代理节点的域名，如果不填则遵循 nameserver-policy、nameserver 和 fallback 的配置
+  - https://doh.pub/dns-query
+  - https://dns.alidns.com/dns-query
+  - tls://223.5.5.5
+  fallback:
+  # 后备域名解析服务器，一般情况下使用境外 DNS, 保证结果可信
+  # 配置 fallback后默认启用 fallback-filter,geoip-code为 cn
+    - 8.8.8.8
+    - 1.1.1.1
+    - "[2001:4860:4860::8888]:53"
+    - "[2001:4860:4860::8844]:53"
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    # 除了 geoip-code 配置的国家 IP, 其他的 IP 结果会被视为污染
+    # geoip-code 配置的国家的结果会直接采用，否则将采用 fallback结果
+    geosite:
+    # 可选值为对于的 geosite 内包含的集合
+    # geosite 列表的内容被视为已污染，匹配到 geosite 的域名，将只使用 fallback解析，不去使用 nameserver
+      -gfw
+    ipcidr:
+    # 这些网段的结果会被视为污染，nameserver解析出这些结果时将会采用 fallback的解析结果
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+    domain:
+    # 这些域名被视为已污染，匹配到这些域名，会直接使用 fallback解析，不去使用 nameserver
+      - +.google.com
+      - +.facebook.com
+      - +.twitter.com
+      - +.youtube.com
+      - +.xn--ngstr-lra8j.com
+      - +.google.cn
+      - +.googleapis.cn
+      - +.gvt1.com
+      - +.github.com
+      - +.githubusercontent.com
