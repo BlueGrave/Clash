@@ -4,7 +4,6 @@ enable_rule_generator = true
 overwrite_original_rules = true
 clash_rule_base = "https://raw.githubusercontent.com/BlueGrave/Clash/master/ClashVergeConfig.yaml"
 
-
 [[custom_groups]]
 name = "DEFAULT"
 type = "select"
@@ -402,7 +401,7 @@ ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master
 type = "clash-classic"
 
 [[rulesets]]
-group = "DIRECT,no-resolve"
+group = "DIRECT"
 ruleset = "[]GEOIP,lan"
 
 [[rulesets]]
