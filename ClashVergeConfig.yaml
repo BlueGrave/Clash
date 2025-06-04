@@ -116,16 +116,16 @@ dns:
     - 8.8.8.8
     - 1.1.1.1
   nameserver-policy:
-    '+.tmall.com': 223.5.5.5
-    '+.taobao.com': 223.5.5.5
-    '+.alicdn.com': 223.5.5.5
-    '+.aliyun.com': 223.5.5.5
-    '+.alipay*.com': 223.5.5.5
-    '+.alibaba*.com': 223.5.5.5
-    '+.alimama*.com': 223.5.5.5
-    '+.qq.com': 119.29.29.29
-    '+.tencent.com': 119.29.29.29
-    '+.weixin.com': 119.29.29.29
+    '+.tmall.com': '223.5.5.5'
+    '+.taobao.com': '223.5.5.5'
+    '+.alicdn.com': '223.5.5.5'
+    '+.aliyun.com': '223.5.5.5'
+    '+.alipay*.com': '223.5.5.5'
+    '+.alibaba*.com': '223.5.5.5'
+    '+.alimama*.com': '223.5.5.5'
+    '+.qq.com': '119.29.29.29'
+    '+.tencent.com': '119.29.29.29'
+    '+.weixin.com': '119.29.29.29'
   nameserver:
     - 223.5.5.5
     - 119.29.29.29
