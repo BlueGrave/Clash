@@ -36,7 +36,7 @@ tun:
     - 'any:53'
     - 'tcp://any:53'
 hosts:
-  router.asus.com: 192.168.186.1
+  'router.asus.com': 192.168.186.1
 dns:
   enable: true
   listen: 127.0.0.1:53
