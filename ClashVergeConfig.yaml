@@ -50,13 +50,13 @@ tun:
   strict-route: false
   #启用 auto-route 时执行严格的路由规则
   dns-hijack:
-    - any:53
-    - tcp://any:53
+    - 'any:53'
+    - 'tcp://any:53'
 hosts:
   router.asus.com: 192.168.186.1
 dns:
   enable:true
-  listen: :53
+  listen: 127.0.0.1:53
   ipv6: true
   use-hosts: true
   use-system-hosts: true
