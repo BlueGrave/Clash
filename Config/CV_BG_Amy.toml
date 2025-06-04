@@ -351,6 +351,14 @@ type = "clash-classic"
 
 [[rulesets]]
 group = "DIRECT"
+ruleset = "[]GEOIP,lan,no-resolve"
+
+[[rulesets]]
+group = "DIRECT"
+ruleset = "[]GEOSITE,CN"
+
+[[rulesets]]
+group = "DIRECT"
 ruleset = "[]GEOIP,CN"
 
 [[rulesets]]
