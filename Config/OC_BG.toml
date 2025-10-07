@@ -35,61 +35,80 @@ rule = [
 [[custom_groups]]
 name = "Netflix"
 type = "select"
-rule = ["((?!.*03).*香港)|新加坡"]
+rule = ["香港|新加坡"]
 
 [[custom_groups]]
 name = "Disney+"
 type = "select"
-rule = ["((?!.*03).*香港)|新加坡"]
+rule = ["香港|新加坡"]
 
 [[custom_groups]]
 name = "HBO GO"
-type = "fallback"
+type = "select"
 rule = [
     "[]FlowerCloud | 台湾",
     "[]AmyTelecom | 台湾",
     "[]PROXY"
 ]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 300
 
 [[custom_groups]]
 name = "Spotify"
-type = "fallback"
+type = "select"
 rule = [
     "[]FlowerCloud | 台湾",
     "[]AmyTelecom | 台湾",
     "[]PROXY"
 ]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 300
 
 [[custom_groups]]
 name = "PayPal"
-type = "fallback"
+type = "select"
 rule = [
     "[]FlowerCloud | 台湾",
     "[]AmyTelecom | 台湾",
     "[]PROXY"
 ]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 300
 
 [[custom_groups]]
 name = "GoogleVoice"
-type = "fallback"
+type = "select"
 rule = [
     "[]FlowerCloud | 美国",
     "[]AmyTelecom | 美国",
     "[]PROXY"
 ]
-url = "http://cp.cloudflare.com/generate_204"
-interval = 300
 
 [[custom_groups]]
 name = "Google"
 type = "select"
 rule = [
+    "[]DEFAULT",
+    "[]PROXY"
+]
+
+[[custom_groups]]
+name = "Steam"
+type = "select"
+rule = [
+    "[]DEFAULT",
+    "[]PROXY",
+    "[]DIRECT"
+]
+
+[[custom_groups]]
+name = "Epic"
+type = "select"
+rule = [
+    "[]DIRECT",
+    "[]DEFAULT",
+    "[]PROXY"
+]
+
+[[custom_groups]]
+name = "TestFlight"
+type = "select"
+rule = [
+    "[]DIRECT",
     "[]DEFAULT",
     "[]PROXY"
 ]
@@ -350,27 +369,27 @@ ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master
 type = "clash-classic"
 
 [[rulesets]]
-group = "Blizzard"
-ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Battle/Battle.list"
-type = "clash-classic"
-
-[[rulesets]]
 group = "DIRECT"
 ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.yaml"
 type = "clash-classic"
 
 [[rulesets]]
-group = "DEFAULT"
+group = "Steam"
 ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.yaml"
 type = "clash-classic"
 
 [[rulesets]]
-group = "DIRECT"
+group = "Epic"
 ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.yaml"
 type = "clash-classic"
 
 [[rulesets]]
-group = "DEFAULT"
+group = "Blizzard"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Battle/Battle.list"
+type = "clash-classic"
+
+[[rulesets]]
+group = "TestFlight"
 ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TestFlight/TestFlight.yaml"
 type = "clash-classic"
 
