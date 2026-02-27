@@ -72,6 +72,10 @@ fake-ip-filter:
   - DC._msDCS.*.*
   - GC._msDCS.*.*
   - speedtest.cros.wr.pvp.net
+  - '*.teafone.com'
+  - '*.sktswe.net'
+  - rtc.goodfone.co.kr
+  - '*.chattti.com'
 default-nameserver:
   - 223.6.6.6
   - 119.29.29.29
