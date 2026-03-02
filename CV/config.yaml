@@ -16,6 +16,9 @@ external-controller-cors:
   - '*'
 unified-delay: true
 tcp-concurrent: true
+geodata-mode: true
+geodata-loader: standard
+geosite-matcher: mph
 profile:
   store-selected: true
   store-fake-ip: true
