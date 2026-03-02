@@ -28,5 +28,9 @@ tun:
   dns-hijack:
     - 'any:53'
     - 'tcp://any:53'
+  route-exclude-address:
+    - '192.168.0.0/16'
+    - '10.0.0.0/8'
+    - '172.16.0.0/12'
 hosts:
   'router.asus.com': 192.168.186.1
