@@ -16,6 +16,7 @@ external-controller-cors:
   - '*'
 unified-delay: true
 tcp-concurrent: true
+global-client-fingerprint: chrome
 geodata-mode: true
 geodata-loader: standard
 geosite-matcher: mph
