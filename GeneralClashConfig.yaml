@@ -117,6 +117,17 @@ sniffer:
     - "Mijia Cloud"            # 小米云，跳过嗅探
     - "+.push.apple.com"       # 苹果推送
 
+# ── HOSTS ───────────────────────────────────────────────────────
+hosts:
+  dns.alidns.com:
+    - 223.5.5.5
+    - 223.6.6.6
+    - 2400:3200:baba::1
+    - 2400:3200::1
+  127.0.0.1.sslip.io: 127.0.0.1
+  127.atlas.skk.moe: 127.0.0.1
+  cdn.jsdelivr.net: cdn.jsdelivr.net.cdn.cloudflare.net
+
 # ── DNS ───────────────────────────────────────────────────────
 dns:
   # 是否启用 dns false
@@ -234,15 +245,6 @@ dns:
     'geosite:geolocation-!cn':
       - 'tls://8.8.8.8'
       - 'tls://1.1.1.1'
-    hosts:
-      dns.alidns.com:
-        - 223.5.5.5
-        - 223.6.6.6
-        - 2400:3200:baba::1
-        - 2400:3200::1
-      127.0.0.1.sslip.io: 127.0.0.1
-      127.atlas.skk.moe: 127.0.0.1
-      cdn.jsdelivr.net: cdn.jsdelivr.net.cdn.cloudflare.net
   # 默认 nameserver：国内 DNS（nameserver-policy 未覆盖的域名使用这里），并发查询取最快结果
   nameserver:
     - https://dns.alidns.com/dns-query # Ali DoH
