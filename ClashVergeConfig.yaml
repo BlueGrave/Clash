@@ -39,7 +39,7 @@ tun:
     - "172.16.0.0/12"
 
 hosts:
-  router.asus.com: system
+  router.asus.com: 192.168.186.1
   dns.alidns.com:
     - 223.5.5.5
     - 223.6.6.6
