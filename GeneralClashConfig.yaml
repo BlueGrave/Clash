@@ -140,6 +140,8 @@ dns:
   # 推荐模式，速度快，与规则配合最好
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
+  # DNS 解析遵循路由规则（如需国外域名走代理 DNS，开启此项）
+  respect-rules: true
 
   # fake-ip 白名单：这些域名不返回假 IP，直接正常解析
   # 主要是局域网服务、NTP、游戏 STUN 等不适合 fake-ip 的场景
@@ -212,9 +214,6 @@ dns:
     - rtc.goodfone.co.kr
     - '*.chattti.com'
     - '+.push.apple.com'
-
-  # DNS 解析遵循路由规则（如需国外域名走代理 DNS，开启此项）
-  respect-rules: true
 
   # 解析代理节点域名用的 DNS（避免代理节点域名本身被污染）
   proxy-server-nameserver:
