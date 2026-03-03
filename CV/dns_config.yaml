@@ -9,7 +9,6 @@ use-system-hosts: true
 enhanced-mode: fake-ip
 fake-ip-range: 198.18.0.1/16
 respect-rules: true
-fake-ip-filter-mode: blacklist
 fake-ip-filter:
   - '*.lan'
   - cable.auth.com
