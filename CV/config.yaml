@@ -23,18 +23,26 @@ geosite-matcher: mph
 profile:
   store-selected: true
   store-fake-ip: true
+
 tun:
   enable: true
   stack: mixed
-  auto-route: true
-  auto-detect-interface: true
-  strict-route: false
   dns-hijack:
     - 'any:53'
     - 'tcp://any:53'
+  auto-route: true
+  auto-detect-interface: true
+  strict-route: false
   route-exclude-address:
-    - '192.168.0.0/16'
-    - '10.0.0.0/8'
-    - '172.16.0.0/12'
+    - "192.168.0.0/16"
+    - "10.0.0.0/8"
+    - "172.16.0.0/12"
+
 hosts:
-  'router.asus.com': 192.168.186.1
+  router.asus.com: system
+  dns.alidns.com:
+    - 223.5.5.5
+    - 223.6.6.6
+    - 2400:3200:baba::1
+    - 2400:3200::1
+  cdn.jsdelivr.net: cdn.jsdelivr.net.cdn.cloudflare.net
