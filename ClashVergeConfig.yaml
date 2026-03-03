@@ -17,8 +17,7 @@ unified-delay: true
 tcp-concurrent: true
 geodata-mode: true
 geodata-loader: standard
-geo-auto-update: true
-geo-update-interval: 24
+geosite-matcher: mph
 geox-url:
   geoip: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
   geosite: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
@@ -108,6 +107,11 @@ dns:
     - DC._msDCS.*.*
     - GC._msDCS.*.*
     - speedtest.cros.wr.pvp.net
+    - '*.teafone.com'
+    - '*.sktswe.net'
+    - rtc.goodfone.co.kr
+    - '*.chattti.com'
+    - '+.push.apple.com'
   default-nameserver:
     - 223.6.6.6
     - 119.29.29.29
