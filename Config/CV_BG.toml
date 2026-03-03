@@ -412,11 +412,11 @@ type = "clash-classic"
 
 [[rulesets]]
 group = "DIRECT"
-ruleset = "[]GEOIP,LAN,no-resolve"
+ruleset = "[]GEOSITE,CN"
 
 [[rulesets]]
 group = "DIRECT"
-ruleset = "[]GEOSITE,CN"
+ruleset = "[]GEOIP,LAN,no-resolve"
 
 [[rulesets]]
 group = "DIRECT"
