@@ -31,6 +31,11 @@ unified-delay: true
 # TCP 并发：同时向所有解析 IP 发起连接，选最快的
 tcp-concurrent: true
 
+# TCP keepalive 探测间隔（秒）
+keep-alive-interval: 30
+# TCP keepalive 空闲等待时间（秒）
+keep-alive-idle: 600
+
 # 全局 TLS 指纹伪装
 global-client-fingerprint: chrome
 
@@ -44,11 +49,21 @@ external-controller: 127.0.0.1:9090
 external-ui: ui
 external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
 
+# ══ GeoData 加载优化 ═══════════════════════════════════════════
+geodata-mode: true
+geodata-loader: memconservative  # 内存节省模式（路由器/内存小的设备推荐）
+                                 # standard：性能更高，内存占用也更多
+geosite-matcher: succinct        # succinct（精简）/ mph（哈希，速度最快）
+
 # ══ GeoData 数据库地址 ════════════════════════════════════════
 geox-url:
   geoip:   "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
   geosite: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
   mmdb:    "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
+
+# ══ 出口网卡绑定（多网卡环境）════════════════════════════════
+# interface-name: eth0           # 指定出口网卡，防止意外走错网卡
+# routing-mark: 666              # Linux 路由策略标记（配合 ip rule 使用）
 
 # ══ 配置持久化 ════════════════════════════════════════════════
 profile:
@@ -59,6 +74,50 @@ profile:
   # Clash 的 RESTful API
 external-controller: '127.0.0.1:9090'
 
+# ── TUN ───────────────────────────────────────────────────────
+tun:
+  enable: true
+  stack: mixed              # 协议栈：mixed（推荐）/ system / gvisor
+                            # system：速度最快，兼容性最好，内存最低
+                            # gvisor：用户态网络栈，UDP 支持更好，但性能略低
+                            # mixed：TCP 走 system，UDP 走 gvisor，均衡之选
+  device: mihomo            # 虚拟网卡名称（可自定义，Linux 下常见 tun0）
+  dns-hijack:
+    - "any:53"              # 劫持所有发往 53 端口的 DNS 请求
+    - "tcp://any:53"        # 同时劫持 TCP 的 DNS
+  auto-detect-interface: true   # 自动识别出口网卡（推荐）
+  auto-route: true              # 自动配置系统路由表（TUN 接管全流量的关键）
+  strict-route: true            # 严格路由：防止流量绕过 TUN（会影响某些 VPN 场景）
+  mtu: 9000                     # MTU，适当提高减少分片（以太网推荐 1500，虚拟网络可更高）
+
+  # 以下 IP 段排除在 TUN 之外（直接走本机网络）
+  route-exclude-address:
+    - "192.168.0.0/16"
+    - "10.0.0.0/8"
+    - "172.16.0.0/12"
+    # 如果使用 ZeroTier / Tailscale 等内网穿透，把对应网段也加进来
+
+  # gso: true               # 通用分段卸载（仅 Linux，可提升 UDP 性能）
+  # gso-max-size: 65536
+
+# ── 嗅探 ──────────────────────────────────────────────────────
+sniffer:
+  enable: true
+  # override-destination：用嗅探到的真实域名覆盖连接目标
+  # 在 TUN 模式下必须开启，否则拿到的是 IP，域名规则无法匹配
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
+  skip-domain:
+    - "Mijia Cloud"            # 小米云，跳过嗅探
+    - "+.push.apple.com"       # 苹果推送
+
+# ── DNS ───────────────────────────────────────────────────────
 dns:
   # 是否启用 dns false
   enable: true
