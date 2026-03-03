@@ -1,89 +1,156 @@
-#---------------------------------------------------#
-# 配置文件需要放置在 $HOME/.config/clash/config.yml
-# 或者运行目录下的config.yml
-#---------------------------------------------------#
-# 混合端口 HTTP和SOCKS5用一个端口
+# ══ 端口 ══════════════════════════════════════════════════════
+# HTTP + SOCKS5 混合端口（推荐只用这一个）
 mixed-port: 7890
 
-# HTTP 代理端口
-# port: 7890
-
-# SOCKS5 代理端口
-# socks-port: 7891
-
-# Linux 和 macOS 的 redir 代理端口 (如需使用此功能，请取消注释)
-# redir-port: 7892
-
-# 允许局域网的连接（可用来共享代理）
+# 是否允许局域网内其他设备接入代理
+# 个人电脑设 false；软路由/共享代理设 true
 allow-lan: true
 
-# 仅在将 allow-lan 设置为 true 时适用
-# "*": 绑定所有 IP 地址
-# 192.168.122.11: 绑定单个 IPv4 地址
-# "[aaaa::a8aa:ff:fe09:57d8]": 绑定单个 IPv6 地址
-# bind-address: "*"
+# allow-lan 为 true 时绑定哪些网卡，* 表示全部
+bind-address: "*"
 
+# ══ 运行模式 ══════════════════════════════════════════════════
 # 规则模式：Rule（规则） / Global（全局代理）/ Direct（全局直连）
 mode: Rule
 
-# 设置日志输出级别 (默认级别：silent，即不输出任何内容，以避免因日志内容过大而导致程序内存溢出）。
+# ══ 日志 ══════════════════════════════════════════════════════
 # 5 个级别：silent / error / warning / info / debug。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
-log-level: info
+# 日常用 warning；排查问题时改 debug
+log-level: warning
 
-# 此项为 false 时，则不将主机名解析为 IPv6 地址
+# ══ 杂项 ══════════════════════════════════════════════════════
+# 不建议新手开启，避免意外问题
 ipv6: false
 
-profile:
-# store the `select` results in $HOME/.cache
-# when two different configurations have groups with the same name, the selected values are shared
-# set false if you don't want this behavior
-# store-selected: false
-# open tracing exporter API
-  tracing: true
-# persistence fakeip
-  store-fake-ip: true
+# 是否匹配进程名（路由器/软路由推荐 off）
+find-process-mode: strict
 
+# 统一延迟测试：用实际往返时间，更准确
+unified-delay: true
+
+# TCP 并发：同时向所有解析 IP 发起连接，选最快的
+tcp-concurrent: true
+
+# 全局 TLS 指纹伪装
+global-client-fingerprint: chrome
+
+# ══ 外部控制（Web 面板）══════════════════════════════════════
+external-controller: 127.0.0.1:9090
+
+# 如果对外暴露务必设置密码
+# secret: "your_strong_password"
+
+# Web UI 存放目录（相对于配置文件目录）
+external-ui: ui
+external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
+
+# ══ GeoData 数据库地址 ════════════════════════════════════════
+geox-url:
+  geoip:   "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
+  geosite: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
+  mmdb:    "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
+
+# ══ 配置持久化 ════════════════════════════════════════════════
+profile:
+# 记住你在 Web UI 中的节点选择，重启后不丢失
+  store-selected: true
+# 持久化 fake-ip 映射表
+  store-fake-ip: true
 # Clash 的 RESTful API
 external-controller: '127.0.0.1:9090'
 
-# 您可以将静态网页资源（如 clash-dashboard）放置在一个目录中，clash 将会服务于 `RESTful API/ui`
-# 参数应填写配置目录的相对路径或绝对路径。
-# http://127.0.0.1:9090/ui/#/
-# external-ui: folder
-# yacd面板：  https://github.com/haishanh/yacd
-# Razord面板：http://clash.razord.top/#/proxies
-# external-ui: dashboard
-
-# RESTful API 的口令 (可选)
-# secret: ""
-
-#	interface-name: en0 # outbound interface name
-
-# 本地 SOCKS5 / HTTP(S) 服务认证
-# authentication:
-#   - "user1:pass1"
-#   - "user2:pass2"
-
-# 实验性功能 hosts, 支持通配符 (例如 *.clash.dev 甚至 *.foo.*.example.com)
-# 静态的域名 比 通配域名 具有更高的优先级 (foo.example.com 优先于 *.example.com)
-# 注意: hosts 在 fake-ip 模式下不生效
-# hosts:
-#   '*.clash.dev': 127.0.0.1
-#   'alpha.clash.dev': '::1'
-
-#   Google FCM (Firebase Cloud Messaging)
-#   'mtalk.google.com': 108.177.125.188
-#   Google Download (Android Studio / Google Chrome)
-#   'dl.google.com': 180.163.151.161
-#   'dl.l.google.com': 180.163.151.161
-
-#   'services.googleapis.cn': 74.125.203.94
-#   'raw.githubusercontent.com': 151.101.228.133
-
 dns:
-  enable: true # 是否启用 dns false
-  ipv6: false # 当此选项为 false 时, AAAA 请求将返回空
+# 是否启用 dns false
+  enable: true
   listen: 127.0.0.1:53
+# 当此选项为 false 时, AAAA 请求将返回空
+  ipv6: false
+# 优先使用 HTTP/3 协议（DoH3），更快
+  prefer-h3: true
+# 推荐模式，速度快，与规则配合最好
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+
+# fake-ip 白名单：这些域名不返回假 IP，直接正常解析
+# 主要是局域网服务、NTP、游戏 STUN 等不适合 fake-ip 的场景
+  fake-ip-filter:
+    - '*.lan'
+    - cable.auth.com
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - network-test.debian.org
+    - detectportal.firefox.com
+    - resolver1.opendns.com
+    - '*.*.*.srv.nintendo.net'
+    - '*.*.stun.playstation.net'
+    - xbox.*.*.microsoft.com
+    - '*.*.xboxlive.com'
+    - stun.*.*.*
+    - stun.*.*
+    - localhost.*.qq.com
+    - '*.logon.battlenet.com.cn'
+    - '*.logon.battle.net'
+    - '*.blzstatic.cn'
+    - music.163.com
+    - '*.music.163.com'
+    - '*.126.net'
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - '*.kuwo.cn'
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - y.qq.com
+    - '*.y.qq.com'
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - '*.xiami.com'
+    - '*.music.migu.cn'
+    - music.migu.cn
+    - proxy.golang.org
+    - '*.mcdn.bilivideo.cn'
+    - '*.cmpassport.com'
+    - id6.me
+    - open.e.189.cn
+    - mdn.open.wo.cn
+    - auth.wosms.cn
+    - '*.jegotrip.com.cn'
+    - '*.icitymobile.mobi'
+    - '*.pingan.com.cn'
+    - '*.cmbchina.com'
+    - pool.ntp.org
+    - '*.pool.ntp.org'
+    - ntp.*.com
+    - time.*.com
+    - ntp?.*.com
+    - time?.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - '*.ntp.org.cn'
+    - PDC._msDCS.*.*
+    - DC._msDCS.*.*
+    - GC._msDCS.*.*
+    - speedtest.cros.wr.pvp.net
+    - '*.teafone.com'
+    - '*.sktswe.net'
+    - rtc.goodfone.co.kr
+    - '*.chattti.com'
+    - '+.push.apple.com'
+
+# DNS 解析遵循路由规则（如需国外域名走代理 DNS，开启此项）
+  respect-rules: true
+
+# 解析代理节点域名用的 DNS（避免代理节点域名本身被污染）
+  proxy-server-nameserver:
+    - https://223.5.5.5/dns-query
+    - https://doh.pub/dns-query
+# 默认 nameserver：国内 DNS，并发查询取最快结果
   nameserver-policy:
     '*.tmall.com': 223.5.5.5
     '*.taobao.com': 223.5.5.5
@@ -95,98 +162,13 @@ dns:
     '*.qq.com': 119.29.29.29
     '*.tencent.com': 119.29.29.29
     '*.weixin.com': 119.29.29.29
-  default-nameserver: # 用于解析 nameserver 里面 DoH/DoT 的域名
-    - 223.5.5.5 # 阿里 AliDNS
-#   - 223.6.6.6 # 阿里 AliDNS
-    - 119.29.29.29 # 腾讯 DNSPod DNS+
-#   - 182.254.116.116 # 腾讯 DNSPod DNS+
-#   - 1.0.0.1 # Cloudflare DNS
-#   - 1.1.1.1 # Cloudflare DNS
-#   - 1.2.4.8 # CNNIC SDNS
-#   - 210.2.4.8 # CNNIC SDNS
-#   - 114.114.114.114 # 114 DNS
-#   - 114.114.115.115 # 114 DNS
-#   - 180.76.76.76 # 百度 BaiduDNS
-#   - 117.50.11.11 # oneDNS
-#   - 52.80.66.66 # oneDNS
-    - 8.8.8.8 # Google DNS
-#   - 8.8.4.4 # Google DNS
-#   - 9.9.9.9 # IBM Quad9
-#   - 4.2.2.1 # Level3 DNS
-#   - 4.2.2.2 # Level3 DNS
-#   - 208.67.222.222 # OpenDNS
-#   - 208.67.220.220 # OpenDNS
-#   - 199.91.73.222 # V2EX DNS
-#   - 178.79.131.110 # V2EX DNS
-#   - 185.222.222.222 # DNS.SB
-#   - 185.184.222.222 # DNS.SB
-  enhanced-mode: redir-host # or fake-ip
-# fake-ip-range: 198.18.0.1/16
-# use-hosts: true
-# fake-ip-filter: # fake ip 白名单列表，如果你不知道这个参数的作用，请勿修改
-#   - '*.lan'
-#   - cable.auth.com
-#   - '*.msftconnecttest.com'
-#   - '*.msftncsi.com'
-#   - network-test.debian.org
-#   - detectportal.firefox.com
-#   - resolver1.opendns.com
-#   - '*.*.*.srv.nintendo.net'
-#   - '*.*.stun.playstation.net'
-#   - xbox.*.*.microsoft.com
-#   - '*.*.xboxlive.com'
-#   - stun.*.*.*
-#   - stun.*.*
-#   - localhost.*.qq.com
-#   - '*.logon.battlenet.com.cn'
-#   - '*.logon.battle.net'
-#   - '*.blzstatic.cn'
-#   - music.163.com
-#   - '*.music.163.com'
-#   - '*.126.net'
-#   - musicapi.taihe.com
-#   - music.taihe.com
-#   - songsearch.kugou.com
-#   - trackercdn.kugou.com
-#   - '*.kuwo.cn'
-#   - api-jooxtt.sanook.com
-#   - api.joox.com
-#   - joox.com
-#   - y.qq.com
-#   - '*.y.qq.com'
-#   - streamoc.music.tc.qq.com
-#   - mobileoc.music.tc.qq.com
-#   - isure.stream.qqmusic.qq.com
-#   - dl.stream.qqmusic.qq.com
-#   - aqqmusic.tc.qq.com
-#   - amobile.music.tc.qq.com
-#   - '*.xiami.com'
-#   - '*.music.migu.cn'
-#   - music.migu.cn
-#   - proxy.golang.org
-#   - '*.mcdn.bilivideo.cn'
-#   - '*.cmpassport.com'
-#   - id6.me
-#   - open.e.189.cn
-#   - mdn.open.wo.cn
-#   - auth.wosms.cn
-#   - '*.jegotrip.com.cn'
-#   - '*.icitymobile.mobi'
-#   - '*.pingan.com.cn'
-#   - '*.cmbchina.com'
-#   - pool.ntp.org
-#   - '*.pool.ntp.org'
-#   - ntp.*.com
-#   - time.*.com
-#   - ntp?.*.com
-#   - time?.*.com
-#   - time.*.gov
-#   - time.*.edu.cn
-#   - '*.ntp.org.cn'
-#   - PDC._msDCS.*.*
-#   - DC._msDCS.*.*
-#   - GC._msDCS.*.*
-#   - speedtest.cros.wr.pvp.net
+    'geosite:cn,private':
+      - https://223.5.5.5/dns-query
+      - https://doh.pub/dns-query
+    'geosite:geolocation-!cn':
+      - 'tls://8.8.8.8'
+      - 'tls://1.1.1.1'
+# 默认 nameserver：国内 DNS，并发查询取最快结果
   nameserver:
     - https://dns.alidns.com/dns-query # Ali DoH
     - https://doh.pub/dns-query # Tencent DoH
@@ -196,6 +178,8 @@ dns:
 #   - "[2400:3200:baba::1]:53" # Ali IPv6 DNS
 #   - "[240C::6666]:53" # 天地互连 IPv6 DNS
 #   - "[240C::6644]:53" # 天地互连 IPv6 DNS
+
+
   fallback:
     - https://dns.google/dns-query # Google DoH
     - https://cloudflare-dns.com/dns-query # Cloudflare DoH
@@ -231,51 +215,3 @@ dns:
       - +.gvt1.com
       - +.github.com
       - +.githubusercontent.com
-
-# tun:
-#   enable: true
-#   stack: system # or gvisor
-#   auto-route: true # auto set global route
-# It is recommended to use `interface-name` (Windows)
-#   auto-detect-interface: true # 自动检测出口网卡，conflict with interface-name
-#   dns-hijack:
-#     - 198.18.0.2:53 # when `fake-ip-range` is 198.18.0.1/16, should hijack 198.18.0.2:53 (Windows)
-#     - 8.8.8.8:53
-#     - tcp://8.8.8.8:53
-#     - tcp://8.8.4.4:53
-#     - any:53
-#     - tcp://any:53
-
-# 1. clash DNS 请求逻辑：
-#   (1) 当访问一个域名时， nameserver 与 fallback 列表内的所有服务器并发请求，得到域名对应的 IP 地址。
-#   (2) clash 将选取 nameserver 列表内，解析最快的结果。
-#   (3) 若解析结果中，IP 地址属于 国外，那么 clash 将选择 fallback 列表内，解析最快的结果。
-#
-#   因此，我在 nameserver 和 fallback 内都放置了无污染、解析速度较快的国内 DNS 服务器，以达到最快的解析速度。
-#   但是 fallback 列表内服务器会用在解析境外网站，为了结果绝对无污染，我仅保留了支持 DoT/DoH 的两个服务器。
-#
-# 2. clash DNS 配置注意事项：
-#   (1) 如果您为了确保 DNS 解析结果无污染，请仅保留列表内以 tls:// 或 https:// 开头的 DNS 服务器，但是通常对于国内域名没有必要。
-#   (2) 如果您不在乎可能解析到污染的结果，更加追求速度。请将 nameserver 列表的服务器插入至 fallback 列表内，并移除重复项。
-#
-# 3. 关于 DNS over HTTPS (DoH) 和 DNS over TLS (DoT) 的选择：
-#   对于两项技术双方各执一词，而且会无休止的争论，各有利弊。各位请根据具体需求自行选择，但是配置文件内默认启用 DoT，因为目前国内没有封锁或管制。
-#   DoH: 以 https:// 开头的 DNS 服务器。拥有更好的伪装性，且几乎不可能被运营商或网络管理封锁，但查询效率和安全性可能略低。
-#   DoT: 以 tls:// 开头的 DNS 服务器。拥有更高的安全性和查询效率，但端口有可能被管制或封锁。
-#   若要了解更多关于 DoH/DoT 相关技术，请自行查阅规范文档。
-
-# 代理组
-# 下面这3个不要引到订阅里去 要不会出错
-# Will be ignored after profile selection
-#Proxy:
-#  - name: Shadowsocks
-#    type: socks5
-#    server: 127.0.0.1
-#    port: 1080
-#Proxy Group:
-#  - name: Proxy
-#    type: select
-#    proxies:
-#      - Shadowsocks
-#Rule:
-#  - 'MATCH,DIRECT'
