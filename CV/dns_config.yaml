@@ -76,31 +76,31 @@ fake-ip-filter:
   - rtc.goodfone.co.kr
   - '*.chattti.com'
   - '+.push.apple.com'
-  proxy-server-nameserver:
+proxy-server-nameserver:
+  - https://223.5.5.5/dns-query
+  - https://doh.pub/dns-query
+nameserver-policy:
+  '*.tmall.com': 223.5.5.5
+  '*.taobao.com': 223.5.5.5
+  '*.alicdn.com': 223.5.5.5
+  '*.aliyun.com': 223.5.5.5
+  '*.alipay*.com': 223.5.5.5
+  '*.alibaba*.com': 223.5.5.5
+  '*.alimama*.com': 223.5.5.5
+  '*.qq.com': 119.29.29.29
+  '*.tencent.com': 119.29.29.29
+  '*.weixin.com': 119.29.29.29
+  dns.alidns.com: quic://223.5.5.5:853
+  dot.pub: 119.29.29.29
+  doh.pub: 119.29.29.29
+  dns.pub: 119.29.29.29
+  doh.360.cn: 101.198.198.198
+  'geosite:cn,private':
     - https://223.5.5.5/dns-query
     - https://doh.pub/dns-query
-  nameserver-policy:
-    '*.tmall.com': 223.5.5.5
-    '*.taobao.com': 223.5.5.5
-    '*.alicdn.com': 223.5.5.5
-    '*.aliyun.com': 223.5.5.5
-    '*.alipay*.com': 223.5.5.5
-    '*.alibaba*.com': 223.5.5.5
-    '*.alimama*.com': 223.5.5.5
-    '*.qq.com': 119.29.29.29
-    '*.tencent.com': 119.29.29.29
-    '*.weixin.com': 119.29.29.29
-    dns.alidns.com: quic://223.5.5.5:853
-    dot.pub: 119.29.29.29
-    doh.pub: 119.29.29.29
-    dns.pub: 119.29.29.29
-    doh.360.cn: 101.198.198.198
-    'geosite:cn,private':
-      - https://223.5.5.5/dns-query
-      - https://doh.pub/dns-query
-    'geosite:geolocation-!cn':
-      - tls://8.8.8.8
-      - tls://1.1.1.1
-  nameserver:
+  'geosite:geolocation-!cn':
+    - tls://8.8.8.8
+    - tls://1.1.1.1
+nameserver:
   - https://223.5.5.5/dns-query
   - https://doh.pub/dns-query
