@@ -7,11 +7,11 @@ mode: rule
 ipv6: true
 find-process-mode: strict
 external-controller: 127.0.0.1:9097
-secret: 'BlueGrave'
+secret: "BlueGrave"
 external-controller-cors:
   allow-private-network: true
   allow-origins:
-    - '*'
+    - "*"
 unified-delay: true
 tcp-concurrent: true
 geodata-mode: true
@@ -25,8 +25,8 @@ tun:
   enable: true
   stack: mixed
   dns-hijack:
-    - 'any:53'
-    - 'tcp://any:53'
+    - "any:53"
+    - "tcp://any:53"
   auto-route: true
   auto-detect-interface: true
   strict-route: false
