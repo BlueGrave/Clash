@@ -41,15 +41,6 @@ type = "select"
 rule = ["香港|新加坡"]
 
 [[custom_groups]]
-name = "HBO GO"
-type = "select"
-rule = [
-    "[]FlowerCloud | 台湾",
-#   "[]AmyTelecom | 台湾",
-    "[]PROXY"
-]
-
-[[custom_groups]]
 name = "Spotify"
 type = "select"
 rule = [
