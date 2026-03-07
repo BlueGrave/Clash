@@ -3,7 +3,7 @@ allow-lan: true
 mode: Rule
 log-level: info
 ipv6: false
-external-controller: '0.0.0.0:9090'
+external-controller: "0.0.0.0:9090"
 profile:
   store-selected: true
   store-fake-ip: true
@@ -29,88 +29,88 @@ dns:
   fake-ip-range: 198.18.0.1/16
   respect-rules: true
   fake-ip-filter: # fake ip 白名单
-    - '*.lan'
+    - "*.lan"
     - cable.auth.com
-    - '*.msftconnecttest.com'
-    - '*.msftncsi.com'
+    - "*.msftconnecttest.com"
+    - "*.msftncsi.com"
     - network-test.debian.org
     - detectportal.firefox.com
     - resolver1.opendns.com
-    - '*.*.*.srv.nintendo.net'
-    - '*.*.stun.playstation.net'
+    - "*.*.*.srv.nintendo.net"
+    - "*.*.stun.playstation.net"
     - xbox.*.*.microsoft.com
-    - '*.*.xboxlive.com'
+    - "*.*.xboxlive.com"
     - stun.*.*.*
     - stun.*.*
     - localhost.*.qq.com
-    - '*.logon.battlenet.com.cn'
-    - '*.logon.battle.net'
-    - '*.blzstatic.cn'
+    - "*.logon.battlenet.com.cn"
+    - "*.logon.battle.net"
+    - "*.blzstatic.cn"
     - music.163.com
-    - '*.music.163.com'
-    - '*.126.net'
+    - "*.music.163.com"
+    - "*.126.net"
     - musicapi.taihe.com
     - music.taihe.com
     - songsearch.kugou.com
     - trackercdn.kugou.com
-    - '*.kuwo.cn'
+    - "*.kuwo.cn"
     - api-jooxtt.sanook.com
     - api.joox.com
     - joox.com
     - y.qq.com
-    - '*.y.qq.com'
+    - "*.y.qq.com"
     - streamoc.music.tc.qq.com
     - mobileoc.music.tc.qq.com
     - isure.stream.qqmusic.qq.com
     - dl.stream.qqmusic.qq.com
     - aqqmusic.tc.qq.com
     - amobile.music.tc.qq.com
-    - '*.xiami.com'
-    - '*.music.migu.cn'
+    - "*.xiami.com"
+    - "*.music.migu.cn"
     - music.migu.cn
     - proxy.golang.org
-    - '*.mcdn.bilivideo.cn'
-    - '*.cmpassport.com'
+    - "*.mcdn.bilivideo.cn"
+    - "*.cmpassport.com"
     - id6.me
     - open.e.189.cn
     - mdn.open.wo.cn
     - auth.wosms.cn
-    - '*.jegotrip.com.cn'
-    - '*.icitymobile.mobi'
-    - '*.pingan.com.cn'
-    - '*.cmbchina.com'
+    - "*.jegotrip.com.cn"
+    - "*.icitymobile.mobi"
+    - "*.pingan.com.cn"
+    - "*.cmbchina.com"
     - pool.ntp.org
-    - '*.pool.ntp.org'
+    - "*.pool.ntp.org"
     - ntp.*.com
     - time.*.com
     - ntp?.*.com
     - time?.*.com
     - time.*.gov
     - time.*.edu.cn
-    - '*.ntp.org.cn'
+    - "*.ntp.org.cn"
     - PDC._msDCS.*.*
     - DC._msDCS.*.*
     - GC._msDCS.*.*
     - speedtest.cros.wr.pvp.net
-    - '*.teafone.com'
-    - '*.sktswe.net'
+    - "*.teafone.com"
+    - "*.sktswe.net"
     - rtc.goodfone.co.kr
-    - '*.chattti.com'
-    - '+.push.apple.com'
+    - "*.chattti.com"
+    - "+.push.apple.com"
   proxy-server-nameserver:
     - https://223.5.5.5/dns-query
     - https://doh.pub/dns-query
   nameserver-policy:
-    '*.tmall.com': 223.5.5.5
-    '*.taobao.com': 223.5.5.5
-    '*.alicdn.com': 223.5.5.5
-    '*.aliyun.com': 223.5.5.5
-    '*.alipay*.com': 223.5.5.5
-    '*.alibaba*.com': 223.5.5.5
-    '*.alimama*.com': 223.5.5.5
-    '*.qq.com': 119.29.29.29
-    '*.tencent.com': 119.29.29.29
-    '*.weixin.com': 119.29.29.29
+    "*.tmall.com": 223.5.5.5
+    "*.taobao.com": 223.5.5.5
+    "*.alicdn.com": 223.5.5.5
+    "*.aliyun.com": 223.5.5.5
+    "*.alipay*.com": 223.5.5.5
+    "*.alibaba*.com": 223.5.5.5
+    "*.alimama*.com": 223.5.5.5
+    "*.qq.com": 119.29.29.29
+    "*.tencent.com": 119.29.29.29
+    "*.weixin.com": 119.29.29.29
     dns.alidns.com: quic://223.5.5.5:853
     dot.pub: 119.29.29.29
     doh.pub: 119.29.29.29
