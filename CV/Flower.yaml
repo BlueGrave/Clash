@@ -160,27 +160,31 @@ dns:
     - https://doh.pub/dns-query
 
 # Proxy Providers
+# Templates
+pSub: &pSub
+  interval: 0
+  size-limit: 0
+  override:
+    tfo: true
+    udp: true
+  health-check:
+    enable: true
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 600
+    timeout: 5000
+    lazy: true
+
 proxy-providers:
   FlowerCloud:
     type: http
     url: ""
     path: "./Proxy_Providers/FlowerCloud.yaml"
     proxy: DIRECT
-    interval: 0
-    size-limit: 0
     exclude-filter: "Traffic|Expire"
-    override:
-      tfo: true
-      udp: true
-    health-check:
-      enable: true
-      url: "https://cp.cloudflare.com/generate_204"
-      interval: 600
-      timeout: 5000
-      lazy: true
+    <<: *pSub
 
 # Proxy Groups
-  # Templates
+# Templates
 Auto: &Auto
   type: url-test
   url: "https://cp.cloudflare.com/generate_204"
