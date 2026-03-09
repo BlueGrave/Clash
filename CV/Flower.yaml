@@ -36,7 +36,7 @@ tun:
     - "tcp://any:53"
   auto-route: true
   auto-detect-interface: true
-  strict-route: false
+  strict-route: true
   route-exclude-address:
     - "192.168.0.0/16"
     - "10.0.0.0/8"
