@@ -55,14 +55,9 @@ sniffer:
 tun:
   enable: true
   stack: system
-  device: utun
   dns-hijack:
     - "any:53"
     - "tcp://any:53"
-  endpoint-independent-nat: true
-  auto-detect-interface: false
-  auto-route: true
-  auto-redirect: true
   strict-route: false
   route-exclude-address:
     - "192.168.0.0/16"
