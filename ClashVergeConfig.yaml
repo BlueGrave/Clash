@@ -1,3 +1,4 @@
+# Global Configuration
 mixed-port: 7897
 allow-lan: false
 mode: rule
@@ -24,6 +25,7 @@ geox-url:
   mmdb: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
   asn: "https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
 
+# TUN
 tun:
   enable: true
   stack: mixed
@@ -38,6 +40,7 @@ tun:
     - "10.0.0.0/8"
     - "172.16.0.0/12"
 
+# HOSTS
 hosts:
   router.asus.com: 192.168.186.1
   dns.alidns.com:
@@ -47,6 +50,7 @@ hosts:
     - 2400:3200::1
   cdn.jsdelivr.net: cdn.jsdelivr.net.cdn.cloudflare.net
 
+# DNS
 dns:
   enable: true
   listen: 127.0.0.1:53
