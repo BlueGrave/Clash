@@ -16,6 +16,8 @@ profile:
   store-fake-ip: true
 unified-delay: true
 tcp-concurrent: true
+keep-alive-interval: 30
+keep-alive-idle: 600
 geodata-mode: true
 geodata-loader: standard
 geosite-matcher: mph
