@@ -9,6 +9,15 @@ allow-lan: true
 # allow-lan 为 true 时绑定哪些网卡，* 表示全部
 bind-address: "*"
 
+# 允许连接的 IP 地址段，仅作用于 allow-lan 为 true 默认值为 0.0.0.0/0和 ::/0
+lan-allowed-ips:
+  - 0.0.0.0/0
+  -::/0
+
+# 禁止连接的 IP 地址段，黑名单优先级高于白名单，默认值为空
+# lan-disallowed-ips:
+#   - 192,168.0.3/32
+
 # ══ 运行模式 ══════════════════════════════════════════════════
 # 规则模式：Rule（规则） / Global（全局代理）/ Direct（全局直连）
 mode: Rule
