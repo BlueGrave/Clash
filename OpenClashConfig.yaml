@@ -16,7 +16,7 @@ profile:
   store-fake-ip: true
 unified-delay: true
 tcp-concurrent: true
-keep-alive-interval: 30
+keep-alive-interval: 15
 keep-alive-idle: 600
 
 # SNIFFER
@@ -60,9 +60,9 @@ tun:
     - "any:53"
     - "tcp://any:53"
   endpoint-independent-nat: true
-  auto-route: false
   auto-detect-interface: false
-  auto-redirect: false
+  auto-route: true
+  auto-redirect: true
   strict-route: false
   route-exclude-address:
     - "192.168.0.0/16"
