@@ -96,6 +96,7 @@ tun:
     - "tcp://any:53"        # 同时劫持 TCP 的 DNS
   auto-detect-interface: true   # 自动识别出口网卡（推荐）
   auto-route: true              # 自动配置系统路由表（TUN 接管全流量的关键）
+  auto-redirect: true           # 仅支持 Linux，自动配置 iptables/nftables 以重定向 TCP 连接，需要auto-route已启用
   strict-route: true            # 严格路由：防止流量绕过 TUN（会影响某些 VPN 场景）
   mtu: 9000                     # MTU，适当提高减少分片（以太网推荐 1500，虚拟网络可更高）
 
