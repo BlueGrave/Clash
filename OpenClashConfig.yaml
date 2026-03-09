@@ -19,51 +19,6 @@ tcp-concurrent: true
 keep-alive-interval: 15
 keep-alive-idle: 600
 
-# SNIFFER
-sniffer:
-  enable: true
-  override-destination: true
-  sniff:
-    QUIC:
-      ports:
-        - 443
-        - 8443
-    TLS:
-      ports:
-        - 443
-        - 8443
-    HTTP:
-      ports:
-        - 80
-        - 8080-8880
-      override-destination: true
-  force-domain:
-  - "+.netflix.com"
-  - "+.nflxvideo.net"
-  - "+.amazonaws.com"
-  - "+.media.dssott.com"
-  skip-domain:
-  - "+.apple.com"
-  - Mijia Cloud
-  - dlg.io.mi.com
-  - "+.oray.com"
-  - "+.sunlogin.net"
-  - "+.push.apple.com"
-  parse-pure-ip: true
-
-# TUN
-tun:
-  enable: true
-  stack: system
-  dns-hijack:
-    - "any:53"
-    - "tcp://any:53"
-  strict-route: false
-  route-exclude-address:
-    - "192.168.0.0/16"
-    - "10.0.0.0/8"
-    - "172.16.0.0/12"
-
 # HOSTS
 hosts:
   router.asus.com: 192.168.186.1
