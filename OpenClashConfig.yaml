@@ -1,15 +1,10 @@
 # Global Configuration
 mixed-port: 7890
-redir-port: 7892
-tproxy-port: 7895
-port: 7890
-socks-port: 7891
 allow-lan: true
 bind-address: "*"
 mode: Rule
 log-level: info
 ipv6: false
-find-process-mode: off
 external-controller: "0.0.0.0:9090"
 profile:
   store-selected: true
@@ -18,6 +13,24 @@ unified-delay: true
 tcp-concurrent: true
 keep-alive-interval: 15
 keep-alive-idle: 600
+
+# TUN
+tun:
+  enable: true
+  stack: system
+  device: utun
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+  endpoint-independent-nat: true
+  auto-detect-interface: false
+  auto-route: true
+  auto-redirect: true
+  strict-route: false
+  route-exclude-address:
+    - "192.168.0.0/16"
+    - "10.0.0.0/8"
+    - "172.16.0.0/12"
 
 # HOSTS
 hosts:
