@@ -1,15 +1,75 @@
+# Global Configuration
 mixed-port: 7890
+redir-port: 7892
+tproxy-port: 7895
+port: 7890
+socks-port: 7891
 allow-lan: true
+bind-address: "*"
 mode: Rule
 log-level: info
 ipv6: false
+find-process-mode: off
 external-controller: "0.0.0.0:9090"
 profile:
   store-selected: true
   store-fake-ip: true
 unified-delay: true
 tcp-concurrent: true
+keep-alive-interval: 30
+keep-alive-idle: 600
 
+# SNIFFER
+sniffer:
+  enable: true
+  override-destination: true
+  sniff:
+    QUIC:
+      ports:
+        - 443
+        - 8443
+    TLS:
+      ports:
+        - 443
+        - 8443
+    HTTP:
+      ports:
+        - 80
+        - 8080-8880
+      override-destination: true
+  force-domain:
+  - "+.netflix.com"
+  - "+.nflxvideo.net"
+  - "+.amazonaws.com"
+  - "+.media.dssott.com"
+  skip-domain:
+  - "+.apple.com"
+  - Mijia Cloud
+  - dlg.io.mi.com
+  - "+.oray.com"
+  - "+.sunlogin.net"
+  - "+.push.apple.com"
+  parse-pure-ip: true
+
+# TUN
+tun:
+  enable: true
+  stack: system
+  device: utun
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+  endpoint-independent-nat: true
+  auto-route: false
+  auto-detect-interface: false
+  auto-redirect: false
+  strict-route: false
+  route-exclude-address:
+    - "192.168.0.0/16"
+    - "10.0.0.0/8"
+    - "172.16.0.0/12"
+
+# HOSTS
 hosts:
   router.asus.com: 192.168.186.1
   dns.alidns.com:
@@ -19,6 +79,7 @@ hosts:
     - 2400:3200::1
   cdn.jsdelivr.net: cdn.jsdelivr.net.cdn.cloudflare.net
 
+# DNS
 dns:
   enable: true
   use-hosts: true
