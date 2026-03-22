@@ -94,9 +94,6 @@ fake-ip-filter:
     dns.pub: 119.29.29.29
     dot.pub: 119.29.29.29
     doh.pub: 119.29.29.29
-    dns.google:
-      - 8.8.4.4
-      - 8.8.8.8
     "geosite:cn,private":
       - https://dns.alidns.com/dns-query
       - https://dns.pub/dns-query
