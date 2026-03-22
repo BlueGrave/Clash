@@ -40,6 +40,9 @@ hosts:
     - 223.6.6.6
     - 2400:3200:baba::1
     - 2400:3200::1
+  dns.google:
+    - 8.8.4.4
+    - 8.8.8.8
   cdn.jsdelivr.net: cdn.jsdelivr.net.cdn.cloudflare.net
 
 # DNS
@@ -139,9 +142,6 @@ dns:
     dns.pub: 119.29.29.29
     dot.pub: 119.29.29.29
     doh.pub: 119.29.29.29
-    dns.google:
-      - 8.8.4.4
-      - 8.8.8.8
   nameserver:
     - https://dns.alidns.com/dns-query
     - https://dns.pub/dns-query
