@@ -274,6 +274,7 @@ dns:
 # fallback:
 #   - https://dns.google/dns-query # Google DoH
 #   - https://cloudflare-dns.com/dns-query # Cloudflare DoH
+#   - https://dns.cloudflare.com/dns-query # Cloudflare DoH
 #   - https://public.dns.iij.jp/dns-query # IIJ.JP DoH
 #   - https://dns.adguard.com/dns-query # Adguard DoH
 #   - https://jp.tiar.app/dns-query
