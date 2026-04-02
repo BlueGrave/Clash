@@ -596,6 +596,14 @@ rule-providers:
     url: "https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/OpenAI/OpenAI.yaml"
     path: "./Rules/OpenAI.yaml"
     
+  AI:
+    type: http
+    behavior: classical
+    interval: 86400
+    proxy: Gemini
+    url: "https://raw.githubusercontent.com/BlueGrave/Clash/refs/heads/master/Providers/AI.yaml"
+    path: "./Rules/AI.yaml"
+    
   Telegram:
     type: http
     behavior: classical
@@ -721,6 +729,9 @@ rules:
   - RULE-SET,GoogleDrive,Google
   - RULE-SET,GoogleVoice,GoogleVoice
   - RULE-SET,Google,Google
+  - RULE-SET,Gemini,Gemini
+  - RULE-SET,OpenAI,OpenAI
+  - RULE-SET,AI,Gemini
   - RULE-SET,Telegram,DEFAULT
   - RULE-SET,Speedtest,Speedtest
   - RULE-SET,SteamCN,DIRECT
