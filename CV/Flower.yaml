@@ -32,6 +32,9 @@ geox-url:
 # SNIFFER
 sniffer:
   enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: true
   sniff:
     QUIC:
       ports:
@@ -51,6 +54,7 @@ sniffer:
     - "+.nflxvideo.net"
     - "+.amazonaws.com"
     - "+.media.dssott.com"
+    - "+.v2ex.com"
   skip-domain:
     - "+.apple.com"
     - Mijia Cloud
@@ -73,6 +77,16 @@ tun:
     - "192.168.0.0/16"
     - "10.0.0.0/8"
     - "172.16.0.0/12"
+
+# P2P下载端口
+listeners:
+- name: socks5-in-1
+  type: socks
+  port: 10808
+  listen: 0.0.0.0
+  udp: true
+  users: []
+  proxy: DIRECT
 
 # HOSTS
 hosts:
@@ -207,7 +221,8 @@ pSub: &pSub
     enable: true
     url: "https://cp.cloudflare.com/generate_204"
     interval: 600
-    timeout: 5000
+    timeout: 3000
+    max-failed-times: 3
     lazy: true
 
 proxy-providers:
@@ -221,23 +236,23 @@ proxy-providers:
 
 # Proxy Groups
 # Templates
-Auto: &Auto
+UrlTest: &UrlTest
   type: url-test
   url: "https://cp.cloudflare.com/generate_204"
   interval: 600
-  timeout: 5000
+  timeout: 3000
   lazy: true
   tolerrance: 20
-  include-all: true
+  include-all-providers: true
 
 Fallback: &Fallback
   type: fallback
   url: "https://cp.cloudflare.com/generate_204"
   interval: 600
-  timeout: 5000
+  timeout: 3000
   lazy: true
   tolerrance: 20
-  include-all: true
+  include-all-providers: true
 
 proxy-groups:
   # Services Groups
@@ -264,12 +279,12 @@ proxy-groups:
   - name: Netflix
     type: select
     filter: "香港|新加坡"
-    include-all: true
+    include-all-providers: true
 
   - name: Disney+
     type: select
     filter: "香港|新加坡"
-    include-all: true
+    include-all-providers: true
 
   - name: Spotify
     type: select
@@ -367,40 +382,40 @@ proxy-groups:
 
   # Node Groups
   - name: FlowerCloud | 日本标准
-    <<: *Auto
+    <<: *UrlTest
     filter: "日本标准"
 
   - name: FlowerCloud | 日本高级
-    <<: *Auto
+    <<: *UrlTest
     filter: "日本高级"
 
   - name: FlowerCloud | 香港标准
-    <<: *Auto
+    <<: *UrlTest
     filter: "香港标准"
 
   - name: FlowerCloud | 香港高级
-    <<: *Auto
+    <<: *UrlTest
     filter: "香港高级"
 
   - name: FlowerCloud | 美国标准
-    <<: *Auto
+    <<: *UrlTest
     filter: "美国标准"
 
   - name: FlowerCloud | 美国高级
-    <<: *Auto
+    <<: *UrlTest
     filter: "美国高级"
 
   - name: FlowerCloud | 台湾标准
-    <<: *Auto
+    <<: *UrlTest
     filter: "台湾标准"
 
   - name: FlowerCloud | 台湾高级
-    <<: *Auto
+    <<: *UrlTest
     filter: "台湾高级"
 
   - name: PROXY
-    <<: *Auto
-    include-all: true
+    <<: *UrlTest
+    include-all-providers: true
 
 # Rule Providers
 rule-providers:
