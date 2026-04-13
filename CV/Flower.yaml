@@ -414,7 +414,7 @@ proxy-groups:
     filter: "台湾高级"
 
   - name: PROXY
-    <<: *UrlTest
+    type: select
     include-all-providers: true
 
 # Rule Providers
