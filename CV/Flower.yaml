@@ -78,7 +78,7 @@ tun:
     - "10.0.0.0/8"
     - "172.16.0.0/12"
 
-# P2P下载端口
+# P2P 下载端口
 listeners:
 - name: socks5-in-1
   type: socks
