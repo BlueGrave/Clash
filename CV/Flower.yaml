@@ -258,6 +258,8 @@ proxy-groups:
   # Services Groups
   - name: DEFAULT
     type: select
+    filter: "实验"
+    include-all-providers: true
     proxies:
       - FlowerCloud | 日本标准
       - FlowerCloud | 日本高级
