@@ -329,6 +329,20 @@ proxy-groups:
       - FlowerCloud | 美国高级
       - PROXY
 
+  - name: AI
+    type: select
+    proxies:
+      - FlowerCloud | 美国标准
+      - FlowerCloud | 美国高级
+      - DEFAULT
+      - PROXY
+
+  - name: Telegram
+    type: select
+    proxies:
+      - DEFAULT
+      - PROXY
+
   - name: Steam
     type: select
     proxies:
@@ -337,13 +351,6 @@ proxy-groups:
       - DIRECT
 
   - name: Epic
-    type: select
-    proxies:
-      - DIRECT
-      - DEFAULT
-      - PROXY
-
-  - name: TestFlight
     type: select
     proxies:
       - DIRECT
@@ -361,7 +368,21 @@ proxy-groups:
       - FlowerCloud | 日本高级
       - PROXY
 
+  - name: TestFlight
+    type: select
+    proxies:
+      - DIRECT
+      - DEFAULT
+      - PROXY
+
   - name: Microsoft
+    type: select
+    proxies:
+      - DIRECT
+      - DEFAULT
+      - PROXY
+
+  - name: Apple
     type: select
     proxies:
       - DIRECT
@@ -748,8 +769,8 @@ rules:
   - RULE-SET,Google,Google
   - RULE-SET,Gemini,Gemini
   - RULE-SET,OpenAI,OpenAI
-  - RULE-SET,AI,Gemini
-  - RULE-SET,Telegram,DEFAULT
+  - RULE-SET,AI,AI
+  - RULE-SET,Telegram,Telegram
   - RULE-SET,Speedtest,Speedtest
   - RULE-SET,SteamCN,DIRECT
   - RULE-SET,Steam,Steam
@@ -757,7 +778,7 @@ rules:
   - RULE-SET,Blizzard,Blizzard
   - RULE-SET,TestFlight,TestFlight
   - RULE-SET,AppleOS_Update,AppleOS_Update
-  - RULE-SET,Apple,DIRECT
+  - RULE-SET,Apple,Apple
   - RULE-SET,Microsoft,Microsoft
   - RULE-SET,ChinaMedia,DIRECT
   - GEOSITE,CN,DIRECT
