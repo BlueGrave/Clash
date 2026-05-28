@@ -22,7 +22,8 @@ name = "YouTube"
 type = "select"
 rule = [
     "[]FlowerCloud | 日本标准",
-    "[]FlowerCloud | 美国",
+    "[]FlowerCloud | 美国标准",
+    "[]FlowerCloud | 美国高级",
     "[]FlowerCloud | 香港标准",
     "[]PROXY"
 ]
@@ -41,7 +42,8 @@ rule = ["香港|新加坡"]
 name = "HBO GO"
 type = "select"
 rule = [
-    "[]FlowerCloud | 台湾",
+    "[]FlowerCloud | 台湾标准",
+    "[]FlowerCloud | 台湾高级",
     "[]PROXY"
 ]
 
@@ -49,7 +51,8 @@ rule = [
 name = "Spotify"
 type = "select"
 rule = [
-    "[]FlowerCloud | 台湾",
+    "[]FlowerCloud | 台湾标准",
+    "[]FlowerCloud | 台湾高级",
     "[]PROXY"
 ]
 
@@ -57,7 +60,8 @@ rule = [
 name = "PayPal"
 type = "select"
 rule = [
-    "[]FlowerCloud | 台湾",
+    "[]FlowerCloud | 台湾标准",
+    "[]FlowerCloud | 台湾高级",
     "[]PROXY"
 ]
 
@@ -65,7 +69,8 @@ rule = [
 name = "GoogleVoice"
 type = "select"
 rule = [
-    "[]FlowerCloud | 美国",
+    "[]FlowerCloud | 美国标准",
+    "[]FlowerCloud | 美国高级",
     "[]PROXY"
 ]
 
@@ -74,6 +79,36 @@ name = "Google"
 type = "select"
 rule = [
     "[]DEFAULT",
+    "[]PROXY"
+]
+
+[[custom_groups]]
+name = "Gemini"
+type = "select"
+rule = [
+    "[]FlowerCloud | 美国标准",
+    "[]FlowerCloud | 美国高级",
+#   "[]AmyTelecom | 美国",
+    "[]PROXY"
+]
+
+[[custom_groups]]
+name = "OpenAI"
+type = "select"
+rule = [
+    "[]FlowerCloud | 美国标准",
+    "[]FlowerCloud | 美国高级",
+#   "[]AmyTelecom | 美国",
+    "[]PROXY"
+]
+
+[[custom_groups]]
+name = "AI"
+type = "select"
+rule = [
+    "[]FlowerCloud | 美国标准",
+    "[]FlowerCloud | 美国高级",
+#   "[]AmyTelecom | 美国",
     "[]PROXY"
 ]
 
@@ -96,6 +131,22 @@ rule = [
 ]
 
 [[custom_groups]]
+name = "Blizzard"
+type = "select"
+rule = [
+#   "[]AmyTelecom | 香港",
+#   "[]AmyTelecom | 台湾",
+#   "[]AmyTelecom | 日本",
+    "[]FlowerCloud | 香港标准",
+    "[]FlowerCloud | 香港高级",
+    "[]FlowerCloud | 台湾标准",
+    "[]FlowerCloud | 台湾高级",
+    "[]FlowerCloud | 日本标准",
+    "[]FlowerCloud | 日本高级",
+    "[]PROXY"
+]
+
+[[custom_groups]]
 name = "TestFlight"
 type = "select"
 rule = [
@@ -105,14 +156,20 @@ rule = [
 ]
 
 [[custom_groups]]
-name = "Blizzard"
+name = "Microsoft"
 type = "select"
 rule = [
-    "[]FlowerCloud | 香港标准",
-    "[]FlowerCloud | 香港高级",
-    "[]FlowerCloud | 台湾",
-    "[]FlowerCloud | 日本标准",
-    "[]FlowerCloud | 日本高级",
+    "[]DIRECT",
+    "[]DEFAULT",
+    "[]PROXY"
+]
+
+[[custom_groups]]
+name = "Apple"
+type = "select"
+rule = [
+    "[]DIRECT",
+    "[]DEFAULT",
     "[]PROXY"
 ]
 
@@ -171,17 +228,49 @@ interval = 600
 tolerance = 20
 
 [[custom_groups]]
-name = "FlowerCloud | 美国"
+name = "FlowerCloud | 美国标准"
 type = "url-test"
-rule = ["(?!.*实验).*美国"]
+rule = ["美国标准"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
 
 [[custom_groups]]
-name = "FlowerCloud | 台湾"
+name = "FlowerCloud | 美国高级"
 type = "url-test"
-rule = ["(?!.*实验).*台湾"]
+rule = ["美国高级"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
+
+[[custom_groups]]
+name = "FlowerCloud | 台湾标准"
+type = "url-test"
+rule = ["台湾标准"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
+
+[[custom_groups]]
+name = "FlowerCloud | 台湾高级"
+type = "url-test"
+rule = ["台湾高级"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
+
+[[custom_groups]]
+name = "FlowerCloud | 新加坡标准"
+type = "url-test"
+rule = ["新加坡标准"]
+url = "http://cp.cloudflare.com/generate_204"
+interval = 600
+tolerance = 20
+
+[[custom_groups]]
+name = "FlowerCloud | 新加坡高级"
+type = "url-test"
+rule = ["新加坡高级"]
 url = "http://cp.cloudflare.com/generate_204"
 interval = 600
 tolerance = 20
@@ -307,7 +396,22 @@ ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master
 type = "clash-classic"
 
 [[rulesets]]
-group = "DEFAULT"
+group = "Gemini"
+ruleset = "https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/Gemini/Gemini.yaml"
+type = "clash-classic"
+
+[[rulesets]]
+group = "OpenAI"
+ruleset = "https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/OpenAI/OpenAI.yaml"
+type = "clash-classic"
+
+[[rulesets]]
+group = "AI"
+ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/refs/heads/master/Providers/AI.yaml"
+type = "clash-classic"
+
+[[rulesets]]
+group = "Telegram"
 ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml"
 type = "clash-classic"
 
@@ -342,18 +446,18 @@ ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master
 type = "clash-classic"
 
 [[rulesets]]
-group = "AppleOS Update"
-ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Providers/AppleOS_Update.yaml"
+group = "Microsoft"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml"
 type = "clash-classic"
 
 [[rulesets]]
-group = "DIRECT"
+group = "Apple"
 ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml"
 type = "clash-classic"
 
 [[rulesets]]
-group = "DIRECT"
-ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml"
+group = "AppleOS Update"
+ruleset = "https://raw.githubusercontent.com/BlueGrave/Clash/master/Providers/AppleOS_Update.yaml"
 type = "clash-classic"
 
 [[rulesets]]
