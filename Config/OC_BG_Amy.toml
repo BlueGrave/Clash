@@ -20,8 +20,8 @@ interval = 300
 name = "YouTube"
 type = "select"
 rule = [
-    "[]AmyTelecom | 日本",
     "[]AmyTelecom | 美国",
+    "[]AmyTelecom | 日本",
     "[]AmyTelecom | 香港",
     "[]PROXY"
 ]
