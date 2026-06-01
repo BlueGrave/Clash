@@ -527,7 +527,7 @@ proxy-groups:
 
   - name: 良心云 | 台湾专线
     <<: *UrlTest
-    filter: "台湾高级"
+    filter: "台湾专线"
     icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/tw.svg
 
   - name: 良心云 | 新加坡高速
@@ -537,7 +537,7 @@ proxy-groups:
 
   - name: 良心云 | 新加坡专线
     <<: *UrlTest
-    filter: "新加坡高级"
+    filter: "新加坡专线"
     icon: https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/sg.svg
 
   - name: PROXY
