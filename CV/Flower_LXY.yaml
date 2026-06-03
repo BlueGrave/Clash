@@ -618,6 +618,14 @@ rule-providers:
     proxy: DEFAULT
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Privacy/Privacy_Classical.yaml"
     path: "./Rules/Privacy_Classical.yaml"
+    
+  HTTPDNS:
+    type: http
+    behavior: classical
+    interval: 86400
+    proxy: DEFAULT
+    url: "https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/refs/heads/main/ruleset/HTTPDNS.Block.yaml"
+    path: "./Rules/HTTPDNS.Block.yaml"
 
   ZhihuAds:
     type: http
@@ -859,6 +867,7 @@ rules:
   - RULE-SET,BanProgramAD,REJECT
   - RULE-SET,Hijacking,REJECT
   - RULE-SET,Privacy_Classical,REJECT
+  - RULE-SET,HTTPDNS,REJECT
   - RULE-SET,ZhihuAds,REJECT
   - RULE-SET,Download,DIRECT
   - RULE-SET,PrivateTracker,DIRECT
