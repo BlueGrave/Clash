@@ -7,24 +7,18 @@
 - [WhiteList.list](https://github.com/BlueGrave/Clash/blob/master/Ruleset/WhiteList.list) 需要 DIRECT 放行的规则
 - [BlackList.list](https://github.com/BlueGrave/Clash/blob/master/Ruleset/BlackList.list) 需要 REJECT 阻止的规则
 - [AppleOS_Update.list](https://github.com/BlueGrave/Clash/blob/master/Ruleset/AppleOS_Update.list) 结合多个大佬的相关规则整理出来的各 Apple OS OTA 规则
+- [AI.list](https://github.com/BlueGrave/Clash/blob/master/Ruleset/AI.list) 结合多个大佬的 AI 访问规则
 
 ### 规则应用环境：
-- [OpenClash](https://github.com/vernesong/OpenClash/tree/master) (OpenWrt 用的是 eSir 编译的高大全2020年7月份版)
+- [OpenClash](https://github.com/vernesong/OpenClash/tree/master) (OpenWrt 用的是 eSir 编译的高大全 2025 年 V1 版)
 
-- [Clash for Windows](https://github.com/Fndroid/clash_for_windows_pkg) (Windows 10/11)
+- [Clash Verge Rev](https://github.com/clash-verge-rev/clash-verge-rev) (Windows 11)
 
 ### 配置文件应用环境：
 - [subconverter](https://github.com/tindy2013/subconverter) v0.6.4 (部署在 [vercel.com](https://vercel.com) 上面，参见 [@tindy2013/subconverter](https://github.com/tindy2013/subconverter) 和 [@tindy2013/now-subconverter](https://github.com/tindy2013/now-subconverter))
 
 - [sub-web](https://github.com/CareyWang/sub-web) v1.0 (部署在 [vercel.com](https://vercel.com) 上面，参见 [@CareyWang/sub-web](https://github.com/CareyWang/sub-web))
 
-- [CFW_BG.toml](https://github.com/BlueGrave/Clash/blob/master/Config/CFW_BG.toml)/[OC_BG.toml](https://github.com/BlueGrave/Clash/blob/master/Config/OC_BG.toml), [CFWClashConfig.yaml](https://github.com/BlueGrave/Clash/blob/master/CFWClashConfig.yaml)/[OpenClashConfig.yaml](https://github.com/BlueGrave/Clash/blob/master/OpenClashConfig.yaml) 和 [pref.toml](https://github.com/BlueGrave/Clash/blob/master/SubConverter/pref_071.toml) 提供给 [subconverter](https://github.com/tindy2013/subconverter) v0.8.2 使用，由于 Vercel 下调了性能，就不再更新部署了，改部署在自用的 OpenWrt 上面了
+- [CV_BG.toml](https://github.com/BlueGrave/Clash/blob/master/Config/CV_BG.toml)/[OC_BG.toml](https://github.com/BlueGrave/Clash/blob/master/Config/OC_BG.toml), [ClashVergeConfig.yaml](https://github.com/BlueGrave/Clash/blob/master/ClashVergeConfig.yaml)/[OpenClashConfig.yaml](https://github.com/BlueGrave/Clash/blob/master/OpenClashConfig.yaml) 和 [pref.toml](https://github.com/BlueGrave/Clash/blob/master/SubConverter/pref_071.toml) 提供给 [subconverter](https://github.com/tindy2013/subconverter) v0.9.0 使用，由于 Vercel 下调了性能，就不再更新部署了，改部署在自用的 OpenWrt 上面了
 
 - [Subconverter.vue](https://github.com/BlueGrave/Clash/blob/master/Subconverter.vue) 提供给 [sub-web](https://github.com/CareyWang/sub-web) 使用
-
-- [cfw-settings.yaml](https://github.com/BlueGrave/Clash/blob/master/cfw-settings.yaml) 提供给 [Clash for Windows](https://github.com/Fndroid/clash_for_windows_pkg) 使用
-
-### 脚本文件应用环境：
-- Windows 10 PowerShell
-
-仅适用于 [Clash for Windows v0.19.0](https://github.com/Fndroid/clash_for_windows_pkg/releases) 及以上版本 (Windows 10) 的 GeoIP2 数据库更新
