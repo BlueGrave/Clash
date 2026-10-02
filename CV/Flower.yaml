@@ -187,9 +187,9 @@ dns:
     "*.taobao.com": 223.5.5.5
     "*.alicdn.com": 223.5.5.5
     "*.aliyun.com": 223.5.5.5
-    "*.alipay*.com": 223.5.5.5
-    "*.alibaba*.com": 223.5.5.5
-    "*.alimama*.com": 223.5.5.5
+    "*.alipay.com": 223.5.5.5
+    "*.alibaba.com": 223.5.5.5
+    "*.alimama.com": 223.5.5.5
     "*.qq.com": 119.29.29.29
     "*.tencent.com": 119.29.29.29
     "*.weixin.com": 119.29.29.29
